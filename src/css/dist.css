@@ -1377,6 +1377,10 @@ video {
   height: 100vh;
 }
 
+.h-\[24px\] {
+  height: 24px;
+}
+
 .min-h-\[400px\] {
   min-height: 400px;
 }
@@ -1421,6 +1425,14 @@ video {
 .w-max {
   width: -moz-max-content;
   width: max-content;
+}
+
+.w-24 {
+  width: 6rem;
+}
+
+.w-\[24px\] {
+  width: 24px;
 }
 
 .max-w-3xl {
@@ -1677,6 +1689,14 @@ video {
 
 .fill-\[currentColor\] {
   fill: currentColor;
+}
+
+.fill-\[\] {
+  fill: ;
+}
+
+.fill-\[cu\] {
+  fill: cu;
 }
 
 .stroke-\[\#a5a6aa\] {
