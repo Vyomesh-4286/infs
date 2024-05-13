@@ -111,25 +111,61 @@ $(document).ready(function () {
         },
     });
 
-        let anim_ups = gsap.utils.toArray(".anim_up");
-        anim_ups.forEach((anim_up) => {
-            gsap.from(anim_up.children, {
-                y: 30, // Start position
-                opacity: 0, // Start opacity
-                duration: 0.75,
-                stagger: 0.25, // Stagger time between animations
-                ease: "power3.inOut"
-            });
-        });
+    // let anim_ups = gsap.utils.toArray(".anim_up");
+    // anim_ups.forEach((anim_up) => {
+    //     gsap.from(anim_up.children, {
+    //         y: 30, // Start position
+    //         opacity: 0, // Start opacity
+    //         duration: 0.75,
+    //         stagger: 0.25, // Stagger time between animations
+    //         ease: "power3.inOut"
+    //     });
+    // });
 
-        let anim_lefts = gsap.utils.toArray(".anim_left");
-        anim_lefts.forEach((anim_left) => {
-            gsap.from(anim_left.children, {
-                x: -30, // Start position
-                opacity: 0, // Start opacity
-                duration: 0.75,
-                stagger: 0.25, // Stagger time between animations
-                ease: "power3.inOut"
-            });
+    // let anim_lefts = gsap.utils.toArray(".anim_left");
+    // anim_lefts.forEach((anim_left) => {
+    //     gsap.from(anim_left.children, {
+    //         x: -30, // Start position
+    //         opacity: 0, // Start opacity
+    //         duration: 0.75,
+    //         stagger: 0.25, // Stagger time between animations
+    //         ease: "power3.inOut"
+    //     });
+    // });
+
+    gsap.utils.toArray(".anim_left").forEach((element1) => {
+        // Create a GSAP animation for each element1
+        const animation = gsap.fromTo(
+            element1.children,
+            { autoAlpha: 0, x: 50 },
+            { delay: 1, duration: 1, autoAlpha: 1, x: 0, stagger: 0.5 }
+        );
+    
+        // Create a ScrollTrigger for each element1
+        ScrollTrigger.create({
+            trigger: element1,
+            ease: "power3.inOut",
+            animation: animation,
+            toggleActions: "play none none none",
+            once: false
         });
+    });
+
+    gsap.utils.toArray(".anim_up").forEach((element) => {
+        // Create a GSAP animation for each element
+        const animation = gsap.fromTo(
+            element.children,
+            { autoAlpha: 0, y: 50 },
+            { delay: 0.25, duration: 1, autoAlpha: 1, y: 0, stagger: 0.5 }
+        );
+    
+        // Create a ScrollTrigger for each element
+        ScrollTrigger.create({
+            trigger: element,
+            ease: "power3.inOut",
+            animation: animation,
+            toggleActions: "play none none none",
+            once: false
+        });
+    });
 })
