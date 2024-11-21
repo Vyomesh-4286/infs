@@ -1,0 +1,1774 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Institute of Nutrition and Fitness Sciences</title>
+
+    <!-- Kumbh Sans Font CDN Start -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap" rel="stylesheet">
+    <!-- Kumbh Sans Font CDN End -->
+
+    <!-- Tailwind CSS CDN Start -->
+    <script
+        src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Tailwind CSS CDN End -->
+
+    <!-- Swiper CSS CDN Start -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- Swiper CSS CDN End -->
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+    <style>
+        .grid {
+            user-select: none;
+        }
+
+        canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+
+        .js-plane {
+            position: absolute;
+            inset: 0%;
+        }
+    </style>
+
+    <!-- Custome CSS Start -->
+    <link rel="stylesheet" href="./src/css/new.css">
+    <!-- Custome CSS End -->
+</head>
+
+<body>
+    <div class="page-wrapper">
+        <div class="global-styles w-embed">
+            <style>
+                /* Make text look crisper and more legible in all browsers */
+                body {
+                    -webkit-font-smoothing: antialiased;
+                    -moz-osx-font-smoothing: grayscale;
+                    font-smoothing: antialiased;
+                    text-rendering: optimizeLegibility;
+                }
+
+                /* Focus state style for keyboard navigation for the focusable elements */
+                *[tabindex]:focus-visible,
+                input[type="file"]:focus-visible {
+                    outline: 0.125rem solid #4d65ff;
+                    outline-offset: 0.125rem;
+                }
+
+                /* Set color style to inherit */
+                .inherit-color * {
+                    color: inherit;
+                }
+
+                /* Get rid of top margin on first element in any rich text element */
+                .w-richtext> :not(div):first-child,
+                .w-richtext>div:first-child> :first-child {
+                    margin-top: 0 !important;
+                }
+
+                /* Get rid of bottom margin on last element in any rich text element */
+                .w-richtext>:last-child,
+                .w-richtext ol li:last-child,
+                .w-richtext ul li:last-child {
+                    margin-bottom: 0 !important;
+                }
+
+
+                /* Make sure containers never lose their center alignment */
+                .container-medium,
+                .container-small,
+                .container-large {
+                    margin-right: auto !important;
+                    margin-left: auto !important;
+                }
+
+                /* 
+        Make the following elements inherit typography styles from the parent and not have hardcoded values. 
+        Important: You will not be able to style for example "All Links" in Designer with this CSS applied.
+        Uncomment this CSS to use it in the project. Leave this message for future hand-off.
+        */
+                /*
+        a,
+        .w-input,
+        .w-select,
+        .w-tab-link,
+        .w-nav-link,
+        .w-dropdown-btn,
+        .w-dropdown-toggle,
+        .w-dropdown-link {
+          color: inherit;
+          text-decoration: inherit;
+          font-size: inherit;
+        }
+        */
+
+                /* Apply "..." after 3 lines of text */
+                .text-style-3lines {
+                    display: -webkit-box;
+                    overflow: hidden;
+                    -webkit-line-clamp: 3;
+                    -webkit-box-orient: vertical;
+                }
+
+                /* Apply "..." after 2 lines of text */
+                .text-style-2lines {
+                    display: -webkit-box;
+                    overflow: hidden;
+                    -webkit-line-clamp: 2;
+                    -webkit-box-orient: vertical;
+                }
+
+                /* These classes are never overwritten */
+                .hide {
+                    display: none !important;
+                }
+
+                @media screen and (max-width: 991px) {
+
+                    .hide,
+                    .hide-tablet {
+                        display: none !important;
+                    }
+                }
+
+                @media screen and (max-width: 767px) {
+                    .hide-mobile-landscape {
+                        display: none !important;
+                    }
+                }
+
+                @media screen and (max-width: 479px) {
+                    .hide-mobile {
+                        display: none !important;
+                    }
+                }
+
+                .margin-0 {
+                    margin: 0rem !important;
+                }
+
+                .padding-0 {
+                    padding: 0rem !important;
+                }
+
+                .spacing-clean {
+                    padding: 0rem !important;
+                    margin: 0rem !important;
+                }
+
+                .margin-top {
+                    margin-right: 0rem !important;
+                    margin-bottom: 0rem !important;
+                    margin-left: 0rem !important;
+                }
+
+                .padding-top {
+                    padding-right: 0rem !important;
+                    padding-bottom: 0rem !important;
+                    padding-left: 0rem !important;
+                }
+
+                .margin-right {
+                    margin-top: 0rem !important;
+                    margin-bottom: 0rem !important;
+                    margin-left: 0rem !important;
+                }
+
+                .padding-right {
+                    padding-top: 0rem !important;
+                    padding-bottom: 0rem !important;
+                    padding-left: 0rem !important;
+                }
+
+                .margin-bottom {
+                    margin-top: 0rem !important;
+                    margin-right: 0rem !important;
+                    margin-left: 0rem !important;
+                }
+
+                .padding-bottom {
+                    padding-top: 0rem !important;
+                    padding-right: 0rem !important;
+                    padding-left: 0rem !important;
+                }
+
+                .margin-left {
+                    margin-top: 0rem !important;
+                    margin-right: 0rem !important;
+                    margin-bottom: 0rem !important;
+                }
+
+                .padding-left {
+                    padding-top: 0rem !important;
+                    padding-right: 0rem !important;
+                    padding-bottom: 0rem !important;
+                }
+
+                .margin-horizontal {
+                    margin-top: 0rem !important;
+                    margin-bottom: 0rem !important;
+                }
+
+                .padding-horizontal {
+                    padding-top: 0rem !important;
+                    padding-bottom: 0rem !important;
+                }
+
+                .margin-vertical {
+                    margin-right: 0rem !important;
+                    margin-left: 0rem !important;
+                }
+
+                .padding-vertical {
+                    padding-right: 0rem !important;
+                    padding-left: 0rem !important;
+                }
+            </style>
+        </div>
+        <main class="main-wrapper">
+            <div data-animation="default" data-collapse="medium" data-duration="400" data-easing="ease"
+                data-easing2="ease" role="banner" class="navbar w-nav">
+                <div class="sub-container w-container">
+                    <div class="navbar-wrap"><a href="#" class="brand w-nav-brand">
+                            <div class="icon-embed-custom w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="100%"
+                                    height="100%" viewBox="0 0 126 55" fill="none" preserveAspectRatio="xMidYMid meet"
+                                    aria-hidden="true" role="img">
+                                    <g clip-path="url(#clip0_811_1045)">
+                                        <path
+                                            d="M61.1455 40.6294V29.2635H66.0704V41.2823C66.0704 43.0461 66.774 43.9602 68.2454 43.9602H68.629C70.1003 43.9602 70.7396 43.0454 70.7396 41.2823V32.9211C70.7396 31.2229 70.2918 30.1775 69.0768 29.1322L64.2797 24.8867C62.0412 22.9922 61.3376 21.6858 61.3376 18.6161V15.5458C61.3376 10.6467 63.5762 8.09933 67.734 8.09933H69.0775C73.2989 8.09933 75.5374 10.6467 75.5374 15.5458V21.294H70.5482V15.1541C70.5482 13.4558 69.9725 12.3456 68.6296 12.3456H68.2461C66.9032 12.3456 66.3275 13.4558 66.3275 15.1541V18.1588C66.3275 19.7264 66.5832 20.4449 67.7347 21.4246L72.5317 25.6701C74.8345 27.6295 75.7295 29.0666 75.7295 32.2675V40.6287C75.7295 45.724 73.4267 48.2714 69.0775 48.2714H67.734C63.4483 48.2714 61.1462 45.724 61.1462 40.6287L61.1455 40.6294Z"
+                                            fill="#30F467"></path>
+                                        <path
+                                            d="M112.504 52.4527V48.9906C113.336 49.6442 115.319 50.6888 117.366 50.6888C119.988 50.6888 121.139 49.5129 121.139 47.2924V45.6591C120.436 46.2471 119.028 47.0962 117.046 47.0962C113.592 47.0962 111.481 45.2017 111.481 40.3683V8.49179H116.406V39.1274C116.406 41.4792 117.302 42.5895 119.093 42.5895C119.86 42.5895 120.563 42.3283 121.011 41.9366V8.49179H126V47.0312C126 52.5833 122.866 55 118.516 55C115.254 55 113.016 53.3667 112.504 52.4527Z"
+                                            fill="#30F467"></path>
+                                        <path
+                                            d="M11.5127 13.1947V8.49178H7.41916V2.28616H4.13053L2.52429 8.49178H0V13.1947H2.36639V41.7397C2.36639 46.312 4.34921 48.2721 7.61129 48.2721C9.40198 48.2721 10.5534 47.6192 11.0012 47.1618V43.0469C10.6812 43.3737 10.042 43.7654 9.27413 43.7654C8.05914 43.7654 7.41916 42.9819 7.41916 41.6098V13.1947H11.5127Z"
+                                            fill="#30F467"></path>
+                                        <path
+                                            d="M22.5143 8.10005C16.2389 8.10005 16.1334 16.026 16.1334 16.026H15.0693L16.9222 8.32339C16.9222 8.32339 17.1408 7.064 17.1408 4.66295V0H12.1523V48.0109H17.1408V17.3781C17.1534 16.6168 17.2973 14.1259 18.6388 13.3317C18.9755 13.164 19.35 13.0641 19.7629 13.0641C21.0422 13.0641 21.7458 13.9132 21.7458 15.6771V48.0109H26.6707V13.5215C26.6707 9.66769 25.1993 8.10005 22.5136 8.10005H22.5143Z"
+                                            fill="#30F467"></path>
+                                        <path
+                                            d="M55.9424 8.10295C50.6478 8.16859 49.8388 15.0093 49.7675 15.9226C49.7612 16.0089 49.7584 16.0567 49.7584 16.0567H48.6993L50.5913 8.49182H45.9863V48.011H50.9748V15.7506C50.9748 14.8851 51.2277 12.9329 53.0855 12.9329C54.2369 12.9329 54.7483 13.782 54.7483 15.4802V23.8414H59.6732V13.5208C59.6732 9.69199 58.3297 8.17073 55.9417 8.10223L55.9424 8.10295Z"
+                                            fill="#30F467"></path>
+                                        <path
+                                            d="M44.2363 48.0109C44.2363 48.0109 43.4929 45.804 43.4929 41.318V8.49179H38.5045V38.0607C38.5045 38.0607 38.487 42.5103 36.8123 43.2303C36.7892 43.2402 36.7669 43.2509 36.7438 43.2609C36.7298 43.2666 36.7159 43.2731 36.7026 43.2788C36.4434 43.3808 36.1688 43.4379 35.8816 43.4379C34.6024 43.4379 33.9631 42.5888 33.9631 40.8249V8.49179H28.9746V42.7201C28.9746 46.7045 30.446 48.2721 33.196 48.2721C33.196 48.2721 39.4113 48.7787 40.0234 40.0008H41.3082L38.8244 48.0109H44.237H44.2363Z"
+                                            fill="#30F467"></path>
+                                        <path
+                                            d="M93.0369 48.0109C93.0369 48.0109 92.2935 45.804 92.2935 41.318V0H87.3686V2.82774C87.3686 3.01112 87.3735 3.20306 87.3819 3.40071C87.5398 6.29837 89.9768 16.0253 89.9768 16.0253H88.8205C88.8205 16.0253 88.8205 16.0189 88.8191 16.0089V16.0139C88.8191 16.0139 88.8177 16.0024 88.8163 15.9818C88.7988 15.7927 88.7171 14.9707 88.5333 13.9425C88.0219 11.4472 86.619 7.66693 82.8483 8.33052C79.7056 8.94487 77.7109 10.8557 77.7109 14.7623V42.7193C77.7109 46.7037 79.2459 48.2714 81.9323 48.2714C81.9777 48.2714 82.0217 48.2685 82.0671 48.2671L82.0622 48.2714C82.0622 48.2714 88.2713 48.7773 88.8889 40.0129C88.8889 40.0086 88.8903 40.0043 88.891 40.0001H90.1759L87.6921 48.0102H93.0383L93.0369 48.0109ZM82.6994 15.0235C82.6994 13.3231 83.5294 12.4712 84.982 12.3591C86.0083 12.337 87.3686 13.3096 87.3686 15.1455V38.7485C87.2666 40.02 86.9103 42.6658 85.7114 43.2959C85.411 43.4279 85.0875 43.5035 84.7465 43.5035C83.4037 43.5035 82.7001 42.5888 82.7001 40.8906V15.0235H82.6994Z"
+                                            fill="#30F467"></path>
+                                        <path d="M104.445 48.0121H104.457L104.445 48.0024V48.0121Z" fill="#30F467">
+                                        </path>
+                                        <path
+                                            d="M109.179 44.2719V15.5464C109.179 10.6473 107.004 8.09998 102.719 8.09998H101.376C97.1542 8.09998 94.9157 10.5167 94.9157 15.2853V23.842H99.8406V15.154C99.8406 13.4558 100.481 12.3455 101.823 12.3455H102.207C103.55 12.3455 104.19 13.4558 104.19 15.154V28.0219C103.486 27.6951 102.527 27.3033 101.248 27.3033C97.0907 27.3033 94.5957 29.5895 94.5957 34.3581V42.7193C94.5957 46.7036 96.0671 48.2713 98.8171 48.2713C98.8268 48.2713 98.8359 48.2713 98.8457 48.2713H98.845C98.845 48.2713 105.06 48.7786 105.672 40.0007L105.647 40.0464C105.649 40.0307 105.651 40.0164 105.654 40.0007H106.938L104.455 48.0108H109.804C109.804 48.0108 109.388 46.775 109.178 44.2726L109.179 44.2719ZM99.5849 34.0976C99.5849 32.2688 100.544 31.3541 102.207 31.3541C102.974 31.3541 103.678 31.6152 104.19 31.8764V39.3321C104.056 40.7257 103.671 42.8256 102.568 43.2908C102.532 43.3065 102.5 43.3208 102.466 43.3358C102.201 43.4428 101.921 43.5042 101.631 43.5042C100.288 43.5042 99.5849 42.6551 99.5849 40.8912V34.0976Z"
+                                            fill="#30F467"></path>
+                                    </g>
+                                    <defs>
+                                        <clippath id="clip0_811_1045">
+                                            <rect width="126" height="55" fill="white"></rect>
+                                        </clippath>
+                                    </defs>
+                                </svg></div>
+                        </a>
+                        <nav role="navigation" class="nav-menu w-nav-menu"><a href="#our_work"
+                                class="nav-menu-link w-nav-link" style="max-width: 1440px;">our Work</a><a
+                                href="#controlled_chaos" class="nav-menu-link w-nav-link"
+                                style="max-width: 1440px;">Controlled
+                                chaos</a><a href="#exprole_section" class="nav-menu-link w-nav-link"
+                                style="max-width: 1440px;">Museum of
+                                Thursday</a><a href="#connect" class="nav-menu-link w-nav-link"
+                                style="max-width: 1440px;">Connect</a>
+                        </nav>
+                        <div class="menu-button w-nav-button" style="-webkit-user-select: text;" aria-label="menu"
+                            role="button" tabindex="0" aria-controls="w-nav-overlay-0" aria-haspopup="menu"
+                            aria-expanded="false">
+                            <div class="w-icon-nav-menu"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-embed">
+                    <style>
+                        .w-nav-link.w--current {
+                            color: var(--color--grey) !important;
+                        }
+                    </style>
+                </div>
+                <div class="w-nav-overlay" data-wf-ignore id="w-nav-overlay-0"></div>
+            </div>
+            <section class="common-section hero_banner">
+                <div class="grid-breackout-wrap">
+                    <div class="grid-breackout"></div>
+                    <div class="grid-breackout"></div>
+                    <div class="grid-breackout"></div>
+                    <div class="grid-breackout"></div>
+                    <div class="grid-breackout"></div>
+                    <div class="grid-breackout"></div>
+                </div>
+                <div class="globle-padding">
+                    <div class="main-container">
+                        <div class="sub-padding">
+                            <div class="banner-section">
+                                <h1 class="banner-heading" style="opacity: 1;">Design is the last
+                                    thing we do </h1>
+                                <div class="banner-sub-info">
+                                    <p class="banner-sub-left-para">We are a
+                                        collective of creators, driven by
+                                        the power
+                                        of design to transform into bloody
+                                        good brands.</p>
+                                    <p class="banner-sub-right-para">So we
+                                        don’t just create collaterals, we
+                                        craft
+                                        experiences that resonate, get
+                                        shared and create culture.</p>
+                                </div>
+                                <div class="banner-sub-img-wrap" style="margin: -11.5rem;"><img
+                                        src="https://cdn.prod.website-files.com/6728ea77b9309773175f65e3/67296b0b31f07097dde48b53_Banner%20Img.webp"
+                                        loading="lazy" sizes="342px"
+                                        srcset="https://cdn.prod.website-files.com/6728ea77b9309773175f65e3/67296b0b31f07097dde48b53_Banner%20Img-p-500.webp 500w, https://cdn.prod.website-files.com/6728ea77b9309773175f65e3/67296b0b31f07097dde48b53_Banner%20Img-p-800.webp 800w, https://cdn.prod.website-files.com/6728ea77b9309773175f65e3/67296b0b31f07097dde48b53_Banner%20Img-p-1080.webp 1080w, https://cdn.prod.website-files.com/6728ea77b9309773175f65e3/67296b0b31f07097dde48b53_Banner%20Img-p-1600.webp 1600w, https://cdn.prod.website-files.com/6728ea77b9309773175f65e3/67296b0b31f07097dde48b53_Banner%20Img-p-2000.webp 2000w, https://cdn.prod.website-files.com/6728ea77b9309773175f65e3/67296b0b31f07097dde48b53_Banner%20Img-p-2600.webp 2600w, https://cdn.prod.website-files.com/6728ea77b9309773175f65e3/67296b0b31f07097dde48b53_Banner%20Img.webp 3059w"
+                                        alt class="banner-sub-img" style="width: 342px; height: 216px;"></div>
+                                <div class="w-embed w-script">
+                                    <script>
+                                        // Select elements for mobile
+                                        const exproleSectionMobile = document.querySelector('.banner-sub-img');
+                                        const bannerWrapMobile = document.querySelector('.banner-sub-img-wrap.mobile-show');
+                                        const bannerHeadingMobile = document.querySelector('.banner-heading');
+                                        const bannerImageMobile = document.querySelector('.banner-sub-img-wrap.mobile-show img');
+                                        const heroBanner = document.querySelector('.hero_banner');
+                                    
+                                        // Initialize GSAP and ScrollTrigger
+                                        gsap.registerPlugin(ScrollTrigger);
+                                    
+                                        if (window.innerWidth <= 768) {
+                                            // Step 1: Fade in the heading
+                                            gsap.timeline({
+                                                scrollTrigger: {
+                                                    trigger: exproleSectionMobile,
+                                                    start: "top top",
+                                                    end: "+=50%", // Scroll zone for Step 1
+                                                    scrub: true, // Tied to scroll
+                                                },
+                                            })
+                                                .fromTo(
+                                                    bannerHeadingMobile,
+                                                    { opacity: 0 },
+                                                    { opacity: 1, duration: 0.2, ease: "power3.inOut" }
+                                                );
+                                    
+                                            // Step 2: Make hero banner sticky
+                                            gsap.timeline({
+                                                scrollTrigger: {
+                                                    trigger: exproleSectionMobile,
+                                                    start: "top+=20% top",
+                                                    end: "+=50%", // Scroll zone for Step 2
+                                                    scrub: true, // Tied to scroll
+                                                },
+                                            }).to(heroBanner, {
+                                                position: "sticky",
+                                                top: 0,
+                                                duration: 0,
+                                            });
+                                    
+                                            // Step 3: Increase image height to 270px
+                                            gsap.timeline({
+                                                scrollTrigger: {
+                                                    trigger: exproleSectionMobile,
+                                                    start: "top+=30% top",
+                                                    end: "+=50%", // Scroll zone for Step 3
+                                                    scrub: true, // Tied to scroll
+                                                },
+                                            }).to(bannerImageMobile, {
+                                                height: "270px",
+                                                duration: 0.5,
+                                                ease: "power3.inOut",
+                                            });
+                                    
+                                            // Step 4: Increase image height to 480px
+                                            gsap.timeline({
+                                                scrollTrigger: {
+                                                    trigger: exproleSectionMobile,
+                                                    start: "top+=50% top",
+                                                    end: "+=50%", // Scroll zone for Step 4
+                                                    scrub: true, // Tied to scroll
+                                                },
+                                            }).to(bannerImageMobile, {
+                                                height: "480px",
+                                                duration: 0.5,
+                                                ease: "power3.inOut",
+                                            });
+                                    
+                                            // Step 5: Set image height to 100vh
+                                            gsap.timeline({
+                                                scrollTrigger: {
+                                                    trigger: exproleSectionMobile,
+                                                    start: "top+=70% top",
+                                                    end: "+=50%", // Scroll zone for Step 5
+                                                    scrub: true, // Tied to scroll
+                                                },
+                                            }).to(bannerImageMobile, {
+                                                height: "100vh",
+                                                duration: 0.8,
+                                                ease: "power3.inOut",
+                                            });
+                                        }
+                                    </script>                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="our_work" class="common-section about-swiper">
+                <div class="grid-breackout-wrap">
+                    <div class="grid-breackout"></div>
+                    <div class="grid-breackout"></div>
+                    <div class="grid-breackout"></div>
+                    <div class="grid-breackout"></div>
+                    <div class="grid-breackout"></div>
+                    <div class="grid-breackout"></div>
+                </div>
+                <div class="globle-padding">
+                    <div class="main-container">
+                        <div class="sub-padding remove-bottom-padding">
+                            <h2 class="common-h2-style">Headline-making
+                                work</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper aboutswiper swiper-initialized swiper-horizontal swiper-backface-hidden">
+                    <div class="swiper-wrapper" id="swiper-wrapper-1a8f0178b5b247d1" aria-live="polite">
+                        <div class="swiper-slide swiper-slide-active" style="width: 536.571px; margin-right: 10px;"
+                            role="group" aria-label="1 / 5">
+                            <div class="about-info-slide"><img
+                                    src="https://cdn.prod.website-files.com/6728ea77b9309773175f65e3/67296b6fb2029beb5bb64a13_About%20Main%20Swiper%20Img%201.webp"
+                                    loading="lazy" alt
+                                    sizes="(max-width: 479px) 63.640625px, (max-width: 767px) 37vw, (max-width: 991px) 29vw, 96vw"
+                                    srcset="https://cdn.prod.website-files.com/6728ea77b9309773175f65e3/67296b6fb2029beb5bb64a13_About%20Main%20Swiper%20Img%201-p-500.webp 500w, https://cdn.prod.website-files.com/6728ea77b9309773175f65e3/67296b6fb2029beb5bb64a13_About%20Main%20Swiper%20Img%201-p-800.webp 800w, https://cdn.prod.website-files.com/6728ea77b9309773175f65e3/67296b6fb2029beb5bb64a13_About%20Main%20Swiper%20Img%201-p-1080.webp 1080w, https://cdn.prod.website-files.com/6728ea77b9309773175f65e3/67296b6fb2029beb5bb64a13_About%20Main%20Swiper%20Img%201-p-1600.webp 1600w, https://cdn.prod.website-files.com/6728ea77b9309773175f65e3/67296b6fb2029beb5bb64a13_About%20Main%20Swiper%20Img%201-p-2000.webp 2000w, https://cdn.prod.website-files.com/6728ea77b9309773175f65e3/67296b6fb2029beb5bb64a13_About%20Main%20Swiper%20Img%201-p-2600.webp 2600w, https://cdn.prod.website-files.com/6728ea77b9309773175f65e3/67296b6fb2029beb5bb64a13_About%20Main%20Swiper%20Img%201-p-3200.webp 3200w, https://cdn.prod.website-files.com/6728ea77b9309773175f65e3/67296b6fb2029beb5bb64a13_About%20Main%20Swiper%20Img%201.webp 3578w"
+                                    class="about-img">
+                                <div class="about-info-main-wrap"><img
+                                        src="https://cdn.prod.website-files.com/6728ea77b9309773175f65e3/67296b6fb2029beb5bb64a13_About%20Main%20Swiper%20Img%201.webp"
+                                        loading="lazy" alt
+                                        sizes="(max-width: 479px) 63.640625px, (max-width: 767px) 37vw, (max-width: 991px) 29vw, 96vw"
+                                        srcset="https://cdn.prod.website-files.com/6728ea77b9309773175f65e3/67296b6fb2029beb5bb64a13_About%20Main%20Swiper%20Img%201-p-500.webp 500w, https://cdn.prod.website-files.com/6728ea77b9309773175f65e3/67296b6fb2029beb5bb64a13_About%20Main%20Swiper%20Img%201-p-800.webp 800w, https://cdn.prod.website-files.com/6728ea77b9309773175f65e3/67296b6fb2029beb5bb64a13_About%20Main%20Swiper%20Img%201-p-1080.webp 1080w, https://cdn.prod.website-files.com/6728ea77b9309773175f65e3/67296b6fb2029beb5bb64a13_About%20Main%20Swiper%20Img%201-p-1600.webp 1600w, https://cdn.prod.website-files.com/6728ea77b9309773175f65e3/67296b6fb2029beb5bb64a13_About%20Main%20Swiper%20Img%201-p-2000.webp 2000w, https://cdn.prod.website-files.com/6728ea77b9309773175f65e3/67296b6fb2029beb5bb64a13_About%20Main%20Swiper%20Img%201-p-2600.webp 2600w, https://cdn.prod.website-files.com/6728ea77b9309773175f65e3/67296b6fb2029beb5bb64a13_About%20Main%20Swiper%20Img%201-p-3200.webp 3200w, https://cdn.prod.website-files.com/6728ea77b9309773175f65e3/67296b6fb2029beb5bb64a13_About%20Main%20Swiper%20Img%201.webp 3578w"
+                                        class="about-info-img">
+                                    <div class="about-info-wrapper">
+                                        <div class="about-info">
+                                            <p class="about-info-heading">the
+                                                bread bar</p>
+                                            <p class="about-info-para">At
+                                                Thursday, we’re brand
+                                                therapists, culture
+                                                creators and creative
+                                                partners all rolled into
+                                                one.</p>
+                                        </div>
+                                        <div class="about-info-icon">
+                                            <div class="code-embed-2 w-embed"><svg width="100%" height="100%"
+                                                    viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M20.9959 2.2531L21 15.3405L14.543 15.4252L15.5397 10.2857C17.0462 7.74725 19.341 5.80676 19.341 5.80676L18.7435 5.03612L12.1589 13.1578C12.1589 13.1578 11.1372 14.463 8.91571 16.6859L4.60444 21L0 16.3926L4.31127 12.0785C6.53277 9.85553 7.83709 8.83319 7.83709 8.83319L15.958 2.24884L15.197 1.66007C15.197 1.66007 13.2578 3.95638 10.721 5.46382L5.58481 6.46125L5.66946 0H18.9987L21 2.00264L20.9959 2.2531Z"
+                                                        fill="currentColor"></path>
+                                                </svg></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide swiper-slide-next" style="width: 536.571px; margin-right: 10px;"
+                            role="group" aria-label="2 / 5">
+                            <div class="about-info-slide"><img
+                                    src="https://cdn.prod.website-files.com/6728ea77b9309773175f65e3/67296b6fb2029beb5bb64a13_About%20Main%20Swiper%20Img%201.webp"
+                                    loading="lazy" alt
+                                    sizes="(max-width: 479px) 63.640625px, (max-width: 767px) 37vw, (max-width: 991px) 29vw, 96vw"
+                                    srcset="https://cdn.prod.website-files.com/6728ea77b9309773175f65e3/67296b6fb2029beb5bb64a13_About%20Main%20Swiper%20Img%201-p-500.webp 500w, https://cdn.prod.website-files.com/6728ea77b9309773175f65e3/67296b6fb2029beb5bb64a13_About%20Main%20Swiper%20Img%201-p-800.webp 800w, https://cdn.prod.website-files.com/6728ea77b9309773175f65e3/67296b6fb2029beb5bb64a13_About%20Main%20Swiper%20Img%201-p-1080.webp 1080w, https://cdn.prod.website-files.com/6728ea77b9309773175f65e3/67296b6fb2029beb5bb64a13_About%20Main%20Swiper%20Img%201-p-1600.webp 1600w, https://cdn.prod.website-files.com/6728ea77b9309773175f65e3/67296b6fb2029beb5bb64a13_About%20Main%20Swiper%20Img%201-p-2000.webp 2000w, https://cdn.prod.website-files.com/6728ea77b9309773175f65e3/67296b6fb2029beb5bb64a13_About%20Main%20Swiper%20Img%201-p-2600.webp 2600w, https://cdn.prod.website-files.com/6728ea77b9309773175f65e3/67296b6fb2029beb5bb64a13_About%20Main%20Swiper%20Img%201-p-3200.webp 3200w, https://cdn.prod.website-files.com/6728ea77b9309773175f65e3/67296b6fb2029beb5bb64a13_About%20Main%20Swiper%20Img%201.webp 3578w"
+                                    class="about-img">
+                                <div class="about-info-main-wrap"><img
+                                        src="https://cdn.prod.website-files.com/6728ea77b9309773175f65e3/67296b6fb2029beb5bb64a13_About%20Main%20Swiper%20Img%201.webp"
+                                        loading="lazy" alt
+                                        sizes="(max-width: 479px) 63.640625px, (max-width: 767px) 37vw, (max-width: 991px) 29vw, 96vw"
+                                        srcset="https://cdn.prod.website-files.com/6728ea77b9309773175f65e3/67296b6fb2029beb5bb64a13_About%20Main%20Swiper%20Img%201-p-500.webp 500w, https://cdn.prod.website-files.com/6728ea77b9309773175f65e3/67296b6fb2029beb5bb64a13_About%20Main%20Swiper%20Img%201-p-800.webp 800w, https://cdn.prod.website-files.com/6728ea77b9309773175f65e3/67296b6fb2029beb5bb64a13_About%20Main%20Swiper%20Img%201-p-1080.webp 1080w, https://cdn.prod.website-files.com/6728ea77b9309773175f65e3/67296b6fb2029beb5bb64a13_About%20Main%20Swiper%20Img%201-p-1600.webp 1600w, https://cdn.prod.website-files.com/6728ea77b9309773175f65e3/67296b6fb2029beb5bb64a13_About%20Main%20Swiper%20Img%201-p-2000.webp 2000w, https://cdn.prod.website-files.com/6728ea77b9309773175f65e3/67296b6fb2029beb5bb64a13_About%20Main%20Swiper%20Img%201-p-2600.webp 2600w, https://cdn.prod.website-files.com/6728ea77b9309773175f65e3/67296b6fb2029beb5bb64a13_About%20Main%20Swiper%20Img%201-p-3200.webp 3200w, https://cdn.prod.website-files.com/6728ea77b9309773175f65e3/67296b6fb2029beb5bb64a13_About%20Main%20Swiper%20Img%201.webp 3578w"
+                                        class="about-info-img">
+                                    <div class="about-info-wrapper">
+                                        <div class="about-info">
+                                            <p class="about-info-heading">the
+                                                bread bar</p>
+                                            <p class="about-info-para">At
+                                                Thursday, we’re brand
+                                                therapists, culture
+                                                creators and creative
+                                                partners all rolled into
+                                                one.</p>
+                                        </div>
+                                        <div class="about-info-icon">
+                                            <div class="code-embed-2 w-embed"><svg width="100%" height="100%"
+                                                    viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M20.9959 2.2531L21 15.3405L14.543 15.4252L15.5397 10.2857C17.0462 7.74725 19.341 5.80676 19.341 5.80676L18.7435 5.03612L12.1589 13.1578C12.1589 13.1578 11.1372 14.463 8.91571 16.6859L4.60444 21L0 16.3926L4.31127 12.0785C6.53277 9.85553 7.83709 8.83319 7.83709 8.83319L15.958 2.24884L15.197 1.66007C15.197 1.66007 13.2578 3.95638 10.721 5.46382L5.58481 6.46125L5.66946 0H18.9987L21 2.00264L20.9959 2.2531Z"
+                                                        fill="currentColor"></path>
+                                                </svg></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide" style="width: 536.571px; margin-right: 10px;" role="group"
+                            aria-label="3 / 5">
+                            <div class="about-info-slide"><img
+                                    src="https://cdn.prod.website-files.com/6728ea77b9309773175f65e3/67296b6fb2029beb5bb64a13_About%20Main%20Swiper%20Img%201.webp"
+                                    loading="lazy" alt
+                                    sizes="(max-width: 479px) 63.640625px, (max-width: 767px) 37vw, (max-width: 991px) 29vw, 96vw"
+                                    srcset="https://cdn.prod.website-files.com/6728ea77b9309773175f65e3/67296b6fb2029beb5bb64a13_About%20Main%20Swiper%20Img%201-p-500.webp 500w, https://cdn.prod.website-files.com/6728ea77b9309773175f65e3/67296b6fb2029beb5bb64a13_About%20Main%20Swiper%20Img%201-p-800.webp 800w, https://cdn.prod.website-files.com/6728ea77b9309773175f65e3/67296b6fb2029beb5bb64a13_About%20Main%20Swiper%20Img%201-p-1080.webp 1080w, https://cdn.prod.website-files.com/6728ea77b9309773175f65e3/67296b6fb2029beb5bb64a13_About%20Main%20Swiper%20Img%201-p-1600.webp 1600w, https://cdn.prod.website-files.com/6728ea77b9309773175f65e3/67296b6fb2029beb5bb64a13_About%20Main%20Swiper%20Img%201-p-2000.webp 2000w, https://cdn.prod.website-files.com/6728ea77b9309773175f65e3/67296b6fb2029beb5bb64a13_About%20Main%20Swiper%20Img%201-p-2600.webp 2600w, https://cdn.prod.website-files.com/6728ea77b9309773175f65e3/67296b6fb2029beb5bb64a13_About%20Main%20Swiper%20Img%201-p-3200.webp 3200w, https://cdn.prod.website-files.com/6728ea77b9309773175f65e3/67296b6fb2029beb5bb64a13_About%20Main%20Swiper%20Img%201.webp 3578w"
+                                    class="about-img">
+                                <div class="about-info-main-wrap"><img
+                                        src="https://cdn.prod.website-files.com/6728ea77b9309773175f65e3/67296b6fb2029beb5bb64a13_About%20Main%20Swiper%20Img%201.webp"
+                                        loading="lazy" alt
+                                        sizes="(max-width: 479px) 63.640625px, (max-width: 767px) 37vw, (max-width: 991px) 29vw, 96vw"
+                                        srcset="https://cdn.prod.website-files.com/6728ea77b9309773175f65e3/67296b6fb2029beb5bb64a13_About%20Main%20Swiper%20Img%201-p-500.webp 500w, https://cdn.prod.website-files.com/6728ea77b9309773175f65e3/67296b6fb2029beb5bb64a13_About%20Main%20Swiper%20Img%201-p-800.webp 800w, https://cdn.prod.website-files.com/6728ea77b9309773175f65e3/67296b6fb2029beb5bb64a13_About%20Main%20Swiper%20Img%201-p-1080.webp 1080w, https://cdn.prod.website-files.com/6728ea77b9309773175f65e3/67296b6fb2029beb5bb64a13_About%20Main%20Swiper%20Img%201-p-1600.webp 1600w, https://cdn.prod.website-files.com/6728ea77b9309773175f65e3/67296b6fb2029beb5bb64a13_About%20Main%20Swiper%20Img%201-p-2000.webp 2000w, https://cdn.prod.website-files.com/6728ea77b9309773175f65e3/67296b6fb2029beb5bb64a13_About%20Main%20Swiper%20Img%201-p-2600.webp 2600w, https://cdn.prod.website-files.com/6728ea77b9309773175f65e3/67296b6fb2029beb5bb64a13_About%20Main%20Swiper%20Img%201-p-3200.webp 3200w, https://cdn.prod.website-files.com/6728ea77b9309773175f65e3/67296b6fb2029beb5bb64a13_About%20Main%20Swiper%20Img%201.webp 3578w"
+                                        class="about-info-img">
+                                    <div class="about-info-wrapper">
+                                        <div class="about-info">
+                                            <p class="about-info-heading">the
+                                                bread bar</p>
+                                            <p class="about-info-para">At
+                                                Thursday, we’re brand
+                                                therapists, culture
+                                                creators and creative
+                                                partners all rolled into
+                                                one.</p>
+                                        </div>
+                                        <div class="about-info-icon">
+                                            <div class="code-embed-2 w-embed"><svg width="100%" height="100%"
+                                                    viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M20.9959 2.2531L21 15.3405L14.543 15.4252L15.5397 10.2857C17.0462 7.74725 19.341 5.80676 19.341 5.80676L18.7435 5.03612L12.1589 13.1578C12.1589 13.1578 11.1372 14.463 8.91571 16.6859L4.60444 21L0 16.3926L4.31127 12.0785C6.53277 9.85553 7.83709 8.83319 7.83709 8.83319L15.958 2.24884L15.197 1.66007C15.197 1.66007 13.2578 3.95638 10.721 5.46382L5.58481 6.46125L5.66946 0H18.9987L21 2.00264L20.9959 2.2531Z"
+                                                        fill="currentColor"></path>
+                                                </svg></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide" style="width: 536.571px; margin-right: 10px;" role="group"
+                            aria-label="4 / 5">
+                            <div class="about-info-slide"><img
+                                    src="https://cdn.prod.website-files.com/6728ea77b9309773175f65e3/67296b6fb2029beb5bb64a13_About%20Main%20Swiper%20Img%201.webp"
+                                    loading="lazy" alt
+                                    sizes="(max-width: 479px) 63.640625px, (max-width: 767px) 37vw, (max-width: 991px) 29vw, 96vw"
+                                    srcset="https://cdn.prod.website-files.com/6728ea77b9309773175f65e3/67296b6fb2029beb5bb64a13_About%20Main%20Swiper%20Img%201-p-500.webp 500w, https://cdn.prod.website-files.com/6728ea77b9309773175f65e3/67296b6fb2029beb5bb64a13_About%20Main%20Swiper%20Img%201-p-800.webp 800w, https://cdn.prod.website-files.com/6728ea77b9309773175f65e3/67296b6fb2029beb5bb64a13_About%20Main%20Swiper%20Img%201-p-1080.webp 1080w, https://cdn.prod.website-files.com/6728ea77b9309773175f65e3/67296b6fb2029beb5bb64a13_About%20Main%20Swiper%20Img%201-p-1600.webp 1600w, https://cdn.prod.website-files.com/6728ea77b9309773175f65e3/67296b6fb2029beb5bb64a13_About%20Main%20Swiper%20Img%201-p-2000.webp 2000w, https://cdn.prod.website-files.com/6728ea77b9309773175f65e3/67296b6fb2029beb5bb64a13_About%20Main%20Swiper%20Img%201-p-2600.webp 2600w, https://cdn.prod.website-files.com/6728ea77b9309773175f65e3/67296b6fb2029beb5bb64a13_About%20Main%20Swiper%20Img%201-p-3200.webp 3200w, https://cdn.prod.website-files.com/6728ea77b9309773175f65e3/67296b6fb2029beb5bb64a13_About%20Main%20Swiper%20Img%201.webp 3578w"
+                                    class="about-img">
+                                <div class="about-info-main-wrap"><img
+                                        src="https://cdn.prod.website-files.com/6728ea77b9309773175f65e3/67296b6fb2029beb5bb64a13_About%20Main%20Swiper%20Img%201.webp"
+                                        loading="lazy" alt
+                                        sizes="(max-width: 479px) 63.640625px, (max-width: 767px) 37vw, (max-width: 991px) 29vw, 96vw"
+                                        srcset="https://cdn.prod.website-files.com/6728ea77b9309773175f65e3/67296b6fb2029beb5bb64a13_About%20Main%20Swiper%20Img%201-p-500.webp 500w, https://cdn.prod.website-files.com/6728ea77b9309773175f65e3/67296b6fb2029beb5bb64a13_About%20Main%20Swiper%20Img%201-p-800.webp 800w, https://cdn.prod.website-files.com/6728ea77b9309773175f65e3/67296b6fb2029beb5bb64a13_About%20Main%20Swiper%20Img%201-p-1080.webp 1080w, https://cdn.prod.website-files.com/6728ea77b9309773175f65e3/67296b6fb2029beb5bb64a13_About%20Main%20Swiper%20Img%201-p-1600.webp 1600w, https://cdn.prod.website-files.com/6728ea77b9309773175f65e3/67296b6fb2029beb5bb64a13_About%20Main%20Swiper%20Img%201-p-2000.webp 2000w, https://cdn.prod.website-files.com/6728ea77b9309773175f65e3/67296b6fb2029beb5bb64a13_About%20Main%20Swiper%20Img%201-p-2600.webp 2600w, https://cdn.prod.website-files.com/6728ea77b9309773175f65e3/67296b6fb2029beb5bb64a13_About%20Main%20Swiper%20Img%201-p-3200.webp 3200w, https://cdn.prod.website-files.com/6728ea77b9309773175f65e3/67296b6fb2029beb5bb64a13_About%20Main%20Swiper%20Img%201.webp 3578w"
+                                        class="about-info-img">
+                                    <div class="about-info-wrapper">
+                                        <div class="about-info">
+                                            <p class="about-info-heading">the
+                                                bread bar</p>
+                                            <p class="about-info-para">At
+                                                Thursday, we’re brand
+                                                therapists, culture
+                                                creators and creative
+                                                partners all rolled into
+                                                one.</p>
+                                        </div>
+                                        <div class="about-info-icon">
+                                            <div class="code-embed-2 w-embed"><svg width="100%" height="100%"
+                                                    viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M20.9959 2.2531L21 15.3405L14.543 15.4252L15.5397 10.2857C17.0462 7.74725 19.341 5.80676 19.341 5.80676L18.7435 5.03612L12.1589 13.1578C12.1589 13.1578 11.1372 14.463 8.91571 16.6859L4.60444 21L0 16.3926L4.31127 12.0785C6.53277 9.85553 7.83709 8.83319 7.83709 8.83319L15.958 2.24884L15.197 1.66007C15.197 1.66007 13.2578 3.95638 10.721 5.46382L5.58481 6.46125L5.66946 0H18.9987L21 2.00264L20.9959 2.2531Z"
+                                                        fill="currentColor"></path>
+                                                </svg></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide" role="group" aria-label="5 / 5"
+                            style="width: 536.571px; margin-right: 10px;">
+                            <div class="about-info-slide"><img
+                                    src="https://cdn.prod.website-files.com/6728ea77b9309773175f65e3/67296b6fb2029beb5bb64a13_About%20Main%20Swiper%20Img%201.webp"
+                                    loading="lazy" alt
+                                    sizes="(max-width: 479px) 63.640625px, (max-width: 767px) 37vw, (max-width: 991px) 29vw, 96vw"
+                                    srcset="https://cdn.prod.website-files.com/6728ea77b9309773175f65e3/67296b6fb2029beb5bb64a13_About%20Main%20Swiper%20Img%201-p-500.webp 500w, https://cdn.prod.website-files.com/6728ea77b9309773175f65e3/67296b6fb2029beb5bb64a13_About%20Main%20Swiper%20Img%201-p-800.webp 800w, https://cdn.prod.website-files.com/6728ea77b9309773175f65e3/67296b6fb2029beb5bb64a13_About%20Main%20Swiper%20Img%201-p-1080.webp 1080w, https://cdn.prod.website-files.com/6728ea77b9309773175f65e3/67296b6fb2029beb5bb64a13_About%20Main%20Swiper%20Img%201-p-1600.webp 1600w, https://cdn.prod.website-files.com/6728ea77b9309773175f65e3/67296b6fb2029beb5bb64a13_About%20Main%20Swiper%20Img%201-p-2000.webp 2000w, https://cdn.prod.website-files.com/6728ea77b9309773175f65e3/67296b6fb2029beb5bb64a13_About%20Main%20Swiper%20Img%201-p-2600.webp 2600w, https://cdn.prod.website-files.com/6728ea77b9309773175f65e3/67296b6fb2029beb5bb64a13_About%20Main%20Swiper%20Img%201-p-3200.webp 3200w, https://cdn.prod.website-files.com/6728ea77b9309773175f65e3/67296b6fb2029beb5bb64a13_About%20Main%20Swiper%20Img%201.webp 3578w"
+                                    class="about-img">
+                                <div class="about-info-main-wrap"><img
+                                        src="https://cdn.prod.website-files.com/6728ea77b9309773175f65e3/67296b6fb2029beb5bb64a13_About%20Main%20Swiper%20Img%201.webp"
+                                        loading="lazy" alt
+                                        sizes="(max-width: 479px) 63.640625px, (max-width: 767px) 37vw, (max-width: 991px) 29vw, 96vw"
+                                        srcset="https://cdn.prod.website-files.com/6728ea77b9309773175f65e3/67296b6fb2029beb5bb64a13_About%20Main%20Swiper%20Img%201-p-500.webp 500w, https://cdn.prod.website-files.com/6728ea77b9309773175f65e3/67296b6fb2029beb5bb64a13_About%20Main%20Swiper%20Img%201-p-800.webp 800w, https://cdn.prod.website-files.com/6728ea77b9309773175f65e3/67296b6fb2029beb5bb64a13_About%20Main%20Swiper%20Img%201-p-1080.webp 1080w, https://cdn.prod.website-files.com/6728ea77b9309773175f65e3/67296b6fb2029beb5bb64a13_About%20Main%20Swiper%20Img%201-p-1600.webp 1600w, https://cdn.prod.website-files.com/6728ea77b9309773175f65e3/67296b6fb2029beb5bb64a13_About%20Main%20Swiper%20Img%201-p-2000.webp 2000w, https://cdn.prod.website-files.com/6728ea77b9309773175f65e3/67296b6fb2029beb5bb64a13_About%20Main%20Swiper%20Img%201-p-2600.webp 2600w, https://cdn.prod.website-files.com/6728ea77b9309773175f65e3/67296b6fb2029beb5bb64a13_About%20Main%20Swiper%20Img%201-p-3200.webp 3200w, https://cdn.prod.website-files.com/6728ea77b9309773175f65e3/67296b6fb2029beb5bb64a13_About%20Main%20Swiper%20Img%201.webp 3578w"
+                                        class="about-info-img">
+                                    <div class="about-info-wrapper">
+                                        <div class="about-info">
+                                            <p class="about-info-heading">the
+                                                bread bar</p>
+                                            <p class="about-info-para">At
+                                                Thursday, we’re brand
+                                                therapists, culture
+                                                creators and creative
+                                                partners all rolled into
+                                                one.</p>
+                                        </div>
+                                        <div class="about-info-icon">
+                                            <div class="code-embed-2 w-embed"><svg width="100%" height="100%"
+                                                    viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M20.9959 2.2531L21 15.3405L14.543 15.4252L15.5397 10.2857C17.0462 7.74725 19.341 5.80676 19.341 5.80676L18.7435 5.03612L12.1589 13.1578C12.1589 13.1578 11.1372 14.463 8.91571 16.6859L4.60444 21L0 16.3926L4.31127 12.0785C6.53277 9.85553 7.83709 8.83319 7.83709 8.83319L15.958 2.24884L15.197 1.66007C15.197 1.66007 13.2578 3.95638 10.721 5.46382L5.58481 6.46125L5.66946 0H18.9987L21 2.00264L20.9959 2.2531Z"
+                                                        fill="currentColor"></path>
+                                                </svg></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-embed w-script">
+                        <style>
+                            .about-info-slide:hover .about-info-main-wrap {
+                                opacity: 100;
+                            }
+                        </style>
+
+                        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+                        <script>
+                            var swiper = new Swiper(".aboutswiper", {
+                                slidesPerView: 3.5,
+                                spaceBetween: 10,
+                                breakpoints: {
+                                    0: {
+                                        slidesPerView: 1.5,
+                                        spaceBetween: 32,
+                                    },
+                                    768: {
+                                        slidesPerView: 3.5,
+                                        spaceBetween: 10,
+                                    },
+                                },
+                            });
+                        </script>
+                    </div><span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+                </div>
+            </section>
+            <div class="common-section how-it-work">
+                <div class="grid-breackout-wrap">
+                    <div class="grid-breackout"></div>
+                    <div class="grid-breackout"></div>
+                    <div class="grid-breackout"></div>
+                    <div class="grid-breackout"></div>
+                    <div class="grid-breackout"></div>
+                    <div class="grid-breackout"></div>
+                </div>
+                <div class="globle-padding">
+                    <div class="main-container">
+                        <div class="sub-padding">
+                            <div class="week-schedule">
+                                <h2 class="common-h2-style week-schedule-heading">What
+                                    we do. Everyday of the week.</h2>
+                                <div class="week-schedule-faq-grid">
+                                    <div id="w-node-ad558bde-90c6-e80b-4d45-9e56f3cabd87-175f65f7"></div>
+                                    <div id="w-node-_4fae96c6-1845-a950-b2c6-8a7513737e7f-175f65f7"
+                                        class="faq2_component">
+                                        <div class="faq2_list">
+                                            <div class="faq2_accordion">
+                                                <div data-w-id="4fae96c6-1845-a950-b2c6-8a7513737e89"
+                                                    class="faq2_question">
+                                                    <h4 class="faq-heading">strategy</h4>
+                                                    <div class="faq2_icon-wrapper">
+                                                        <div class="icon-embed-small-2 w-embed"><svg width="100%"
+                                                                height="100%" viewBox="0 0 35 35" fill="none"
+                                                                xmlns="http://www.w3.org/2000/svg">
+                                                                <path
+                                                                    d="M35 18.3584V12.5629H21.8648L19.6892 17.5454H18.3584V0H12.5629V13.1307L17.5454 15.3063V16.637H0V22.4371H13.1307L15.3063 17.45H16.637V35H22.4371V21.8648L17.45 19.6892V18.3584H35Z"
+                                                                    fill="currentColor"></path>
+                                                            </svg></div>
+                                                    </div>
+                                                </div>
+                                                <div style="width: 100%; height: 0px;" class="faq2_answer">
+                                                    <p class="faq-para">Lorem
+                                                        Ipsum<br>Lorem
+                                                        Ipsum<br>Lorem
+                                                        Ipsum</p>
+                                                </div>
+                                            </div>
+                                            <div class="faq2_accordion">
+                                                <div data-w-id="4fae96c6-1845-a950-b2c6-8a7513737eb5"
+                                                    class="faq2_question">
+                                                    <h4 class="faq-heading">design</h4>
+                                                    <div class="faq2_icon-wrapper">
+                                                        <div class="icon-embed-small-2 w-embed"><svg width="100%"
+                                                                height="100%" viewBox="0 0 35 35" fill="none"
+                                                                xmlns="http://www.w3.org/2000/svg">
+                                                                <path
+                                                                    d="M35 18.3584V12.5629H21.8648L19.6892 17.5454H18.3584V0H12.5629V13.1307L17.5454 15.3063V16.637H0V22.4371H13.1307L15.3063 17.45H16.637V35H22.4371V21.8648L17.45 19.6892V18.3584H35Z"
+                                                                    fill="currentColor"></path>
+                                                            </svg></div>
+                                                    </div>
+                                                </div>
+                                                <div style="width: 100%; height: 0px;" class="faq2_answer">
+                                                    <p class="faq-para">Lorem
+                                                        Ipsum<br>Lorem
+                                                        Ipsum<br>Lorem
+                                                        Ipsum</p>
+                                                </div>
+                                            </div>
+                                            <div class="faq2_accordion">
+                                                <div data-w-id="7fea4f39-a16c-b09d-35f2-5496d99d1840"
+                                                    class="faq2_question">
+                                                    <h4 class="faq-heading">expansion</h4>
+                                                    <div class="faq2_icon-wrapper">
+                                                        <div class="icon-embed-small-2 w-embed"><svg width="100%"
+                                                                height="100%" viewBox="0 0 35 35" fill="none"
+                                                                xmlns="http://www.w3.org/2000/svg">
+                                                                <path
+                                                                    d="M35 18.3584V12.5629H21.8648L19.6892 17.5454H18.3584V0H12.5629V13.1307L17.5454 15.3063V16.637H0V22.4371H13.1307L15.3063 17.45H16.637V35H22.4371V21.8648L17.45 19.6892V18.3584H35Z"
+                                                                    fill="currentColor"></path>
+                                                            </svg></div>
+                                                    </div>
+                                                </div>
+                                                <div style="width: 100%; height: 0px;" class="faq2_answer">
+                                                    <p class="faq-para">Lorem
+                                                        Ipsum<br>Lorem
+                                                        Ipsum<br>Lorem
+                                                        Ipsum</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="common-section about-detail-section">
+                <div class="grid-breackout-wrap">
+                    <div class="grid-breackout black-grid"></div>
+                    <div class="grid-breackout black-grid"></div>
+                    <div class="grid-breackout black-grid"></div>
+                    <div class="grid-breackout black-grid"></div>
+                    <div class="grid-breackout black-grid"></div>
+                    <div class="grid-breackout black-grid"></div>
+                </div>
+                <div class="globle-padding">
+                    <div class="main-container">
+                        <div class="sub-padding about-detail-wrap">
+                            <div class="about-detail-info-wrap">
+                                <div class="about-detail-top-info">
+                                    <div id="w-node-ff57010b-af56-4236-16da-c0dac68f69d6-175f65f7"
+                                        class="about-detail-top-img-wrap"><img
+                                            src="https://cdn.prod.website-files.com/plugins/Basic/assets/placeholder.60f9b1840c.svg"
+                                            loading="lazy" alt class="about-detail-top-img"></div>
+                                    <div id="w-node-_95bce03e-f255-34d8-c9d3-1b33c0ac1808-175f65f7"
+                                        class="about-detail-top-info-wrap">
+                                        <h3 class="about-detail-top-info-heading"><span class="text-span">
+                                            </span>You
+                                            see, we’re not just changing our
+                                            name, we’re raising the bar.
+                                            This is our
+                                            official glow-up; same steller
+                                            minds, bolder vision.</h3>
+                                    </div>
+                                </div>
+                                <div class="about-detail-bottom-info">
+                                    <div id="w-node-fcf29a50-1468-71fa-b5f0-866f0750f33a-175f65f7" class="extra-div">
+                                    </div>
+                                    <div id="w-node-a25fb66d-b31a-9d55-a008-3b27557451e3-175f65f7"
+                                        class="about-detail-bottom-img-wrap"><img
+                                            src="https://cdn.prod.website-files.com/plugins/Basic/assets/placeholder.60f9b1840c.svg"
+                                            loading="lazy" alt class="about-detail-bottom-img"></div>
+                                    <div id="w-node-a25fb66d-b31a-9d55-a008-3b27557451e5-175f65f7"
+                                        class="about-detail-bottom-info-wrap">
+                                        <p class="about-detail-bottom-info-para">Much
+                                            like Thursday itself, we thrive
+                                            in
+                                            the sweet spot between structure
+                                            and spontaneity, where wild
+                                            ideas make love
+                                            to meticulous
+                                            execution.<br><br>And like true
+                                            love, we’ll embrace everything
+                                            that comes oue way enroute - the
+                                            unexpected, sometimes
+                                            uncomfortable, always
+                                            unpredictable - whatever helps
+                                            us birth brilliant, pretty
+                                            babies on the
+                                            brand canvas.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="controlled_chaos" class="common-section controlled-section">
+                <div class="grid-breackout-wrap">
+                    <div class="grid-breackout"></div>
+                    <div class="grid-breackout"></div>
+                    <div class="grid-breackout"></div>
+                    <div class="grid-breackout"></div>
+                    <div class="grid-breackout"></div>
+                    <div class="grid-breackout"></div>
+                </div>
+                <div class="header80_component">
+                    <div class="header80_content-wrapper">
+                        <div class="header80_images-wrapper">
+                            <div class="header80_image-list"
+                                style="will-change: transform; transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
+                                <div class="header80_image-wrapper is-image-1"><img
+                                        id="w-node-_8fbec456-8406-a1f1-34ab-b65f36cab84d-175f65f7" loading="lazy" alt
+                                        src="https://cdn.prod.website-files.com/6728ea77b9309773175f65e3/6739c5d4264a049df94587eb_image.webp"
+                                        class="header80_image"></div>
+                                <div class="header80_image-wrapper is-image-2"><img
+                                        id="w-node-_8fbec456-8406-a1f1-34ab-b65f36cab84f-175f65f7" loading="lazy" alt
+                                        src="https://cdn.prod.website-files.com/6728ea77b9309773175f65e3/6739c5d9b28a4d3505966709_image%20(2).webp"
+                                        class="header80_image"></div>
+                                <div class="header80_image-wrapper is-image-3"><img
+                                        id="w-node-_8fbec456-8406-a1f1-34ab-b65f36cab851-175f65f7" loading="lazy" alt
+                                        src="https://cdn.prod.website-files.com/6728ea77b9309773175f65e3/6739c5d6bdf24ec7036b2ed4_image%20(1).webp"
+                                        class="header80_image"></div>
+                            </div>
+                        </div>
+                        <div class="header80_images-wrapper images-wrapper-right">
+                            <div class="header80_image-list image-list-right"
+                                style="will-change: transform; transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
+                                <div class="header80_image-wrapper is-image-4"><img
+                                        id="w-node-_8fbec456-8406-a1f1-34ab-b65f36cab853-175f65f7" loading="lazy" alt
+                                        src="https://cdn.prod.website-files.com/6728ea77b9309773175f65e3/6739c5db6f5f42c0837565ce_image%20(3).webp"
+                                        class="header80_image"></div>
+                                <div class="header80_image-wrapper is-image-5"><img
+                                        id="w-node-_8fbec456-8406-a1f1-34ab-b65f36cab857-175f65f7" loading="lazy" alt
+                                        src="https://cdn.prod.website-files.com/6728ea77b9309773175f65e3/6739c5dd04cea24f60aca82d_image%20(4).webp"
+                                        class="header80_image"></div>
+                                <div class="header80_image-wrapper is-image-6"><img
+                                        id="w-node-_8fbec456-8406-a1f1-34ab-b65f36cab859-175f65f7" loading="lazy" alt
+                                        src="https://cdn.prod.website-files.com/6728ea77b9309773175f65e3/6739c5e8d98f28ed5abdeb29_image%20(5).webp"
+                                        class="header80_image"></div>
+                            </div>
+                        </div>
+                        <div class="header80_content">
+                            <div class="text-align-center controlled-section-main-wrap">
+                                <p class="controlled-section-top-para">Controlled
+                                    Chaos isn't just a catchy phrase at
+                                    Thursday; it's the lifeblood that
+                                    courses through our veins, the guiding
+                                    principle
+                                    that fuels our creative engine.</p>
+                                <div class="fs-rangeslider_form w-form">
+                                    <form id="email-form" name="email-form" data-name="Email Form" method="get"
+                                        data-wf-page-id="6728ea77b9309773175f65f7"
+                                        data-wf-element-id="76249dc2-66ee-603d-dbaa-e699433b695b"
+                                        aria-label="Email Form">
+                                        <div fs-rangeslider-formatdisplay="true" fs-rangeslider-element="wrapper"
+                                            fs-rangeslider-min="0" fs-rangeslider-max="100" fs-rangeslider-step="10"
+                                            class="fs-rangeslider_wrapper">
+                                            <div fs-rangeslider-element="track" class="fs-rangeslider_track"
+                                                style="position: relative;">
+                                                <div fs-rangeslider-element="handle" class="fs-rangeslider_handle"
+                                                    role="slider" tabindex="0" aria-label="From-3" aria-valuenow="0"
+                                                    aria-valuemin="0" aria-valuemax="100"
+                                                    style="position: absolute; right: unset; top: 50%; transform: translate(-50%, -50%); left: 0px;">
+                                                </div>
+                                                <div class="fs-rangeslider_handle-value"><span
+                                                        fs-rangeslider-element="display-value">0</span></div>
+                                                <div fs-rangeslider-element="fill" class="fs-rangeslider_fill"
+                                                    style="position: absolute; right: unset; left: 0px; width: 0px;">
+                                                </div>
+                                            </div><input class="fs-rangeslider_input w-input" maxlength="256"
+                                                name="From-3" fs-cmsfilter-field="price" data-name="From 3"
+                                                fs-cmsfilter-range="from" placeholder="From" type="text" id="From-3">
+                                        </div>
+                                    </form>
+                                    <div class="w-form-done" tabindex="-1" role="region"
+                                        aria-label="Email Form success">
+                                        <div>Thank you! Your submission has
+                                            been received!</div>
+                                    </div>
+                                    <div class="w-form-fail" tabindex="-1" role="region"
+                                        aria-label="Email Form failure">
+                                        <div>Oops! Something went wrong
+                                            while submitting the form.</div>
+                                    </div>
+                                </div>
+                                <h1 class="controlled-section-heading">Controlled</h1>
+                                <h1 class="controlled-section-heading chaos-section-heading"
+                                    style="transition: 100ms ease-in-out;">chaos</h1>
+                                <p class="controlled-section-bottom-para">After
+                                    all, we're a design powerhouse obsessed
+                                    with transforming businesses into bloody
+                                    good brands, and we believe that the
+                                    path
+                                    to clarity is paved with chaos.</p>
+                                <div class="w-embed w-script">
+                                    <script>
+                                        // Select the slider value element and section heading element
+                                        const rangeSliderValue = document.querySelector(".fs-rangeslider_handle-value span");
+                                        const sectionHeading = document.querySelector(".controlled-section-heading");
+
+                                        // Function to update font-weight
+                                        function updateFontWeight() {
+                                            const value = parseInt(rangeSliderValue.textContent) * 10;
+                                            const fontWeight = Math.min(value, 900); // Limit font-weight to a maximum of 900
+                                            sectionHeading.style.fontWeight = fontWeight;
+                                        }
+
+                                        // Set up a MutationObserver to detect changes in the slider value
+                                        const observer = new MutationObserver(updateFontWeight);
+
+                                        // Start observing the slider value for text changes
+                                        observer.observe(rangeSliderValue, { childList: true, characterData: true, subtree: true });
+
+                                        // Initial call to set font-weight on page load
+                                        updateFontWeight();
+                                    </script>
+                                    <script>
+                                        const controlledWrap = document.querySelector('.controlled-section-main-wrap');
+                                        const chaosHeading = document.querySelector('.chaos-section-heading');
+
+                                        // Define styles to rotate through
+                                        const styles = [
+                                            { fontFamily: 'Archivo', fontSize: '9.606rem', lineHeight: '8.934rem' },
+                                            { fontFamily: 'Borel', fontSize: '9.606rem', lineHeight: '9.563rem' },
+                                            { fontFamily: 'Fleur De Leah', fontSize: '9.606rem', lineHeight: '16.25rem' },
+                                            { fontFamily: 'Kings', fontSize: '9.606rem', lineHeight: '12.688rem' },
+                                            { fontFamily: 'Margarine', fontSize: '9.606rem', lineHeight: '11.5rem' },
+                                        ];
+
+                                        // Default style (set when hover out)
+                                        const defaultStyle = {
+                                            fontFamily: 'Archivo', // Replace 'inherit' with your default font family if needed
+                                            fontSize: '9.606rem',
+                                            lineHeight: '8.934rem',
+                                            color: '#F6F6F6',
+                                        };
+
+                                        // Add smooth transition with 100ms duration and 2ms delay
+                                        chaosHeading.style.transition = 'all 100ms ease-in-out';
+
+                                        // Define variables for delay and current index
+                                        let currentIndex = 0;
+
+                                        // Handle hover in
+                                        controlledWrap.addEventListener('mouseenter', () => {
+                                            const intervalId = setInterval(() => {
+                                                const style = styles[currentIndex];
+                                                chaosHeading.style.fontFamily = style.fontFamily;
+                                                chaosHeading.style.fontSize = style.fontSize;
+                                                chaosHeading.style.lineHeight = style.lineHeight;
+                                                chaosHeading.style.color = '#30F467';
+
+                                                // Update index for next style
+                                                currentIndex = (currentIndex + 1) % styles.length;
+                                            }, 102); // 100ms duration + 2ms delay
+
+                                            // Store interval ID for clearing later
+                                            controlledWrap.dataset.intervalId = intervalId;
+                                        });
+
+                                        // Handle hover out
+                                        controlledWrap.addEventListener('mouseleave', () => {
+                                            // Clear interval
+                                            clearInterval(controlledWrap.dataset.intervalId);
+
+                                            // Reset to default style
+                                            chaosHeading.style.fontFamily = defaultStyle.fontFamily;
+                                            chaosHeading.style.fontSize = defaultStyle.fontSize;
+                                            chaosHeading.style.lineHeight = defaultStyle.lineHeight;
+                                            chaosHeading.style.color = defaultStyle.color;
+                                        });
+                                    </script>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="header80_content">
+                            <div class="text-align-center controlled-section-main-wrap">
+                                <p class="controlled-section-top-para">Controlled
+                                    Chaos isn't just a catchy phrase at
+                                    Thursday; it's the lifeblood that
+                                    courses through our veins, the guiding
+                                    principle
+                                    that fuels our creative engine.</p>
+                                <div class="fs-rangeslider_form w-form">
+                                    <form id="email-form" name="email-form" data-name="Email Form" method="get"
+                                        data-wf-page-id="6728ea77b9309773175f65f7"
+                                        data-wf-element-id="8cad61a8-fe8d-ddf2-65ad-2fd4639529dc"
+                                        aria-label="Email Form">
+                                        <div fs-rangeslider-formatdisplay="true" fs-rangeslider-element="wrapper"
+                                            fs-rangeslider-min="0" fs-rangeslider-max="100" fs-rangeslider-step="10"
+                                            class="fs-rangeslider_wrapper">
+                                            <div fs-rangeslider-element="track" class="fs-rangeslider_track"
+                                                style="position: relative;">
+                                                <div fs-rangeslider-element="handle" class="fs-rangeslider_handle"
+                                                    role="slider" tabindex="0" aria-label="From-3" aria-valuenow="0"
+                                                    aria-valuemin="0" aria-valuemax="100"
+                                                    style="position: absolute; right: unset; top: 50%; transform: translate(-50%, -50%); left: 0px;">
+                                                </div>
+                                                <div class="fs-rangeslider_handle-value"><span
+                                                        fs-rangeslider-element="display-value">0</span></div>
+                                                <div fs-rangeslider-element="fill" class="fs-rangeslider_fill"
+                                                    style="position: absolute; right: unset; left: 0px; width: 0px;">
+                                                </div>
+                                            </div><input class="fs-rangeslider_input w-input" maxlength="256"
+                                                name="From-3" fs-cmsfilter-field="price" data-name="From 3"
+                                                fs-cmsfilter-range="from" placeholder="From" type="text" id="From-3">
+                                        </div>
+                                    </form>
+                                    <div class="w-form-done" tabindex="-1" role="region"
+                                        aria-label="Email Form success">
+                                        <div>Thank you! Your submission has
+                                            been received!</div>
+                                    </div>
+                                    <div class="w-form-fail" tabindex="-1" role="region"
+                                        aria-label="Email Form failure">
+                                        <div>Oops! Something went wrong
+                                            while submitting the form.</div>
+                                    </div>
+                                </div>
+                                <h1 class="controlled-section-heading">Controlled</h1>
+                                <h1 class="controlled-section-heading chaos-section-heading">chaos</h1>
+                                <p class="controlled-section-bottom-para">After
+                                    all, we're a design powerhouse obsessed
+                                    with transforming businesses into bloody
+                                    good brands, and we believe that the
+                                    path
+                                    to clarity is paved with chaos.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div data-w-id="8fbec456-8406-a1f1-34ab-b65f36cab867" class="header80_ix-trigger"></div>
+                </div>
+                <div data-w-id="4d5e1e51-835b-7a1e-e153-06de3bbd49b3" class="header142_component hide">
+                    <div class="globle-padding">
+                        <div class="main-container">
+                            <div class="sub-padding">
+                                <div class="text-align-center controlled-section-main-wrap">
+                                    <p class="controlled-section-top-para">Controlled
+                                        Chaos isn't just a catchy phrase
+                                        at Thursday; it's the lifeblood that
+                                        courses through our veins, the
+                                        guiding
+                                        principle that fuels our creative
+                                        engine.</p>
+                                    <div class="fs-rangeslider_form w-form">
+                                        <form id="email-form" name="email-form" data-name="Email Form" method="get"
+                                            data-wf-page-id="6728ea77b9309773175f65f7"
+                                            data-wf-element-id="eb0eea92-c921-2f6a-0c04-1a426230a066"
+                                            aria-label="Email Form">
+                                            <div fs-rangeslider-formatdisplay="true" fs-rangeslider-element="wrapper"
+                                                fs-rangeslider-min="0" fs-rangeslider-max="100" fs-rangeslider-step="10"
+                                                class="fs-rangeslider_wrapper">
+                                                <div fs-rangeslider-element="track" class="fs-rangeslider_track"
+                                                    style="position: relative;">
+                                                    <div fs-rangeslider-element="handle" class="fs-rangeslider_handle"
+                                                        role="slider" tabindex="0" aria-label="From-3" aria-valuenow="0"
+                                                        aria-valuemin="0" aria-valuemax="100"
+                                                        style="position: absolute; right: unset; top: 50%; transform: translate(-50%, -50%); left: 0px;">
+                                                    </div>
+                                                    <div class="fs-rangeslider_handle-value"><span
+                                                            fs-rangeslider-element="display-value">0</span></div>
+                                                    <div fs-rangeslider-element="fill" class="fs-rangeslider_fill"
+                                                        style="position: absolute; right: unset; left: 0px; width: 0px;">
+                                                    </div>
+                                                </div><input class="fs-rangeslider_input w-input" maxlength="256"
+                                                    name="From-3" fs-cmsfilter-field="price" data-name="From 3"
+                                                    fs-cmsfilter-range="from" placeholder="From" type="text"
+                                                    id="From-3">
+                                            </div>
+                                        </form>
+                                        <div class="w-form-done" tabindex="-1" role="region"
+                                            aria-label="Email Form success">
+                                            <div>Thank you! Your submission
+                                                has been received!</div>
+                                        </div>
+                                        <div class="w-form-fail" tabindex="-1" role="region"
+                                            aria-label="Email Form failure">
+                                            <div>Oops! Something went wrong
+                                                while submitting the
+                                                form.</div>
+                                        </div>
+                                    </div>
+                                    <h1 class="controlled-section-heading">Controlled</h1>
+                                    <h1 class="controlled-section-heading chaos-section-heading">chaos</h1>
+                                    <p class="controlled-section-bottom-para">After
+                                        all, we're a design powerhouse
+                                        obsessed with transforming
+                                        businesses into bloody good brands,
+                                        and we believe
+                                        that the path to clarity is paved
+                                        with chaos.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="header142_images-canvas"
+                        style="will-change: transform; transform: translate3d(-2.036vw, -2.036vh, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
+                        <div class="header142_images-group1"
+                            style="will-change: transform; transform: translate3d(-4.8384%, -4.8384%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
+                            <div class="header142_image-wrapper1"><img loading="eager"
+                                    src="https://cdn.prod.website-files.com/624380709031623bfe4aee60/6243807090316203124aee66_placeholder-image.svg"
+                                    alt class="header142_image"></div>
+                            <div class="header142_image-wrapper3"><img loading="eager"
+                                    src="https://cdn.prod.website-files.com/624380709031623bfe4aee60/6243807090316203124aee66_placeholder-image.svg"
+                                    alt class="header142_image"></div>
+                            <div class="header142_image-wrapper6"><img loading="eager"
+                                    src="https://cdn.prod.website-files.com/624380709031623bfe4aee60/6243807090316203124aee66_placeholder-image.svg"
+                                    alt class="header142_image"></div>
+                            <div class="header142_image-wrapper8"><img loading="eager"
+                                    src="https://cdn.prod.website-files.com/624380709031623bfe4aee60/6243807090316203124aee66_placeholder-image.svg"
+                                    alt class="header142_image"></div>
+                        </div>
+                        <div class="header142_images-group2"
+                            style="will-change: transform; transform: translate3d(-1.2096%, -1.2096%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
+                            <div class="header142_image-wrapper2"><img loading="eager"
+                                    src="https://cdn.prod.website-files.com/624380709031623bfe4aee60/6243807090316203124aee66_placeholder-image.svg"
+                                    alt class="header142_image"></div>
+                            <div class="header142_image-wrapper4"><img loading="eager"
+                                    src="https://cdn.prod.website-files.com/624380709031623bfe4aee60/6243807090316203124aee66_placeholder-image.svg"
+                                    alt class="header142_image"></div>
+                            <div class="header142_image-wrapper5"><img loading="eager"
+                                    src="https://cdn.prod.website-files.com/624380709031623bfe4aee60/6243807090316203124aee66_placeholder-image.svg"
+                                    alt class="header142_image"></div>
+                            <div class="header142_image-wrapper7"><img loading="eager"
+                                    src="https://cdn.prod.website-files.com/624380709031623bfe4aee60/6243807090316203124aee66_placeholder-image.svg"
+                                    alt class="header142_image"></div>
+                        </div>
+                    </div>
+                </div>
+                <header class="section_header80">
+                    <div class="padding-global-10"></div>
+                </header>
+            </div>
+            <div class="common-section hiring-form-section">
+                <div class="globle-padding hiring-form-padding">
+                    <div class="main-container">
+                        <div class="sub-padding hiring-sub-padding">
+                            <div class="hiring-lookup-form-wrapper">
+                                <div id="w-node-_5bd360f3-e387-6fd2-0ea0-ccf21dbdbb8d-175f65f7" class="extra-form-div">
+                                </div>
+                                <div id="w-node-a05e8492-af98-a97a-f773-8bda950c8dcb-175f65f7"
+                                    class="hiring-lookup-info-wrap">
+                                    <div class="hiring-lookup-info">
+                                        <p class="hiring-lookup-info-para">If
+                                            you’re damn good at what you do,
+                                            we’ll
+                                            invent a position for you.</p>
+                                        <h3 class="hiring-lookup-info-heading">We're
+                                            always on the lookout.</h3>
+                                        <div class="hiring-lookup-info-btn">
+                                            <div class="hiring-lookup-info-btn-text">We’re
+                                                hiring</div>
+                                            <div class="hiring-lookup-info-btn-icon-wrap">
+                                                <div class="hiring-lookup-info-btn-icon w-embed"><svg width="100%"
+                                                        height="100%" viewBox="0 0 24 24" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M21.2961 0.283965L6.54358 0.279329L6.44811 7.5579L12.2416 6.43431C15.103 4.73617 17.2903 2.14939 17.2903 2.14939L18.159 2.82292L9.00403 10.2453C9.00403 10.2453 7.5328 11.397 5.02702 13.9011L0.164062 18.7609L5.35771 23.9512L10.2207 19.0914C12.7265 16.5872 13.8789 15.117 13.8789 15.117L21.3009 5.96278L21.9646 6.82063C21.9646 6.82063 19.3762 9.00658 17.6769 11.8661L16.5526 17.6558L23.8359 17.5604L23.8359 2.53529L21.5785 0.279328L21.2961 0.283965Z"
+                                                            fill="currentColor"></path>
+                                                    </svg></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="w-node-e18abe21-b943-b2aa-198a-7729f89fc0cf-175f65f7" class="extra-div"></div>
+                            </div>
+                            <div id="w-node-_68d71116-d633-2393-401a-805d9c1ce3bf-175f65f7"
+                                class="hiring-lookup-form-anim">
+                                <div id="w-node-ead44c3c-8b83-06e7-895b-82360649cba3-175f65f7" class="extra-div-anim">
+                                </div>
+                                <div id="w-node-f38725eb-6338-bb3b-1193-5422365ef018-175f65f7"
+                                    class="hiring-lookup-form-wrap">
+                                    <div id="w-node-_286fbbaf-71e8-edce-6ab9-82b3d8980529-175f65f7"
+                                        class="hiring-lookup-form w-form">
+                                        <form id="wf-form-hiring-lookup-form" name="wf-form-hiring-lookup-form"
+                                            data-name="hiring-lookup-form" method="get" class="hiring-form"
+                                            data-wf-page-id="6728ea77b9309773175f65f7"
+                                            data-wf-element-id="286fbbaf-71e8-edce-6ab9-82b3d898052a"
+                                            aria-label="hiring-lookup-form"><input
+                                                class="hiring-lookup-form-field w-input" maxlength="256"
+                                                name="Name-Surname" data-name="Name Surname" placeholder="Name Surname"
+                                                type="text" id="Name-Surname"><input
+                                                class="hiring-lookup-form-field w-input" maxlength="256" name="Email-id"
+                                                data-name="Email id" placeholder="Email id" type="email" id="Email-id"
+                                                required><input class="hiring-lookup-form-field w-input" maxlength="256"
+                                                name="How-you-can-help" data-name="How you can help"
+                                                placeholder="How you can help" type="email" id="How-you-can-help"
+                                                required><input class="hiring-lookup-form-field w-input" maxlength="256"
+                                                name="Portfolio-link" data-name="Portfolio link"
+                                                placeholder="Portfolio link" type="email" id="Portfolio-link"
+                                                required><input type="submit" data-wait="Please wait..."
+                                                class="hiring-lookup-form-submit-btn w-button" value="Submit">
+                                            <div class="hiring-lookup-form-close-wrap">
+                                                <div class="code-embed-3 w-embed"><svg width="100%" height="100%"
+                                                        viewBox="0 0 12 12" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M1 1L11 11M1 11L11 1" stroke="currentColor"
+                                                            stroke-linecap="round" stroke-linejoin="round"></path>
+                                                    </svg></div>
+                                            </div>
+                                        </form>
+                                        <div class="w-form-done" tabindex="-1" role="region"
+                                            aria-label="hiring-lookup-form success">
+                                            <div>Thank you! Your submission
+                                                has been received!</div>
+                                        </div>
+                                        <div class="w-form-fail" tabindex="-1" role="region"
+                                            aria-label="hiring-lookup-form failure">
+                                            <div>Oops! Something went wrong
+                                                while submitting the
+                                                form.</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-embed w-script">
+                    <style>
+                        .form_active div#w-node-_68d71116-d633-2393-401a-805d9c1ce3bf-175f65f7 {
+                            transform: translate(0%);
+                            transition: 0.5s ease-in-out;
+                        }
+
+                        .form_active .extra-form-div {
+                            grid-area: span 1 / span 3 / span 1 / span 3 !important;
+                            transition: 0.5s ease-in-out;
+                        }
+
+                        .form_active .extra-div {
+                            grid-area: span 1 / span 2 / span 1 / span 2 !important;
+                            transition: 0.5s ease-in-out;
+                        }
+                    </style>
+
+                    <script>
+                        // Select elements
+                        const formPadding = document.querySelector('.hiring-form-padding');
+                        const infoButton = document.querySelector('.hiring-lookup-info-btn-icon-wrap');
+                        const extraDiv = document.querySelector('.hiring-lookup-form-close-wrap');
+
+                        // Add .form_active class when clicking on .hiring-lookup-info-btn-icon-wrap
+                        infoButton.addEventListener('click', () => {
+                            formPadding.classList.add('form_active');
+                        });
+
+                        // Remove .form_active class when clicking on .extra-div-anim
+                        extraDiv.addEventListener('click', () => {
+                            formPadding.classList.remove('form_active');
+                        });
+                    </script>
+                </div>
+            </div>
+            <div class="common-section case-study-section">
+                <div class="grid-breackout-wrap">
+                    <div class="grid-breackout black-grid"></div>
+                    <div class="grid-breackout black-grid"></div>
+                    <div class="grid-breackout black-grid"></div>
+                    <div class="grid-breackout black-grid"></div>
+                    <div class="grid-breackout black-grid"></div>
+                    <div class="grid-breackout black-grid"></div>
+                </div>
+                <div class="globle-padding">
+                    <div class="main-container">
+                        <div class="sub-padding">
+                            <div class="case-study-wapper">
+                                <div id="w-node-_14495419-8de3-9ea2-b88c-e9da10a7e0b8-175f65f7"
+                                    class="w-layout-hflex case-study-hr"></div>
+                                <div id="w-node-_2daad9fe-b6e6-ad52-171e-f2ca40630d1e-175f65f7"
+                                    class="case-study-img-wrap"><img
+                                        src="https://cdn.prod.website-files.com/6728ea77b9309773175f65e3/6739eddabdf24ec70384f4dc_WhatsApp%20Image%202023-11-10%20at%202.04.48%20PM.png"
+                                        loading="lazy" alt class="case-study-img active-img"
+                                        style="translate: none; rotate: none; scale: none; transform: translate(0px, 0%);"><img
+                                        src="https://cdn.prod.website-files.com/6728ea77b9309773175f65e3/6739eddd1fa566a3332e2819_Award-.png"
+                                        loading="lazy" alt class="case-study-img"
+                                        style="translate: none; rotate: none; scale: none; transform: translate(0px, 100%);">
+                                </div>
+                                <div id="w-node-_899e9ddc-b2ef-555f-7172-17675f7529c8-175f65f7"
+                                    class="case-study-info-wapper">
+                                    <div class="case-study-heading-wrap">
+                                        <h3 class="case-study-heading">Our
+                                            accolades we achieved as</h3>
+                                        <h3 class="case-study-heading">The
+                                            Honest Illustrations</h3>
+                                    </div>
+                                    <div class="case-study-sub-heading-wrap">
+                                        <div class="case-study-sub-wrapper">
+                                            <div class="case-study-sub-info-wrap active" style="opacity: 1;">
+                                                <div class="case-study-sub-heading">2023
+                                                    kyoorius </div>
+                                                <div class="case-study-sub-para">The
+                                                    Bread Bar brand identity
+                                                    design
+                                                </div>
+                                            </div>
+                                            <div class="case-study-sub-info-wrap" style="opacity: 0;">
+                                                <div class="case-study-sub-heading">Abbys
+                                                    2023</div>
+                                                <div class="case-study-sub-para">Kul
+                                                    Brand Identity
+                                                    Design</div>
+                                            </div>
+                                        </div>
+                                        <div class="case-study-progress-bar">
+                                            <div class="w-layout-hflex case-study-progress"></div>
+                                            <div class="case-study-bar" style="width: 36.4%;"></div>
+                                        </div>
+                                        <div class="case-study-btn-wrap">
+                                            <div class="text-block">view
+                                                case study</div>
+                                            <div class="case-study-btn-icon-wrap">
+                                                <div class="code-embed-4 w-embed"><svg width="100%" height="100%"
+                                                        viewBox="0 0 19 19" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M3.45545 14.8341L5.62981 12.6611C6.59879 11.6928 7.3599 10.9938 7.86958 10.544C8.12443 10.3192 8.31643 10.1566 8.44013 10.0538C8.50198 10.0025 8.54676 9.96603 8.57379 9.94424L8.60092 9.9225L8.60172 9.92185L8.60242 9.9213L8.60349 9.92046L8.60362 9.92036L8.60434 9.91979L8.61736 9.9096L8.63359 9.89645L11.149 7.85712L9.11076 10.371L9.09807 10.3866L9.08834 10.3991L9.08784 10.3997L9.08766 10.3999L9.08682 10.401L9.08597 10.4021L9.08563 10.4025L9.06387 10.4296C9.04207 10.4566 9.00562 10.5013 8.95421 10.5631C8.8514 10.6868 8.68873 10.8786 8.46372 11.1333C8.01369 11.6427 7.31422 12.4033 6.34525 13.3716L4.16864 15.5468L3.45545 14.8341ZM7.5312 2.44333L9.06379 2.44381C8.97313 2.50632 8.88144 2.56771 8.78886 2.62768L7.52557 2.87268L7.5312 2.44333ZM16.5574 9.92465L16.5574 11.4597L16.1242 11.4654L16.3688 10.2061C16.4303 10.1113 16.4933 10.0174 16.5574 9.92465Z"
+                                                            fill="#30F467" stroke="currentColor" stroke-width="4.88515">
+                                                        </path>
+                                                    </svg></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="w-node-aaf6e468-c725-582d-2e2d-993702356e31-175f65f7"
+                                    class="w-layout-hflex case-study-hr bottom-hr"></div>
+                                <div id="w-node-_31e1be0b-ad1e-9c8b-d1a4-ba024301be54-175f65f7"
+                                    class="w-embed w-script">
+                                    <style>
+                                        .case-study-sub-info-wrap {
+                                            opacity: 0;
+                                            transition: opacity 1s ease-in-out;
+                                        }
+
+                                        .case-study-sub-info-wrap.active {
+                                            opacity: 1;
+                                        }
+                                    </style>
+
+                                    <script>
+                                        document.addEventListener('DOMContentLoaded', () => {
+                                            // Selectors
+                                            const caseStudyImages = document.querySelectorAll('.case-study-img-wrap .case-study-img');
+                                            const caseStudyTexts = document.querySelectorAll('.case-study-sub-wrapper .case-study-sub-info-wrap');
+                                            const progressBar = document.querySelector('.case-study-bar');
+
+                                            // Validation
+                                            if (!caseStudyImages.length || !caseStudyTexts.length || !progressBar) {
+                                                console.error('Missing required DOM elements. Ensure the HTML structure matches.');
+                                                return;
+                                            }
+
+                                            let currentIndex = 0;
+                                            const duration = 5; // Total duration in seconds
+
+                                            function resetActiveClasses() {
+                                                caseStudyImages.forEach((img) => img.classList.remove('active-img'));
+                                                caseStudyTexts.forEach((text) => text.classList.remove('active'));
+                                            }
+
+                                            function startAnimation() {
+                                                const nextIndex = (currentIndex + 1) % caseStudyImages.length;
+
+                                                console.log('Animating: Current Index:', currentIndex, 'Next Index:', nextIndex);
+
+                                                // Reset active classes
+                                                resetActiveClasses();
+
+                                                // Set active classes
+                                                if (caseStudyImages[currentIndex]) {
+                                                    caseStudyImages[currentIndex].classList.add('active-img');
+                                                } else {
+                                                    console.error('Image not found for currentIndex:', currentIndex);
+                                                }
+
+                                                if (caseStudyTexts[currentIndex]) {
+                                                    caseStudyTexts[currentIndex].classList.add('active');
+                                                } else {
+                                                    console.error('Text not found for currentIndex:', currentIndex);
+                                                }
+
+                                                // Progress bar animation
+                                                gsap.to(progressBar, {
+                                                    width: '100%',
+                                                    duration,
+                                                    ease: 'linear',
+                                                    onComplete: () => gsap.set(progressBar, { width: '0%' }),
+                                                });
+
+                                                // Image animations
+                                                gsap.fromTo(
+                                                    caseStudyImages[currentIndex],
+                                                    { y: '0%' },
+                                                    { y: '-100%', duration: 2, ease: 'power1.inOut', delay: 2 }
+                                                );
+
+                                                gsap.fromTo(
+                                                    caseStudyImages[nextIndex],
+                                                    { y: '100%' },
+                                                    { y: '0%', duration: 2, ease: 'power1.inOut', delay: 2 }
+                                                );
+
+                                                // Text fade animations
+                                                gsap.to(caseStudyTexts[currentIndex], {
+                                                    opacity: 0,
+                                                    duration: 1,
+                                                    ease: 'power1.inOut',
+                                                    delay: 2,
+                                                });
+
+                                                gsap.to(caseStudyTexts[nextIndex], {
+                                                    opacity: 1,
+                                                    duration: 1,
+                                                    ease: 'power1.inOut',
+                                                    delay: 3,
+                                                });
+
+                                                // Update index
+                                                currentIndex = nextIndex;
+                                            }
+
+                                            // Start the animation loop
+                                            setInterval(startAnimation, duration * 1000);
+                                            startAnimation();
+                                        });
+                                    </script>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="exprole_section" class="common-section exprole-section">
+                <div class="grid-breackout-wrap">
+                    <div class="grid-breackout"></div>
+                    <div class="grid-breackout"></div>
+                    <div class="grid-breackout"></div>
+                    <div class="grid-breackout"></div>
+                    <div class="grid-breackout"></div>
+                    <div class="grid-breackout"></div>
+                </div>
+                <div data-w-id="68bd9f8d-7cb7-cc46-01d5-88f27f466c8a"
+                    class="header142_component explore-section-component">
+                    <div class="globle-padding">
+                        <div class="main-container">
+                            <div class="sub-padding">
+                                <div class="text-align-center exprole-section-wrapper">
+                                    <p class="exprole-section-para">No
+                                        pressure, no pretense. Just a raw,
+                                        unfiltered
+                                        explosion of posters, pictures,
+                                        palettes, and punchlines. It's our
+                                        playground,
+                                        our backyard, our love letter to
+                                        design. <br><br>Here we break
+                                        patterns, draw
+                                        lines, and make sense (mostly to
+                                        ourselves). It's what we do for a
+                                        loving,
+                                        fuelled by defiance, caffeine, and a
+                                        healthy dose of controlled chaos.
+                                        Welcome
+                                        to our museum, where screenshots are
+                                        encouraged and imitation is the
+                                        sincerest
+                                        form of flattery.</p>
+                                    <div class="exprole-section-icon-wrap">
+                                        <div class="exprole-section-icon-div">
+                                            <div class="exprole-section-icon w-embed"><svg width="100%" height="100%"
+                                                    viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M21.9322 16.804L22.9029 17.7793L25.815 14.8672H35V20.1374H21.9643V21.5201H25.2473L31.7399 28.0128L28.0128 31.7399L22.5504 26.2729L20.1374 23.869L18.2509 21.9734L17.2756 22.9441L20.1374 25.8104V35H14.8672V23.869L14.8489 23.8874V22.0925H13.4707V25.2656L6.99176 31.7399L3.26923 28.0128L11.1355 20.1374H11.1126L12.619 18.631L11.6392 17.6557L9.16667 20.1374H0V14.8672H11.1355L11.1264 14.8581H13.0174V13.4707H9.73901L3.26923 6.99176L6.99176 3.26923L12.2482 8.51648L16.5476 12.8159L17.5183 11.8407L14.8672 9.1804V0H20.1374V6.87729H20.1328V12.9533H21.5201V9.75733L28.0128 3.26923L31.7399 6.99176L26.2225 12.5092L23.869 14.8672L21.9322 16.804Z"
+                                                        fill="currentColor"></path>
+                                                </svg></div>
+                                        </div>
+                                        <div class="exprole-section-icon-text">drag
+                                            to explore</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="drag_img_wrap">
+                        <img src="https://cdn.prod.website-files.com/6728ea77b9309773175f65e3/6739d709d03eccef6cf9138c_Thursday%20Poster%203.webp"
+                            loading="lazy" alt class="drag_img drag_img_1"><img
+                            src="https://cdn.prod.website-files.com/6728ea77b9309773175f65e3/6739d70953821f6427cbbf19_Thursday%20Poster%202.webp"
+                            loading="lazy" sizes="(max-width: 479px) 100vw, 206px"
+                            srcset="https://cdn.prod.website-files.com/6728ea77b9309773175f65e3/6739d70953821f6427cbbf19_Thursday%20Poster%202-p-500.webp 500w, https://cdn.prod.website-files.com/6728ea77b9309773175f65e3/6739d70953821f6427cbbf19_Thursday%20Poster%202-p-800.webp 800w, https://cdn.prod.website-files.com/6728ea77b9309773175f65e3/6739d70953821f6427cbbf19_Thursday%20Poster%202-p-1080.webp 1080w, https://cdn.prod.website-files.com/6728ea77b9309773175f65e3/6739d70953821f6427cbbf19_Thursday%20Poster%202-p-1600.webp 1600w, https://cdn.prod.website-files.com/6728ea77b9309773175f65e3/6739d70953821f6427cbbf19_Thursday%20Poster%202-p-2000.webp 2000w, https://cdn.prod.website-files.com/6728ea77b9309773175f65e3/6739d70953821f6427cbbf19_Thursday%20Poster%202-p-2600.webp 2600w, https://cdn.prod.website-files.com/6728ea77b9309773175f65e3/6739d70953821f6427cbbf19_Thursday%20Poster%202.webp 3072w"
+                            alt class="drag_img drag_img_2"><img
+                            src="https://cdn.prod.website-files.com/6728ea77b9309773175f65e3/6739d7098a328ca11f949170_Thursday%20Poster%201.webp"
+                            loading="lazy" alt class="drag_img drag_img_3"><img
+                            src="https://cdn.prod.website-files.com/6728ea77b9309773175f65e3/6739d7091c22434577ca6aa7_Thursday%20Stars%20Final.webp"
+                            loading="lazy" alt class="drag_img drag_img_4"><img
+                            src="https://cdn.prod.website-files.com/6728ea77b9309773175f65e3/6739d709022685bac3b8913b_Thursday.webp"
+                            loading="lazy" sizes="(max-width: 479px) 100vw, 206px"
+                            srcset="https://cdn.prod.website-files.com/6728ea77b9309773175f65e3/6739d709022685bac3b8913b_Thursday-p-500.webp 500w, https://cdn.prod.website-files.com/6728ea77b9309773175f65e3/6739d709022685bac3b8913b_Thursday-p-800.webp 800w, https://cdn.prod.website-files.com/6728ea77b9309773175f65e3/6739d709022685bac3b8913b_Thursday.webp 1080w"
+                            alt class="drag_img drag_img_5"><img
+                            src="https://cdn.prod.website-files.com/6728ea77b9309773175f65e3/6739d70904cea24f60b7160c_Thursday%201.webp"
+                            loading="lazy" alt class="drag_img drag_img_6">
+                    </div>
+                </div>
+                <div data-poster-url="https://cdn.prod.website-files.com/6728ea77b9309773175f65e3%2F672ac25dc478f7cc2f9840de_-afbe-4370-b41b-faedb4ca3c60-poster-00001.jpg"
+                    data-video-urls="https://cdn.prod.website-files.com/6728ea77b9309773175f65e3%2F672ac25dc478f7cc2f9840de_-afbe-4370-b41b-faedb4ca3c60-transcode.mp4,https://cdn.prod.website-files.com/6728ea77b9309773175f65e3%2F672ac25dc478f7cc2f9840de_-afbe-4370-b41b-faedb4ca3c60-transcode.webm"
+                    data-autoplay="true" data-loop="true" data-wf-ignore="true"
+                    class="exprole-section-video w-background-video w-background-video-atom"><video
+                        id="b05272bc-dffa-f984-81b2-043f65f5cb84-video" autoplay loop
+                        style="background-image:url(&quot;https://cdn.prod.website-files.com/6728ea77b9309773175f65e3%2F672ac25dc478f7cc2f9840de_-afbe-4370-b41b-faedb4ca3c60-poster-00001.jpg&quot;)"
+                        muted playsinline data-wf-ignore="true" data-object-fit="cover" __idm_id__="622593">
+                        <source
+                            src="https://cdn.prod.website-files.com/6728ea77b9309773175f65e3%2F672ac25dc478f7cc2f9840de_-afbe-4370-b41b-faedb4ca3c60-transcode.mp4"
+                            data-wf-ignore="true">
+                        <source
+                            src="https://cdn.prod.website-files.com/6728ea77b9309773175f65e3%2F672ac25dc478f7cc2f9840de_-afbe-4370-b41b-faedb4ca3c60-transcode.webm"
+                            data-wf-ignore="true">
+                    </video><noscript>
+                        <style>
+                            [data-wf-bgvideo-fallback-img] {
+                                display: none;
+                            }
+
+                            @media (prefers-reduced-motion: reduce) {
+                                [data-wf-bgvideo-fallback-img] {
+                                    position: absolute;
+                                    z-index: -100;
+                                    display: inline-block;
+                                    height: 100%;
+                                    width: 100%;
+                                    object-fit: cover;
+                                }
+                            }
+                        </style><img data-wf-bgvideo-fallback-img="true"
+                            src="https://cdn.prod.website-files.com/6728ea77b9309773175f65e3%2F672ac25dc478f7cc2f9840de_-afbe-4370-b41b-faedb4ca3c60-poster-00001.jpg"
+                            alt />
+                    </noscript>
+                    <div aria-live="polite"><button type="button" data-w-bg-video-control="true"
+                            aria-controls="b05272bc-dffa-f984-81b2-043f65f5cb84-video"
+                            class="w-backgroundvideo-backgroundvideoplaypausebutton w-background-video--control"><span><img
+                                    src="https://cdn.prod.website-files.com/6022af993a6b2191db3ed10c/628299f8aa233b83918e24fd_Pause.svg"
+                                    loading="lazy" alt="Pause video"></span><span hidden><img loading="lazy"
+                                    alt="Play video"
+                                    src="https://cdn.prod.website-files.com/6022af993a6b2191db3ed10c/628298b20ae0236682d4b87f_Play-24.svg"></span></button>
+                    </div>
+                </div>
+                <div class="w-embed w-script">
+                    <script>
+                        document.addEventListener("DOMContentLoaded", () => {
+                            const exploreSection = document.querySelector(".explore-section-component");
+
+                            if (!exploreSection) {
+                                console.error("No element with class 'explore-section-component' found.");
+                                return;
+                            }
+
+                            const elements = exploreSection.querySelectorAll("*");
+                            let isDragging = false;
+                            let startX = 0, startY = 0;
+                            let velocityX = 0, velocityY = 0;
+                            let currentX = 0, currentY = 0;
+
+                            const damping = 0.1; // Adjust for smoother or snappier movement
+                            const animationLoop = () => {
+                                currentX += velocityX;
+                                currentY += velocityY;
+
+                                elements.forEach((element, index) => {
+                                    const offsetMultiplier = (index + 1) * 0.1; // Parallax effect multiplier
+                                    const translateX = currentX * offsetMultiplier;
+                                    const translateY = currentY * offsetMultiplier;
+                                    element.style.transform = `translate(${translateX}px, ${translateY}px)`;
+                                });
+
+                                // Gradually reduce velocity for smooth inertia
+                                velocityX *= 1 - damping;
+                                velocityY *= 1 - damping;
+
+                                // Stop the animation loop if velocity is almost zero
+                                if (Math.abs(velocityX) > 0.001 || Math.abs(velocityY) > 0.001) {
+                                    requestAnimationFrame(animationLoop);
+                                }
+                            };
+
+                            const onDragStart = (e) => {
+                                isDragging = true;
+                                startX = e.clientX || e.touches[0].clientX;
+                                startY = e.clientY || e.touches[0].clientY;
+                                exploreSection.style.cursor = "grabbing";
+                            };
+
+                            const onDragMove = (e) => {
+                                if (!isDragging) return;
+
+                                const clientX = e.clientX || e.touches[0].clientX;
+                                const clientY = e.clientY || e.touches[0].clientY;
+
+                                velocityX += (clientX - startX) * 0.1; // Apply sensitivity multiplier
+                                velocityY += (clientY - startY) * 0.1;
+
+                                startX = clientX;
+                                startY = clientY;
+
+                                requestAnimationFrame(animationLoop); // Start animation loop
+                            };
+
+                            const onDragEnd = () => {
+                                isDragging = false;
+                                exploreSection.style.cursor = "grab";
+                            };
+
+                            // Add mouse and touch events
+                            exploreSection.addEventListener("mousedown", onDragStart);
+                            exploreSection.addEventListener("mousemove", onDragMove);
+                            exploreSection.addEventListener("mouseup", onDragEnd);
+                            exploreSection.addEventListener("mouseleave", onDragEnd);
+
+                            exploreSection.addEventListener("touchstart", onDragStart);
+                            exploreSection.addEventListener("touchmove", onDragMove);
+                            exploreSection.addEventListener("touchend", onDragEnd);
+                        });
+                    </script>
+                </div>
+            </div>
+            <div id="connect" class="common-section footer-section">
+                <div class="globle-padding">
+                    <div class="main-container">
+                        <div class="sub-padding footer-padding">
+                            <div class="footer-nav-wrap">
+                                <div class="footer-sub-heading">
+                                    <p class="footer-sub-para">Have a new
+                                        project, collaboration or general
+                                        enquiry?
+                                        <br>Don’t be a stranger. Say hi.
+                                    </p><a href="mailto:info@thursday.com" class="footer-sub-email w-inline-block">
+                                        <div class="footer-sub-email-text">info@thursday.com</div>
+                                    </a>
+                                </div><a href="#" class="footer-brand w-inline-block">
+                                    <div class="footer-brand-img w-embed"><svg width="100%" height="100%"
+                                            viewBox="0 0 1060 442" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0_822_5340)">
+                                                <path
+                                                    d="M514.397 326.274V235.14H555.829V331.509C555.829 345.652 561.748 352.981 574.127 352.981H577.353C589.732 352.981 595.11 345.646 595.11 331.509V264.468C595.11 250.851 591.342 242.469 581.121 234.088L540.765 200.046C521.933 184.856 516.014 174.381 516.014 149.768V125.149C516.014 85.8673 534.846 65.4424 569.824 65.4424H581.127C616.64 65.4424 635.472 85.8673 635.472 125.149V171.24H593.499V122.008C593.499 108.392 588.656 99.4896 577.359 99.4896H574.132C562.835 99.4896 557.992 108.392 557.992 122.008V146.101C557.992 158.67 560.144 164.432 569.83 172.287L610.186 206.328C629.559 222.039 637.088 233.561 637.088 259.227V326.269C637.088 367.124 617.715 387.549 581.127 387.549H569.824C533.77 387.549 514.403 367.124 514.403 326.269L514.397 326.274Z"
+                                                    fill="currentColor"></path>
+                                                <path
+                                                    d="M946.468 420.955V393.196C953.463 398.436 970.144 406.812 987.365 406.812C1009.42 406.812 1019.11 397.384 1019.11 379.579V366.483C1013.19 371.197 1001.35 378.006 984.673 378.006C955.62 378.006 937.863 362.816 937.863 324.06V68.4688H979.295V314.111C979.295 332.968 986.83 341.87 1001.89 341.87C1008.35 341.87 1014.27 339.776 1018.03 336.635V68.4688H1060V377.485C1060 422.002 1033.63 441.38 997.046 441.38C969.603 441.38 950.771 428.284 946.468 420.955Z"
+                                                    fill="currentColor"></path>
+                                                <path
+                                                    d="M96.8526 106.297V68.5878H62.4152V18.8301H34.7489L21.2361 68.5878H0V106.297H19.9077V335.175C19.9077 371.837 36.5886 387.553 64.0315 387.553C79.0961 387.553 88.7825 382.318 92.5501 378.651V345.657C89.8581 348.277 84.48 351.418 78.0204 351.418C67.7991 351.418 62.4152 345.136 62.4152 334.134V106.297H96.8526Z"
+                                                    fill="currentColor"></path>
+                                                <path
+                                                    d="M189.401 65.4457C136.608 65.4457 135.721 128.997 135.721 128.997H126.769L142.356 67.2365C142.356 67.2365 144.196 57.1385 144.196 37.8864V0.498047H102.229V385.458H144.196V139.839C144.302 133.735 145.513 113.762 156.798 107.394C159.631 106.049 162.781 105.248 166.255 105.248C177.017 105.248 182.936 112.057 182.936 126.2V385.458H224.368V108.916C224.368 78.0153 211.989 65.4457 189.396 65.4457H189.401Z"
+                                                    fill="currentColor"></path>
+                                                <path
+                                                    d="M470.626 65.4706C426.085 65.9969 419.279 120.847 418.679 128.17C418.626 128.862 418.603 129.245 418.603 129.245H409.692L425.609 68.5886H386.869V385.46H428.836V126.791C428.836 119.851 430.964 104.198 446.592 104.198C456.279 104.198 460.581 111.006 460.581 124.623V191.664H502.013V108.912C502.013 78.2118 490.71 66.0141 470.62 65.4648L470.626 65.4706Z"
+                                                    fill="currentColor"></path>
+                                                <path
+                                                    d="M372.146 385.46C372.146 385.46 365.892 367.764 365.892 331.794V68.5879H323.926V305.677C323.926 305.677 323.779 341.354 309.69 347.127C309.496 347.207 309.308 347.293 309.114 347.373C308.996 347.419 308.879 347.47 308.767 347.516C306.586 348.334 304.276 348.792 301.861 348.792C291.099 348.792 285.721 341.984 285.721 327.841V68.5879H243.754V343.036C243.754 374.984 256.132 387.554 279.267 387.554C279.267 387.554 331.555 391.616 336.704 321.233H347.513L326.618 385.46H372.152H372.146Z"
+                                                    fill="currentColor"></path>
+                                                <path
+                                                    d="M782.691 385.458C782.691 385.458 776.437 367.763 776.437 331.793V0.498047H735.005V23.1714C735.005 24.6417 735.046 26.1808 735.117 27.7655C736.445 50.9996 756.946 128.992 756.946 128.992H747.219C747.219 128.992 747.219 128.94 747.207 128.86V128.9C747.207 128.9 747.195 128.809 747.184 128.643C747.037 127.127 746.349 120.536 744.803 112.291C740.501 92.2841 728.698 61.9729 696.976 67.2937C670.539 72.2197 653.758 87.5412 653.758 118.865V343.03C653.758 374.977 666.671 387.547 689.271 387.547C689.653 387.547 690.023 387.524 690.405 387.512L690.364 387.547C690.364 387.547 742.599 391.603 747.795 321.329C747.795 321.295 747.807 321.26 747.813 321.226H758.622L737.726 385.453H782.703L782.691 385.458ZM695.725 120.959C695.725 107.325 702.707 100.494 714.927 99.5959C723.561 99.4185 735.005 107.217 735.005 121.937V311.191C734.147 321.386 731.149 342.6 721.063 347.652C718.536 348.711 715.814 349.317 712.946 349.317C701.649 349.317 695.73 341.983 695.73 328.366V120.959H695.725Z"
+                                                    fill="currentColor"></path>
+                                                <path d="M878.667 385.471H878.764L878.667 385.391V385.471Z"
+                                                    fill="currentColor"></path>
+                                                <path
+                                                    d="M918.491 353.76V123.434C918.491 84.1514 900.193 63.7266 864.146 63.7266H852.843C817.33 63.7266 798.498 83.1045 798.498 121.34V189.949H839.93V120.287C839.93 106.67 845.313 97.768 856.61 97.768H859.837C871.134 97.768 876.518 106.67 876.518 120.287V223.464C870.599 220.844 862.529 217.703 851.767 217.703C816.795 217.703 795.806 236.034 795.806 274.269V341.31C795.806 373.258 808.184 385.827 831.319 385.827C831.401 385.827 831.477 385.827 831.56 385.827H831.554C831.554 385.827 883.842 389.895 888.991 319.512L888.779 319.879C888.797 319.753 888.814 319.638 888.832 319.512H899.641L878.746 383.739H923.751C923.751 383.739 920.248 373.83 918.485 353.766L918.491 353.76ZM837.778 272.18C837.778 257.517 845.848 250.182 859.837 250.182C866.291 250.182 872.21 252.276 876.518 254.37V314.152C875.39 325.325 872.151 342.163 862.876 345.893C862.57 346.019 862.3 346.133 862.018 346.254C859.784 347.112 857.433 347.604 854.994 347.604C843.697 347.604 837.778 340.795 837.778 326.653V272.18Z"
+                                                    fill="currentColor"></path>
+                                            </g>
+                                            <defs>
+                                                <clippath id="clip0_822_5340">
+                                                    <rect width="1060" height="441" fill="white"
+                                                        transform="translate(0 0.5)"></rect>
+                                                </clippath>
+                                            </defs>
+                                        </svg></div>
+                                </a>
+                                <div class="footer-nav-link-wrap"><a href="#" class="footer-nav-link">Instagram</a>
+                                    <div class="w-layout-vflex footer-nav-hr"></div><a href="#"
+                                        class="footer-nav-link">linkedin</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+<!-- jQuery CDN Start -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<!-- jQuery CDN End -->
+
+<!-- Swiper Js CDN Start -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<!-- Swiper Js CDN End -->
+
+<!-- [Attributes by Finsweet] Range Slider -->
+<script defer src="https://cdn.jsdelivr.net/npm/@finsweet/attributes-rangeslider@1/rangeslider.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
+
+<!-- Custome Js Start -->
+<script src="./src/js/index.js"></script>
+<!-- Custome Js End -->
+
+</html>
+
+<script>
+    const paths = document.querySelectorAll('.svg-container .orbit-group');
+
+    paths.forEach((path) => {
+        const duration = Math.random() * 485 + 10; // Random duration between 5s and 20s
+        const isReverse = Math.random() > 0.5;
+        path.style.animation = `rotate ${duration}s linear infinite ${isReverse ? 'reverse' : 'normal'}`;
+    });
+
+</script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const items = gsap.utils.toArray(".header1_image");  // Select all 9 images
+
+        // Extract src attributes directly from the image elements
+        const imageUrls = items.map(item => item.src);
+
+        let currentIndex = 0;
+
+        function rotateImages() {
+            // Get the Flip state before rotating, capturing the layout of the items
+            const state = Flip.getState(items);
+
+            // Update the src of the 3 visible images
+            items.forEach((item, i) => {
+                let imgIndex = (currentIndex + i) % imageUrls.length;  // Rotating through the list
+                item.src = imageUrls[imgIndex];  // Dynamically update the image src
+            });
+
+            currentIndex = (currentIndex + 1) % imageUrls.length;  // Increment the index for next rotation
+
+            // Animate the position changes and the swapping effect
+            Flip.from(state, {
+                absolute: true,
+                duration: 1.5,  // Adjust the duration for smoother motion
+                ease: "power2.inOut",  // Smooth easing for a more dynamic feel
+                stagger: 0.2,  // Adds a staggered effect between each image
+                onEnter: (elements) => {
+                    gsap.fromTo(elements, { opacity: 0 }, { opacity: 1, duration: 0.5 });  // Fade in effect
+                },
+                onLeave: (elements) => {
+                    gsap.to(elements, { opacity: 0, duration: 0.5 });  // Fade out effect
+                }
+            });
+        }
+
+        // Rotate images every 1.5 seconds
+        setInterval(rotateImages, 2000);
+    });
+</script>

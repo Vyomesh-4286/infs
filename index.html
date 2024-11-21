@@ -29,7 +29,7 @@
 
 <body>
     <!-- Header Start -->
-    <header class="z-20 flex items-center px-2 py-1 lg:px-16 absolute top-0 w-full bg-transparent">
+    <header class="hidden z-20 flex items-center px-2 py-1 lg:px-16 absolute top-0 w-full bg-transparent">
         <a class="flex-shrink-0" href="/">
             <img alt="INFS Logo" src="./src/images/infs_logo.webp" width="92" height="58" decoding="async"
                 data-nimg="future" class="invert-0">
@@ -263,709 +263,83 @@
     <!-- Main Section Start -->
     <main>
 
-        <!-- Main Banner Section Start -->
-        <section class="main_banner">
-            <div class="relative h-screen md:hidden">
-                <img src="./src/images/Main_Banner_img_1.webp" class="object-cover object-left w-full h-screen" alt="">
-                <div
-                    class="absolute top-0 flex flex-col items-center justify-center w-full h-full bg-black/30 text-white/90 ">
-                    <p>Set Off on a Successful Career</p>
-                    <h1 class="mt-4 mb-8 text-center text-4xl font-bold lg:text-7xl lg:leading-[66px]">Become A Fitness
-                        Coach TODAY!</h1>
-                    <div>
-                        <a class="inline-block text-sm font-medium text-white rounded-full transition ease-in duration-300 bg-primary hover:bg-primary-dark shadow-glow px-10 py-4 lg:py-5 lg:px-16 btn-blue"
-                            href="/course/DiplomainNutritionandFitness-6">Get Started</a>
-                    </div>
-                    <button class="flex items-center mt-10 space-x-3">
-                        <div class="border-2 rounded-full border-white/20">
-                            <span
-                                class="flex items-center justify-center w-12 h-12 m-2 bg-white rounded-full text-[#010305] hover:bg-white/90 lg:h-16 lg:w-16"><svg
-                                    xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor"
-                                    viewBox="0 0 256 256">
-                                    <rect width="256" height="256" fill="none"></rect>
-                                    <path
-                                        d="M232.3,114.3,88.3,26.4a15.5,15.5,0,0,0-16.1-.3A15.8,15.8,0,0,0,64,40V216a15.8,15.8,0,0,0,8.2,13.9,15.5,15.5,0,0,0,16.1-.3l144-87.9a16,16,0,0,0,0-27.4Z">
-                                    </path>
-                                </svg>
-                            </span>
-                        </div>
-                        <span class="text-xs font-semibold tracking-wider uppercase text-white/90">WATCH VIDEO</span>
-                    </button>
-                </div>
-            </div>
-            <div class="swiper bannerSwiper h-screen hidden md:block">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide full_img">
-                        <img src="./src/images/Main_Banner_img_1.webp" alt="">
-                        <div class="banner_content">
-                            <div class="description">
-                                <p>Comprehensive and Practical</p>
-                            </div>
-                            <h1>Now Access Latest Research Backed Curriculum</h1>
-                            <div class="get_started">
-                                <button class="btn-blue">Get Started</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide full_img">
-                        <img src="./src/images/Main_Banner_img_2.webp" alt="">
-                        <div class="banner_content">
-                            <div class="description">
-                                <p>Set Off on a Successful Career</p>
-                            </div>
-                            <h1>Become A Fitness Coach TODAY!</h1>
-                            <div class="get_started">
-                                <button class="btn-blue">Get Started</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide full_img">
-                        <img src="./src/images/Main_Banner_img_3.webp" alt="">
-                        <div class="banner_content">
-                            <div class="description">
-                                <p>Comprehensive and Practical</p>
-                            </div>
-                            <h1>Practical Content, Online Courses, & Lifetime Access</h1>
-                            <div class="get_started">
-                                <button class="btn-blue">Get Started</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div
-                    class="instgram-prev swiper-button-prev absolute z-10 items-center justify-center hidden w-16 h-16 text-white -translate-y-1/2 rounded-full tex-white top-1/2 left-16 bg-white/30 hover:bg-white/40 lg:flex">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
-                        viewBox="0 0 256 256">
-                        <rect width="256" height="256" fill="none"></rect>
-                        <line x1="216" y1="128" x2="40" y2="128" fill="none" stroke="currentColor"
-                            stroke-linecap="round" stroke-linejoin="round" stroke-width="24"></line>
-                        <polyline points="112 56 40 128 112 200" fill="none" stroke="currentColor"
-                            stroke-linecap="round" stroke-linejoin="round" stroke-width="24"></polyline>
-                    </svg>
-                </div>
-                <div
-                    class="instgram-next swiper-button-next absolute z-10 items-center justify-center hidden w-16 h-16 text-white -translate-y-1/2 rounded-full tex-white top-1/2 right-16 bg-white/30 hover:bg-white/40 lg:flex">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
-                        viewBox="0 0 256 256">
-                        <rect width="256" height="256" fill="none"></rect>
-                        <line x1="40" y1="128" x2="216" y2="128" fill="none" stroke="currentColor"
-                            stroke-linecap="round" stroke-linejoin="round" stroke-width="24"></line>
-                        <polyline points="144 56 216 128 144 200" fill="none" stroke="currentColor"
-                            stroke-linecap="round" stroke-linejoin="round" stroke-width="24"></polyline>
-                    </svg>
-                </div>
-            </div>
-        </section>
-        <!-- Banner Section End -->
+        <div class="hidden">
 
-        <!-- What We Do Section Start -->
-        <section class="what_we_de anim_up">
-            <div class="description">
-                <p>WHAT WE DO</p>
-            </div>
-            <h2>
-                Delivering the highest quality of
-                <br> education. Provided with experience, care, thought and <span id="typed" class="typed">
-                </span>.
-            </h2>
-            <div class="fonder_details anim_up">
-                <h3>Balakrishna Reddy</h3>
-                <p>Director &amp; Co-Founder</p>
-            </div>
-        </section>
-        <!-- What We Do Section End -->
-
-        <!-- Courses Grid Section Start -->
-        <section class="courses_grid anim_up">
-            <div class="grid grid-cols-1 gap-8 mb-10 justify-items-center md:grid-cols-2 xl:grid-cols-3 anim_up">
-                <div class="w-full">
-                    <a class="group flex h-full w-full max-w-[410px] flex-col bg-white drop-shadow-light"
-                        target="_blank" href="/course/DietPlanning-OnlineWorkshop-4">
-                        <div class="relative ">
-                            <div class="w-100 h-[308px]">
-                                <span class="inline-block w-full h-full overflow-hidden">
-                                    <img alt="Diet Planning - Online Workshop"
-                                        src="./src/images/Courses_Grid_Img_1.webp" decoding="async" data-nimg="fill"
-                                        class="w-full transition duration-1000 ease-out group-hover:scale-110 h-full">
-                                </span>
-                            </div>
-                            <p
-                                class="righ rig absolute right-10 flex h-16 w-16 -translate-y-1/2 flex-col items-center justify-center rounded-full bg-[#010305] lg:h-20 lg:w-20">
-                                <span class="p-1 font-kumbh text-sm font-semibold text-white lg:text-base">₹ 3200</span>
-                            </p>
-                        </div>
-                        <div class="flex h-full flex-col p-10">
-                            <h3
-                                class="mb-4 text-2xl font-semibold transition ease-in line-clamp-2 group-hover:text-primary lg:text-3xl">
-                                Diet Planning - Online Workshop</h3>
-                            <div class="mt-auto">
-                                <p class="font-kumbh text-sm font-semibold text-[#a5a6aa] line-clamp-1">Workshops </p>
-                                <hr class="my-6 h-1 text-[#797C7F3D]">
-                                <div class="flex items-center justify-between">
-                                    <h4 class="flex items-center space-x-2 text-sm font-semibold">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
-                                            fill="currentColor" viewBox="0 0 256 256"
-                                            class="flex-shrink-0 text-primary">
-                                            <rect width="256" height="256" fill="none"></rect>
-                                            <circle cx="128" cy="128" r="96" fill="none" stroke="currentColor"
-                                                stroke-linecap="round" stroke-linejoin="round" stroke-width="24">
-                                            </circle>
-                                            <polyline points="128 72 128 128 184 128" fill="none" stroke="currentColor"
-                                                stroke-linecap="round" stroke-linejoin="round" stroke-width="24">
-                                            </polyline>
-                                        </svg>
-                                        <div>
-                                            <p>1 week</p>
-                                        </div>
-                                    </h4>
-                                    <h4 class="flex items-center space-x-2 text-sm font-semibold">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
-                                            fill="currentColor" viewBox="0 0 256 256"
-                                            class="flex-shrink-0 text-primary">
-                                            <rect width="256" height="256" fill="none"></rect>
-                                            <circle cx="128" cy="96" r="64" fill="none" stroke="currentColor"
-                                                stroke-linecap="round" stroke-linejoin="round" stroke-width="24">
-                                            </circle>
-                                            <path d="M31,216a112,112,0,0,1,194,0" fill="none" stroke="currentColor"
-                                                stroke-linecap="round" stroke-linejoin="round" stroke-width="24"></path>
-                                        </svg>
-                                        <span class="line-clamp-1">536</span>
-                                    </h4>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="w-full">
-                    <a class="group flex h-full w-full max-w-[410px] flex-col bg-white drop-shadow-light"
-                        target="_blank" href="/course/DiplomainNutritionandFitness-6">
-                        <div class="relative ">
-                            <div class="w-100 h-[308px]">
-                                <span class="inline-block w-full h-full overflow-hidden">
-                                    <img alt="Diploma in Nutrition and Fitness"
-                                        src="./src/images/Courses_Grid_Img_2.webp" decoding="async" data-nimg="fill"
-                                        class="w-full transition duration-1000 ease-out group-hover:scale-110 h-full">
-                                </span>
-                            </div>
-                            <p
-                                class="righ rig absolute right-10 flex h-16 w-16 -translate-y-1/2 flex-col items-center justify-center rounded-full bg-[#010305] lg:h-20 lg:w-20">
-                                <span class="p-1 font-kumbh text-sm font-semibold text-white lg:text-base">₹
-                                    38600</span>
-                            </p>
-                        </div>
-                        <div class="flex h-full flex-col p-10">
-                            <h3
-                                class="mb-4 text-2xl font-semibold transition ease-in line-clamp-2 group-hover:text-primary lg:text-3xl">
-                                Diploma in Nutrition and Fitness</h3>
-                            <div class="mt-auto">
-                                <p class="font-kumbh text-sm font-semibold text-[#a5a6aa] line-clamp-1">Certified
-                                    Nutrition Fitness Coach</p>
-                                <hr class="my-6 h-1 text-[#797C7F3D]">
-                                <div class="flex items-center justify-between">
-                                    <h4 class="flex items-center space-x-2 text-sm font-semibold">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
-                                            fill="currentColor" viewBox="0 0 256 256"
-                                            class="flex-shrink-0 text-primary">
-                                            <rect width="256" height="256" fill="none"></rect>
-                                            <circle cx="128" cy="128" r="96" fill="none" stroke="currentColor"
-                                                stroke-linecap="round" stroke-linejoin="round" stroke-width="24">
-                                            </circle>
-                                            <polyline points="128 72 128 128 184 128" fill="none" stroke="currentColor"
-                                                stroke-linecap="round" stroke-linejoin="round" stroke-width="24">
-                                            </polyline>
-                                        </svg>
-                                        <div>
-                                            <p>16-24 weeks</p>
-                                        </div>
-                                    </h4>
-                                    <h4 class="flex items-center space-x-2 text-sm font-semibold">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
-                                            fill="currentColor" viewBox="0 0 256 256"
-                                            class="flex-shrink-0 text-primary">
-                                            <rect width="256" height="256" fill="none"></rect>
-                                            <circle cx="128" cy="96" r="64" fill="none" stroke="currentColor"
-                                                stroke-linecap="round" stroke-linejoin="round" stroke-width="24">
-                                            </circle>
-                                            <path d="M31,216a112,112,0,0,1,194,0" fill="none" stroke="currentColor"
-                                                stroke-linecap="round" stroke-linejoin="round" stroke-width="24"></path>
-                                        </svg>
-                                        <span class="line-clamp-1">4815</span>
-                                    </h4>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="w-full">
-                    <a class="group flex h-full w-full max-w-[410px] flex-col bg-white drop-shadow-light"
-                        target="_blank" href="/course/CertifiedPersonalTrainer-36">
-                        <div class="relative ">
-                            <div class="w-100 h-[308px]">
-                                <span class="inline-block w-full h-full overflow-hidden">
-                                    <img alt="Certified Personal Trainer" src="./src/images/Courses_Grid_Img_3.webp"
-                                        decoding="async" data-nimg="fill"
-                                        class="w-full transition duration-1000 ease-out group-hover:scale-110 h-full">
-                                </span>
-                            </div>
-                            <p
-                                class="righ rig absolute right-10 flex h-16 w-16 -translate-y-1/2 flex-col items-center justify-center rounded-full bg-[#010305] lg:h-20 lg:w-20">
-                                <span class="p-1 font-kumbh text-sm font-semibold text-white lg:text-base">₹
-                                    17800</span>
-                            </p>
-                        </div>
-                        <div class="flex h-full flex-col p-10">
-                            <h3
-                                class="mb-4 text-2xl font-semibold transition ease-in line-clamp-2 group-hover:text-primary lg:text-3xl">
-                                Certified Personal Trainer</h3>
-                            <div class="mt-auto">
-                                <p class="font-kumbh text-sm font-semibold text-[#a5a6aa] line-clamp-1">Other
-                                    Professional Courses</p>
-                                <hr class="my-6 h-1 text-[#797C7F3D]">
-                                <div class="flex items-center justify-between">
-                                    <h4 class="flex items-center space-x-2 text-sm font-semibold">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
-                                            fill="currentColor" viewBox="0 0 256 256"
-                                            class="flex-shrink-0 text-primary">
-                                            <rect width="256" height="256" fill="none"></rect>
-                                            <circle cx="128" cy="128" r="96" fill="none" stroke="currentColor"
-                                                stroke-linecap="round" stroke-linejoin="round" stroke-width="24">
-                                            </circle>
-                                            <polyline points="128 72 128 128 184 128" fill="none" stroke="currentColor"
-                                                stroke-linecap="round" stroke-linejoin="round" stroke-width="24">
-                                            </polyline>
-                                        </svg>
-                                        <div>
-                                            <span
-                                                data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;15-16 weeks&quot;}"
-                                                data-sheets-userformat="{&quot;2&quot;:637,&quot;3&quot;:{&quot;1&quot;:0},&quot;5&quot;:{&quot;1&quot;:[{&quot;1&quot;:2,&quot;2&quot;:0,&quot;5&quot;:{&quot;1&quot;:2,&quot;2&quot;:0}},{&quot;1&quot;:0,&quot;2&quot;:0,&quot;3&quot;:3},{&quot;1&quot;:1,&quot;2&quot;:0,&quot;4&quot;:1}]},&quot;6&quot;:{&quot;1&quot;:[{&quot;1&quot;:2,&quot;2&quot;:0,&quot;5&quot;:{&quot;1&quot;:2,&quot;2&quot;:0}},{&quot;1&quot;:0,&quot;2&quot;:0,&quot;3&quot;:3},{&quot;1&quot;:1,&quot;2&quot;:0,&quot;4&quot;:1}]},&quot;7&quot;:{&quot;1&quot;:[{&quot;1&quot;:2,&quot;2&quot;:0,&quot;5&quot;:{&quot;1&quot;:2,&quot;2&quot;:0}},{&quot;1&quot;:0,&quot;2&quot;:0,&quot;3&quot;:3},{&quot;1&quot;:1,&quot;2&quot;:0,&quot;4&quot;:1}]},&quot;8&quot;:{&quot;1&quot;:[{&quot;1&quot;:2,&quot;2&quot;:0,&quot;5&quot;:{&quot;1&quot;:2,&quot;2&quot;:0}},{&quot;1&quot;:0,&quot;2&quot;:0,&quot;3&quot;:3},{&quot;1&quot;:1,&quot;2&quot;:0,&quot;4&quot;:1}]},&quot;9&quot;:1,&quot;12&quot;:0}">15-16
-                                                weeks</span>
-                                            <br>
-                                        </div>
-                                    </h4>
-                                    <h4 class="flex items-center space-x-2 text-sm font-semibold">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
-                                            fill="currentColor" viewBox="0 0 256 256"
-                                            class="flex-shrink-0 text-primary">
-                                            <rect width="256" height="256" fill="none"></rect>
-                                            <circle cx="128" cy="96" r="64" fill="none" stroke="currentColor"
-                                                stroke-linecap="round" stroke-linejoin="round" stroke-width="24">
-                                            </circle>
-                                            <path d="M31,216a112,112,0,0,1,194,0" fill="none" stroke="currentColor"
-                                                stroke-linecap="round" stroke-linejoin="round" stroke-width="24"></path>
-                                        </svg>
-                                        <span class="line-clamp-1">176</span>
-                                    </h4>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="flex justify-center">
-                <a class="btn-blue inline-block text-sm font-medium text-white rounded-full transition ease-in duration-300 bg-primary hover:bg-primary-dark shadow-glow px-10 py-4"
-                    href="/courses">View All Courses</a>
-            </div>
-        </section>
-        <!-- Courses Grid Section End -->
-
-        <!-- Course Info Section Start -->
-        <section class="courses_info">
-            <div
-                class="m-auto grid max-w-7xl justify-items-center gap-14 px-4 py-10 md:grid-cols-2 lg:grid-cols-4 lg:py-20 anim_left">
-                <div class="group flex flex-col items-center justify-center">
-                    <img alt="Online Courses" src="./src/images/Course_Info_Img_1.webp" width="124" height="124"
-                        decoding="async" data-nimg="future"
-                        class="transition-all duration-500 ease-in-out group-hover:-translate-y-2 group-hover:contrast-200 group-hover:saturate-0"
-                        loading="lazy">
-                    <h3 class="mt-6 mb-1 text-center text-xl font-semibold lg:mt-8 lg:mb-3 lg:text-2xl">Online Courses
-                    </h3>
-                    <p class="text-center font-kumbh text-[#a5a6aa]">Comprehensive and science-backed curriculum </p>
-                </div>
-                <div class="group flex flex-col items-center justify-center">
-                    <img alt="Knowledgeable Faculty" src="./src/images/Course_Info_Img_2.webp" width="124" height="124"
-                        decoding="async" data-nimg="future"
-                        class="transition-all duration-500 ease-in-out group-hover:-translate-y-2 group-hover:contrast-200 group-hover:saturate-0"
-                        loading="lazy">
-                    <h3 class="mt-6 mb-1 text-center text-xl font-semibold lg:mt-8 lg:mb-3 lg:text-2xl"> Knowledgeable
-                        Faculty</h3>
-                    <p class="text-center font-kumbh text-[#a5a6aa]">Combined teaching experience of 40 years</p>
-                </div>
-                <div class="group flex flex-col items-center justify-center">
-                    <img alt="Multiple Accreditations" src="./src/images/Course_Info_Img_3.webp" width="124"
-                        height="124" decoding="async" data-nimg="future"
-                        class="transition-all duration-500 ease-in-out group-hover:-translate-y-2 group-hover:contrast-200 group-hover:saturate-0"
-                        loading="lazy">
-                    <h3 class="mt-6 mb-1 text-center text-xl font-semibold lg:mt-8 lg:mb-3 lg:text-2xl">Multiple
-                        Accreditations</h3>
-                    <p class="text-center font-kumbh text-[#a5a6aa]">Fully accredited institute with internationally
-                        accredited courses</p>
-                </div>
-                <div class="group flex flex-col items-center justify-center">
-                    <img alt="+30,000 Scholars" src="./src/images/Course_Info_Img_4.webp" width="124" height="124"
-                        decoding="async" data-nimg="future"
-                        class="transition-all duration-500 ease-in-out group-hover:-translate-y-2 group-hover:contrast-200 group-hover:saturate-0"
-                        loading="lazy">
-                    <h3 class="mt-6 mb-1 text-center text-xl font-semibold lg:mt-8 lg:mb-3 lg:text-2xl">+30,000 Scholars
-                    </h3>
-                    <p class="text-center font-kumbh text-[#a5a6aa]">Certified scholars with starting income of
-                        ₹40,000/month*</p>
-                </div>
-            </div>
-        </section>
-        <!-- Course Info Section End -->
-
-        <!-- Modern Education Section Start -->
-        <section class="modern_education anim_up">
-            <p class="mb-7 text-xs font-semibold">MODERN EDUCATION</p>
-            <div class="grid grid-cols-1 gap-8 lg:grid-cols-2 anim_up">
-                <h2 class="text-4xl font-semibold lg:text-6xl lg:leading-[62px]">We provide the best <br> online
-                    courses. </h2>
-                <div class="space-y-7 font-kumbh text-[#a5a6aa] anim_up">
-                    <p>We are known to provide comprehensive and practical knowledge in health and fitness. Renowned
-                        researchers and world-class elite coaches contribute to all our premium certification programs.
-                    </p>
-                    <p>Our courses are suitable for general health-conscious people as well as for those wanting to
-                        build a career in the fitness industry.</p>
-                </div>
-            </div>
-        </section>
-        <!-- Modern Education Section End -->
-
-        <!-- Latest Blogs Section Start -->
-        <section class="latest_blog anim_up">
-            <div class="space-y-6 text-center anim_up">
-                <p class="text-xs font-semibold">INSIGHTFUL &amp; INSPIRING</p>
-                <h2 class="text-4xl font-semibold lg:text-6xl lg:leading-[62px]">Latest Blogs</h2>
-            </div>
-            <div class="grid grid-cols-1 justify-items-center gap-8 py-10 md:grid-cols-2 xl:grid-cols-3 anim_up">
-                <div>
-                    <a href="https://blog.infs.com/blog/2022/12/21/how-to-stay-consistent-during-your-weight-loss-journey/"
-                        target="_blank" rel="noreferrer"
-                        class="group flex min-h-[400px] max-w-[410px] flex-col justify-between">
-                        <div class="relative ">
-                            <div class="overflow-hidden">
-                                <img alt="How to stay Consistent during your Weight Loss Journey?"
-                                    src="./src/images/Latest_Blogs_1.webp" width="395" height="274" decoding="async"
-                                    data-nimg="future"
-                                    class="w-full object-cover transition duration-1000 ease-out group-hover:scale-110 lg:h-[274px]"
-                                    loading="lazy">
-                            </div>
-                            <div class="absolute inset-0 bg-[#010305]/10"></div>
-                        </div>
-                        <div class="mt-7 flex h-full flex-col justify-between">
-                            <p class="text-xs font-semibold">WEIGHT LOSS</p>
-                            <h3
-                                class="my-4 text-2xl font-semibold transition ease-in line-clamp-2 group-hover:text-primary lg:text-3xl">
-                                How to stay Consistent during your Weight Loss Journey?</h3>
-                            <time class="mt-auto font-kumbh text-sm text-[#a5a6aa] line-clamp-1">Dec 21, 2022</time>
-                        </div>
-                    </a>
-                </div>
-                <div>
-                    <a href="https://blog.infs.com/blog/2021/07/08/career-opportunities-in-the-fitness-industry/"
-                        target="_blank" rel="noreferrer"
-                        class="group flex min-h-[400px] max-w-[410px] flex-col justify-between">
-                        <div class="relative ">
-                            <div class="overflow-hidden">
-                                <img alt="Top 9 Career Opportunities in the Fitness Industry "
-                                    src="./src/images/Latest_Blogs_2.webp" width="395" height="274" decoding="async"
-                                    data-nimg="future"
-                                    class="w-full object-cover transition duration-1000 ease-out group-hover:scale-110 lg:h-[274px]"
-                                    loading="lazy">
-                            </div>
-                            <div class="absolute inset-0 bg-[#010305]/10"></div>
-                        </div>
-                        <div class="mt-7 flex h-full flex-col justify-between">
-                            <p class="text-xs font-semibold">CAREERS IN FITNESS</p>
-                            <h3
-                                class="my-4 text-2xl font-semibold transition ease-in line-clamp-2 group-hover:text-primary lg:text-3xl">
-                                Top 9 Career Opportunities in the Fitness Industry </h3>
-                            <time class="mt-auto font-kumbh text-sm text-[#a5a6aa] line-clamp-1">Jul 8, 2021</time>
-                        </div>
-                    </a>
-                </div>
-                <div>
-                    <a href="https://blog.infs.com/blog/2022/09/08/how-to-manage-a-full-time-job-with-fitness-coaching/"
-                        target="_blank" rel="noreferrer"
-                        class="group flex min-h-[400px] max-w-[410px] flex-col justify-between">
-                        <div class="relative ">
-                            <div class="overflow-hidden">
-                                <img alt="How to manage a Full Time Job with Fitness Coaching?"
-                                    src="./src/images/Latest_Blogs_3.webp" width="395" height="274" decoding="async"
-                                    data-nimg="future"
-                                    class="w-full object-cover transition duration-1000 ease-out group-hover:scale-110 lg:h-[274px]"
-                                    loading="lazy">
-                            </div>
-                            <div class="absolute inset-0 bg-[#010305]/10"></div>
-                        </div>
-                        <div class="mt-7 flex h-full flex-col justify-between">
-                            <p class="text-xs font-semibold">CAREERS IN FITNESS</p>
-                            <h3
-                                class="my-4 text-2xl font-semibold transition ease-in line-clamp-2 group-hover:text-primary lg:text-3xl">
-                                How to manage a Full Time Job with Fitness Coaching?</h3>
-                            <time class="mt-auto font-kumbh text-sm text-[#a5a6aa] line-clamp-1">Sep 8, 2022</time>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="flex justify-center">
-                <a href="https://blog.infs.com/" target="_blank" rel="noreferrer"
-                    class="btn-blue inline-block text-sm font-medium text-white rounded-full transition ease-in duration-300 bg-primary hover:bg-primary-dark shadow-glow px-10 py-4">Show
-                    More</a>
-            </div>
-        </section>
-        <!-- Latest Blogs Section End -->
-
-        <!-- Infs Newslwtter Section Start -->
-        <section class="infs_newsletter bg-[#f5f7fa]">
-            <div class="m-auto max-w-7xl px-4 py-10 lg:py-20 anim_up">
-                <p class="mb-6 text-xs font-semibold">INFS NEWSLETTER</p>
-                <h2 class="text-4xl font-semibold lg:text-6xl lg:leading-[62px]">Get the Latest <br>Into Your Inbox
-                </h2>
-                <div class="mt-10 grid-cols-12 lg:grid anim_up">
-                    <img alt="newsletter" src="./src/images/Infs_Newslwtter_Img.webp" width="728" height="500"
-                        decoding="async" data-nimg="future" class="col-span-7 w-full object-cover lg:h-[500px]"
-                        loading="lazy">
-                    <form
-                        class="col-span-5 flex h-full w-full flex-col justify-between space-y-10 self-start bg-white p-[3.5rem] lg:-ml-14 lg:-mt-36 anim_left">
-                        <div class="group relative">
-                            <svg class="absolute top-1/2 -translate-y-1/2 text-[#a5a6aa] fill-[#a5a6aa] stroke-[#a5a6aa] inline-block w-[20px] h-[20px]"
-                                viewBox="0 0 884 1024">
-                                <path
-                                    d="M601.8 634.3H558.9C553 634.3 547.3 632.3 542.6 628.7 538 625 534.7 619.9 533.2 614.2 532 609 532.1 603.6 533.5 598.5 534.9 593.3 537.5 588.6 541.1 584.7 629.8 498.4 682.3 381.5 687.8 257.9 687.8 189.5 660.6 123.9 612.3 75.5 563.9 27.2 498.3 0 429.9 0 361.5 0 295.9 27.2 247.5 75.5 199.2 123.9 172 189.5 172 257.9 177.5 381.5 230 498.4 318.7 584.7 322.3 588.6 324.9 593.3 326.3 598.5 327.7 603.6 327.8 609 326.6 614.2 325.1 619.9 321.8 625 317.2 628.7 312.5 632.3 306.8 634.3 300.9 634.3H258C189.6 634.3 124 661.6 75.6 709.9 27.3 758.3 0.1 823.8 0 892.2V949.5C0 957.1 3 964.4 8.4 969.8 13.8 975.2 21.1 978.2 28.7 978.2H831.1C838.7 978.2 846 975.2 851.3 969.8 856.7 964.4 859.7 957.1 859.7 949.5V892.2C859.7 823.8 832.5 758.3 784.1 709.9 735.8 661.6 670.2 634.4 601.8 634.3ZM802.4 920.9H57.3V892.2C57.4 839 78.5 788 116.1 750.4 153.7 712.8 204.7 691.6 257.9 691.6H300.8C319.5 691.6 337.7 685.3 352.4 673.8 367.1 662.3 377.6 646.2 382.1 628.1 386 612.5 385.5 596.2 380.9 580.9 376.2 565.6 367.5 551.8 355.7 541 280.2 465.4 235.2 364.6 229.2 257.9 229.2 204.7 250.4 153.7 288 116.1 325.6 78.4 376.6 57.3 429.8 57.3 483.1 57.3 534.1 78.4 571.7 116.1 609.3 153.7 630.5 204.7 630.5 257.9 624.5 364.6 579.5 465.4 504 541 492.2 551.8 483.5 565.6 478.8 580.9 474.2 596.2 473.7 612.5 477.6 628.1 482.1 646.2 492.5 662.3 507.3 673.8 522 685.3 540.2 691.6 558.9 691.6H601.8C655 691.6 706 712.8 743.6 750.4 781.2 788 802.3 839 802.4 892.2L802.4 920.9Z">
-                                </path>
-                            </svg>
-                            <div>
-                                <input
-                                    class="peer w-full py-2 pl-8 text-sm outline-none transition-all ease-in focus:placeholder:text-[#010305]"
-                                    name="Name" required="" type="text" placeholder="Name">
-                                <div
-                                    class="h-0.5 w-full bg-[#a6a7ab4d] transition-all ease-in-out peer-focus:bg-[#010305]">
-                                    <div
-                                        class=" duration-400 h-0.5 w-0 bg-[#010305] transition-all ease-in-out group-hover:w-full">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="group relative">
-                            <svg class="absolute top-1/2 -translate-y-1/2 text-[#a5a6aa] fill-[#a5a6aa] stroke-[#a5a6aa] inline-block w-[20px] h-[20px]"
-                                viewBox="0 0 1024 1024">
-                                <path
-                                    d="M900.6 0H86.8C63.8 0 41.7 9.2 25.4 25.5 9.2 41.8 0 63.8 0 86.8L0 665.4C0 688.4 9.2 710.4 25.4 726.7 41.7 743 63.8 752.1 86.8 752.2H900.6C923.6 752.1 945.7 743 962 726.7 978.2 710.4 987.4 688.4 987.4 665.4V86.8C987.4 63.8 978.2 41.7 962 25.5 945.7 9.2 923.6 0 900.6 0ZM888.6 57.9L495.6 450.9 99 57.9H888.6ZM57.9 653.4V98.5L336.5 374.7 57.9 653.4ZM98.8 694.3L377.6 415.5 475.3 512.3C480.7 517.7 488.1 520.8 495.7 520.8 503.4 520.8 510.7 517.7 516.1 512.3L611.4 417 888.7 694.4 98.8 694.3ZM929.6 653.4L652.2 376 929.6 98.7V653.4Z">
-                                </path>
-                            </svg>
-                            <div>
-                                <input
-                                    class="peer w-full py-2 pl-8 text-sm outline-none transition-all ease-in focus:placeholder:text-[#010305]"
-                                    name="Email" required="" type="email" placeholder="Email">
-                                <div
-                                    class="h-0.5 w-full bg-[#a6a7ab4d] transition-all ease-in-out peer-focus:bg-[#010305]">
-                                    <div
-                                        class=" duration-400 h-0.5 w-0 bg-[#010305] transition-all ease-in-out group-hover:w-full">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="group relative">
-                            <svg class="absolute top-1/2 -translate-y-1/2 text-[#a5a6aa] fill-[#a5a6aa] stroke-[#a5a6aa] inline-block w-[20px] h-[20px]"
-                                viewBox="0 0 1079 1024">
-                                <path
-                                    d="M547.893 0c-135.697-0.226-265.961 53.305-362.289 148.882s-150.877 225.418-151.713 361.114c0.725 136.099 55.112 266.418 151.349 362.656 96.237 96.234 226.556 150.621 362.653 151.347 135.791 0 266.022-53.943 362.042-149.963 96.016-96.016 149.958-226.246 149.958-362.037s-53.943-266.020-149.958-362.039c-96.020-96.019-226.251-149.961-362.042-149.961v0zM547.893 964.385c-89.471 0.396-177.051-25.751-251.664-75.13s-132.908-119.772-167.513-202.285c-34.605-82.508-43.966-173.426-26.9-261.257 17.067-87.83 59.795-168.627 122.781-232.174s143.401-106.989 231.078-124.833c87.677-17.844 178.675-9.289 261.485 24.584 82.815 33.873 153.725 91.542 203.763 165.715s76.956 161.518 77.352 250.99c-0.205 119.755-47.594 234.607-131.896 319.662-84.306 85.059-198.736 133.463-318.486 134.727v0z"
-                                    fill="rgb(165, 166, 170)"></path>
-                                <path
-                                    d="M547.849 420.018c-23.855 0.035-46.721 9.527-63.586 26.392-16.865 16.869-26.357 39.731-26.392 63.586v243.979c0 23.868 9.483 46.761 26.361 63.639s39.767 26.361 63.639 26.361c23.868 0 46.761-9.483 63.639-26.361s26.361-39.771 26.361-63.639v-243.979c-0.036-23.859-9.532-46.734-26.41-63.599-16.874-16.869-39.753-26.356-63.613-26.379zM577.857 753.931c0 7.96-3.161 15.592-8.789 21.219s-13.263 8.789-21.219 8.789c-7.96 0-15.592-3.161-21.219-8.789s-8.789-13.259-8.789-21.219v-243.979c0-7.96 3.161-15.592 8.789-21.219s13.259-8.789 21.219-8.789c7.956 0 15.592 3.161 21.219 8.789s8.789 13.259 8.789 21.219v243.979z"
-                                    fill="rgb(165, 166, 170)"></path>
-                                <path
-                                    d="M547.849 180.001c-17.795 0-35.194 5.277-49.989 15.164-14.799 9.887-26.33 23.94-33.142 40.381-6.807 16.441-8.593 34.533-5.12 51.987s12.043 33.487 24.625 46.071c12.586 12.584 28.619 21.153 46.071 24.625s35.546 1.69 51.988-5.12c16.442-6.81 30.493-18.343 40.381-33.14s15.164-32.193 15.164-49.989c-0.036-23.853-9.528-46.719-26.392-63.586-16.869-16.867-39.736-26.358-63.586-26.393zM547.849 300.21c-5.935 0-11.736-1.76-16.673-5.057-4.933-3.297-8.78-7.984-11.050-13.467s-2.867-11.517-1.71-17.338c1.158-5.821 4.016-11.168 8.214-15.364 4.194-4.197 9.541-7.054 15.364-8.212 5.819-1.158 11.856-0.564 17.337 1.708 5.485 2.271 10.169 6.117 13.468 11.052 3.295 4.935 5.058 10.737 5.058 16.672-0.013 7.955-3.179 15.58-8.802 21.206-5.628 5.625-13.25 8.79-21.206 8.802z"
-                                    fill="rgb(165, 166, 170)"></path>
-                            </svg>
-                            <div>
-                                <select name="ListID"
-                                    class="peer w-full py-2 pl-8 text-sm outline-none transition-all ease-in focus:placeholder:text-[#010305]">
-                                    <option value="40754">Holistic Health &amp; Wellness</option>
-                                    <option value="40632">Wellness for Women and Kids </option>
-                                    <option value="40670">Career in the Fitness Industry</option>
-                                    <option value="40600">Weight Loss Tips</option>
-                                </select>
-                                <div
-                                    class="h-0.5 w-full bg-[#a6a7ab4d] transition-all ease-in-out peer-focus:bg-[#010305]">
-                                    <div
-                                        class=" duration-400 h-0.5 w-0 bg-[#010305] transition-all ease-in-out group-hover:w-full">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+            <!-- Main Banner Section Start -->
+            <section class="main_banner">
+                <div class="relative h-screen md:hidden">
+                    <img src="./src/images/Main_Banner_img_1.webp" class="object-cover object-left w-full h-screen"
+                        alt="">
+                    <div
+                        class="absolute top-0 flex flex-col items-center justify-center w-full h-full bg-black/30 text-white/90 ">
+                        <p>Set Off on a Successful Career</p>
+                        <h1 class="mt-4 mb-8 text-center text-4xl font-bold lg:text-7xl lg:leading-[66px]">Become A
+                            Fitness
+                            Coach TODAY!</h1>
                         <div>
-                            <button
-                                class="inline-block text-sm font-medium text-white rounded-full transition ease-in duration-300 bg-accent ring-2 ring-accent hover:bg-transparent hover:text-accent shadow-glow shadow-accent/20 px-10 py-4 flex items-center justify-between space-x-2"
-                                type="submit">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor"
-                                    viewBox="0 0 256 256">
-                                    <rect width="256" height="256" fill="none"></rect>
-                                    <path
-                                        d="M210.3,35.9,23.9,88.4a8,8,0,0,0-1.2,15l85.6,40.5a7.8,7.8,0,0,1,3.8,3.8l40.5,85.6a8,8,0,0,0,15-1.2L220.1,45.7A7.9,7.9,0,0,0,210.3,35.9Z"
-                                        fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                        stroke-width="24"></path>
-                                    <line x1="110.9" y1="145.1" x2="156.1" y2="99.9" fill="none" stroke="currentColor"
-                                        stroke-linecap="round" stroke-linejoin="round" stroke-width="24"></line>
-                                </svg>
-                                <span>Subscribe</span>
-                            </button>
+                            <a class="inline-block text-sm font-medium text-white rounded-full transition ease-in duration-300 bg-primary hover:bg-primary-dark shadow-glow px-10 py-4 lg:py-5 lg:px-16 btn-blue"
+                                href="/course/DiplomainNutritionandFitness-6">Get Started</a>
                         </div>
-                    </form>
+                        <button class="flex items-center mt-10 space-x-3">
+                            <div class="border-2 rounded-full border-white/20">
+                                <span
+                                    class="flex items-center justify-center w-12 h-12 m-2 bg-white rounded-full text-[#010305] hover:bg-white/90 lg:h-16 lg:w-16"><svg
+                                        xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor"
+                                        viewBox="0 0 256 256">
+                                        <rect width="256" height="256" fill="none"></rect>
+                                        <path
+                                            d="M232.3,114.3,88.3,26.4a15.5,15.5,0,0,0-16.1-.3A15.8,15.8,0,0,0,64,40V216a15.8,15.8,0,0,0,8.2,13.9,15.5,15.5,0,0,0,16.1-.3l144-87.9a16,16,0,0,0,0-27.4Z">
+                                        </path>
+                                    </svg>
+                                </span>
+                            </div>
+                            <span class="text-xs font-semibold tracking-wider uppercase text-white/90">WATCH
+                                VIDEO</span>
+                        </button>
+                    </div>
                 </div>
-            </div>
-        </section>
-        <!-- Infs Newslwtter Section End -->
-
-        <!-- Our Approach Section Start -->
-        <section class="our_approach">
-            <div class="grid grid-cols-2 anim_up">
-                <img alt="approaches laptop" src="./src/images/Our_Approach_Img_1.webp" width="412" height="412"
-                    decoding="async" data-nimg="future" class="w-full object-cover" loading="lazy">
-                <img alt="approaches employee" src="./src/images/Our_Approach_Img_2.webp" width="462" height="478"
-                    decoding="async" data-nimg="future" class="mt-10 -ml-20 w-full object-cover lg:mt-20 lg:-ml-40"
-                    loading="lazy">
-            </div>
-            <div class="!overflow-x-hidden anim_up overflow-hidden">
-                <p class="text-xs font-semibold">OUR APPROACH</p>
-                <h2 class="py-6 text-4xl font-semibold lg:text-6xl lg:leading-[62px]">We develop career-boosting
-                    certifications.</h2>
-                <p class="font-kumbh text-[#797c7f]">Create your niche in the
-                    field of fitness and nutrition with our <br> world-class programs. </p>
-                <div class="space-y-3 py-8 anim_up">
-                    <p class="flex items-center space-x-2 font-kumbh">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="currentColor"
-                            viewBox="0 0 256 256" class="text-primary">
-                            <rect width="256" height="256" fill="none"></rect>
-                            <polyline points="216 72 104 184 48 128" fill="none" stroke="currentColor"
-                                stroke-linecap="round" stroke-linejoin="round" stroke-width="24"></polyline>
-                        </svg>
-                        <span>Build a strong foundation</span>
-                    </p>
-                    <p class="flex items-center space-x-2 font-kumbh">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="currentColor"
-                            viewBox="0 0 256 256" class="text-primary">
-                            <rect width="256" height="256" fill="none"></rect>
-                            <polyline points="216 72 104 184 48 128" fill="none" stroke="currentColor"
-                                stroke-linecap="round" stroke-linejoin="round" stroke-width="24"></polyline>
-                        </svg>
-                        <span>Stay updated with the latest information</span>
-                    </p>
-                    <p class="flex items-center space-x-2 font-kumbh">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="currentColor"
-                            viewBox="0 0 256 256" class="text-primary">
-                            <rect width="256" height="256" fill="none"></rect>
-                            <polyline points="216 72 104 184 48 128" fill="none" stroke="currentColor"
-                                stroke-linecap="round" stroke-linejoin="round" stroke-width="24"></polyline>
-                        </svg>
-                        <span>Earn in 6 figures</span>
-                    </p>
-                </div>
-                <div>
-                    <a class="btn-blue inline-block text-sm font-medium text-white rounded-full transition ease-in duration-300 bg-primary hover:bg-primary-dark shadow-glow px-10 py-4"
-                        href="/courses">View Our Courses</a>
-                </div>
-            </div>
-        </section>
-        <!-- Our Approach Section End -->
-
-        <!-- Testimonial Section Start -->
-        <section class="testimonial">
-            <div class="relative m-auto max-w-7xl sm:px-8 py-10 lg:py-[72px] anim_up">
-                <div class="swiper testimonial_content">
+                <div class="swiper bannerSwiper h-screen hidden md:block">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <div class="flex flex-col items-center justify-center w-full h-full">
-                                <svg class="text-accent fill-[currentColor] stroke-[currentColor] w-[28px] h-[28px] inline-block"
-                                    viewBox="0 0 1024 1024">
-                                    <path d="M0 0V747.9L373.9 373.9V0H0Z"></path>
-                                    <path d="M623.2 0V747.9L997.1 373.9V0H623.2Z"></path>
-                                </svg>
-                                <h3 class="max-w-3xl m-auto mt-12 mb-5 text-lg text-center lg:text-xl">I'm forever
-                                    grateful to INFS to make my foundations and understanding rock solid. Their
-                                    comprehensive course has helped me with so much knowledge that I can now confidently
-                                    help others transform their lives and achieve their fitness goals just like I did
-                                    mine.</h3>
-                                <h4 class="text-base font-semibold lg:text-lg">Tanya Sharma</h4>
-                                <p class="text-sm font-kumbh text-gray/50">INFS Scholar</p>
+                        <div class="swiper-slide full_img">
+                            <img src="./src/images/Main_Banner_img_1.webp" alt="">
+                            <div class="banner_content">
+                                <div class="description">
+                                    <p>Comprehensive and Practical</p>
+                                </div>
+                                <h1>Now Access Latest Research Backed Curriculum</h1>
+                                <div class="get_started">
+                                    <button class="btn-blue">Get Started</button>
+                                </div>
                             </div>
                         </div>
-                        <div class="swiper-slide">
-                            <div class="flex flex-col items-center justify-center w-full h-full">
-                                <svg class="text-accent fill-[currentColor] stroke-[currentColor] w-[28px] h-[28px] inline-block"
-                                    viewBox="0 0 1024 1024">
-                                    <path d="M0 0V747.9L373.9 373.9V0H0Z"></path>
-                                    <path d="M623.2 0V747.9L997.1 373.9V0H623.2Z"></path>
-                                </svg>
-                                <h3 class="max-w-3xl m-auto mt-12 mb-5 text-lg text-center lg:text-xl">The Diploma
-                                    course is very comprehensive which transforms a general fitness enthusiast into a
-                                    Nutrition &amp; Fitness Coach. It focuses on imparting practical knowledge and
-                                    developing requisite coaching skills to make a successful career in the Nutrition
-                                    &amp; Fitness Industry.</h3>
-                                <h4 class="text-base font-semibold lg:text-lg">Anita Kumar</h4>
-                                <p class="text-sm font-kumbh text-gray/50">INFS Scholar</p>
+                        <div class="swiper-slide full_img">
+                            <img src="./src/images/Main_Banner_img_2.webp" alt="">
+                            <div class="banner_content">
+                                <div class="description">
+                                    <p>Set Off on a Successful Career</p>
+                                </div>
+                                <h1>Become A Fitness Coach TODAY!</h1>
+                                <div class="get_started">
+                                    <button class="btn-blue">Get Started</button>
+                                </div>
                             </div>
                         </div>
-                        <div class="swiper-slide">
-                            <div class="flex flex-col items-center justify-center w-full h-full">
-                                <svg class="text-accent fill-[currentColor] stroke-[currentColor] w-[28px] h-[28px] inline-block"
-                                    viewBox="0 0 1024 1024">
-                                    <path d="M0 0V747.9L373.9 373.9V0H0Z"></path>
-                                    <path d="M623.2 0V747.9L997.1 373.9V0H623.2Z"></path>
-                                </svg>
-                                <h3 class="max-w-3xl m-auto mt-12 mb-5 text-lg text-center lg:text-xl"> Every module of
-                                    the Diploma course is backed by scientific research papers and designed in such a
-                                    way that even a non-science background individual can understand the concepts
-                                    precisely.</h3>
-                                <h4 class="text-base font-semibold lg:text-lg">Umesh Choudhary</h4>
-                                <p class="text-sm font-kumbh text-gray/50">INFS Scholar</p>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="flex flex-col items-center justify-center w-full h-full">
-                                <svg class="text-accent fill-[currentColor] stroke-[currentColor] w-[28px] h-[28px] inline-block"
-                                    viewBox="0 0 1024 1024">
-                                    <path d="M0 0V747.9L373.9 373.9V0H0Z"></path>
-                                    <path d="M623.2 0V747.9L997.1 373.9V0H623.2Z"></path>
-                                </svg>
-                                <h3 class="max-w-3xl m-auto mt-12 mb-5 text-lg text-center lg:text-xl">The course has
-                                    live lectures which helped me clear any doubts with the most knowledgeable faculty,
-                                    who always encouraged scholars by saying that no questions are silly! The recorded
-                                    lectures were always handy as an alternative to live lectures and for future
-                                    revisions of the topic.</h3>
-                                <h4 class="text-base font-semibold lg:text-lg">Akhila Vadrevu</h4>
-                                <p class="text-sm font-kumbh text-gray/50">INFS Scholar</p>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="flex flex-col items-center justify-center w-full h-full"><svg
-                                    class="text-accent fill-[currentColor] stroke-[currentColor] w-[28px] h-[28px] inline-block"
-                                    viewBox="0 0 1024 1024">
-                                    <path d="M0 0V747.9L373.9 373.9V0H0Z"></path>
-                                    <path d="M623.2 0V747.9L997.1 373.9V0H623.2Z"></path>
-                                </svg>
-                                <h3 class="max-w-3xl m-auto mt-12 mb-5 text-lg text-center lg:text-xl">The Diploma in
-                                    Nutrition and Fitness was a comprehensive program that covered all aspects of
-                                    nutrition, from the basics of macro and micronutrients to advanced topics like
-                                    sports nutrition and supplement use.</h3>
-                                <h4 class="text-base font-semibold lg:text-lg">Rashmi Priya</h4>
-                                <p class="text-sm font-kumbh text-gray/50">INFS Scholar</p>
+                        <div class="swiper-slide full_img">
+                            <img src="./src/images/Main_Banner_img_3.webp" alt="">
+                            <div class="banner_content">
+                                <div class="description">
+                                    <p>Comprehensive and Practical</p>
+                                </div>
+                                <h1>Practical Content, Online Courses, & Lifetime Access</h1>
+                                <div class="get_started">
+                                    <button class="btn-blue">Get Started</button>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="instgram-thumb-next swiper-button-next">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                            viewBox="0 0 256 256">
-                            <rect width="256" height="256" fill="none"></rect>
-                            <line x1="40" y1="128" x2="216" y2="128" fill="none" stroke="currentColor"
-                                stroke-linecap="round" stroke-linejoin="round" stroke-width="24"></line>
-                            <polyline points="144 56 216 128 144 200" fill="none" stroke="currentColor"
-                                stroke-linecap="round" stroke-linejoin="round" stroke-width="24"></polyline>
-                        </svg>
-                    </div>
-                    <div class="instgram-thumb-prev swiper-button-prev">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    <div
+                        class="instgram-prev swiper-button-prev absolute z-10 items-center justify-center hidden w-16 h-16 text-white -translate-y-1/2 rounded-full tex-white top-1/2 left-16 bg-white/30 hover:bg-white/40 lg:flex">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
                             viewBox="0 0 256 256">
                             <rect width="256" height="256" fill="none"></rect>
                             <line x1="216" y1="128" x2="40" y2="128" fill="none" stroke="currentColor"
@@ -974,65 +348,952 @@
                                 stroke-linecap="round" stroke-linejoin="round" stroke-width="24"></polyline>
                         </svg>
                     </div>
+                    <div
+                        class="instgram-next swiper-button-next absolute z-10 items-center justify-center hidden w-16 h-16 text-white -translate-y-1/2 rounded-full tex-white top-1/2 right-16 bg-white/30 hover:bg-white/40 lg:flex">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                            viewBox="0 0 256 256">
+                            <rect width="256" height="256" fill="none"></rect>
+                            <line x1="40" y1="128" x2="216" y2="128" fill="none" stroke="currentColor"
+                                stroke-linecap="round" stroke-linejoin="round" stroke-width="24"></line>
+                            <polyline points="144 56 216 128 144 200" fill="none" stroke="currentColor"
+                                stroke-linecap="round" stroke-linejoin="round" stroke-width="24"></polyline>
+                        </svg>
+                    </div>
                 </div>
-                <div class="flex items-center justify-center mt-4 space-x-3 lg:mt-8 lg:space-x-5">
-                    <div thumbsSlider="" class="swiper testimonial_img md:max-w-[500px] max-w-[310px] mx-auto">
-                        <div class="swiper-wrapper anim_up">
+            </section>
+            <!-- Banner Section End -->
+
+            <!-- What We Do Section Start -->
+            <section class="what_we_de anim_up">
+                <div class="description">
+                    <p>WHAT WE DO</p>
+                </div>
+                <h2>
+                    Delivering the highest quality of
+                    <br> education. Provided with experience, care, thought and <span id="typed" class="typed">
+                    </span>.
+                </h2>
+                <div class="fonder_details anim_up">
+                    <h3>Balakrishna Reddy</h3>
+                    <p>Director &amp; Co-Founder</p>
+                </div>
+            </section>
+            <!-- What We Do Section End -->
+
+            <!-- Courses Grid Section Start -->
+            <section class="courses_grid anim_up">
+                <div class="grid grid-cols-1 gap-8 mb-10 justify-items-center md:grid-cols-2 xl:grid-cols-3 anim_up">
+                    <div class="w-full">
+                        <a class="group flex h-full w-full max-w-[410px] flex-col bg-white drop-shadow-light"
+                            target="_blank" href="/course/DietPlanning-OnlineWorkshop-4">
+                            <div class="relative ">
+                                <div class="w-100 h-[308px]">
+                                    <span class="inline-block w-full h-full overflow-hidden">
+                                        <img alt="Diet Planning - Online Workshop"
+                                            src="./src/images/Courses_Grid_Img_1.webp" decoding="async" data-nimg="fill"
+                                            class="w-full transition duration-1000 ease-out group-hover:scale-110 h-full">
+                                    </span>
+                                </div>
+                                <p
+                                    class="righ rig absolute right-10 flex h-16 w-16 -translate-y-1/2 flex-col items-center justify-center rounded-full bg-[#010305] lg:h-20 lg:w-20">
+                                    <span class="p-1 font-kumbh text-sm font-semibold text-white lg:text-base">₹
+                                        3200</span>
+                                </p>
+                            </div>
+                            <div class="flex h-full flex-col p-10">
+                                <h3
+                                    class="mb-4 text-2xl font-semibold transition ease-in line-clamp-2 group-hover:text-primary lg:text-3xl">
+                                    Diet Planning - Online Workshop</h3>
+                                <div class="mt-auto">
+                                    <p class="font-kumbh text-sm font-semibold text-[#a5a6aa] line-clamp-1">Workshops
+                                    </p>
+                                    <hr class="my-6 h-1 text-[#797C7F3D]">
+                                    <div class="flex items-center justify-between">
+                                        <h4 class="flex items-center space-x-2 text-sm font-semibold">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                                fill="currentColor" viewBox="0 0 256 256"
+                                                class="flex-shrink-0 text-primary">
+                                                <rect width="256" height="256" fill="none"></rect>
+                                                <circle cx="128" cy="128" r="96" fill="none" stroke="currentColor"
+                                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="24">
+                                                </circle>
+                                                <polyline points="128 72 128 128 184 128" fill="none"
+                                                    stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                                    stroke-width="24">
+                                                </polyline>
+                                            </svg>
+                                            <div>
+                                                <p>1 week</p>
+                                            </div>
+                                        </h4>
+                                        <h4 class="flex items-center space-x-2 text-sm font-semibold">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                                fill="currentColor" viewBox="0 0 256 256"
+                                                class="flex-shrink-0 text-primary">
+                                                <rect width="256" height="256" fill="none"></rect>
+                                                <circle cx="128" cy="96" r="64" fill="none" stroke="currentColor"
+                                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="24">
+                                                </circle>
+                                                <path d="M31,216a112,112,0,0,1,194,0" fill="none" stroke="currentColor"
+                                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="24">
+                                                </path>
+                                            </svg>
+                                            <span class="line-clamp-1">536</span>
+                                        </h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="w-full">
+                        <a class="group flex h-full w-full max-w-[410px] flex-col bg-white drop-shadow-light"
+                            target="_blank" href="/course/DiplomainNutritionandFitness-6">
+                            <div class="relative ">
+                                <div class="w-100 h-[308px]">
+                                    <span class="inline-block w-full h-full overflow-hidden">
+                                        <img alt="Diploma in Nutrition and Fitness"
+                                            src="./src/images/Courses_Grid_Img_2.webp" decoding="async" data-nimg="fill"
+                                            class="w-full transition duration-1000 ease-out group-hover:scale-110 h-full">
+                                    </span>
+                                </div>
+                                <p
+                                    class="righ rig absolute right-10 flex h-16 w-16 -translate-y-1/2 flex-col items-center justify-center rounded-full bg-[#010305] lg:h-20 lg:w-20">
+                                    <span class="p-1 font-kumbh text-sm font-semibold text-white lg:text-base">₹
+                                        38600</span>
+                                </p>
+                            </div>
+                            <div class="flex h-full flex-col p-10">
+                                <h3
+                                    class="mb-4 text-2xl font-semibold transition ease-in line-clamp-2 group-hover:text-primary lg:text-3xl">
+                                    Diploma in Nutrition and Fitness</h3>
+                                <div class="mt-auto">
+                                    <p class="font-kumbh text-sm font-semibold text-[#a5a6aa] line-clamp-1">Certified
+                                        Nutrition Fitness Coach</p>
+                                    <hr class="my-6 h-1 text-[#797C7F3D]">
+                                    <div class="flex items-center justify-between">
+                                        <h4 class="flex items-center space-x-2 text-sm font-semibold">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                                fill="currentColor" viewBox="0 0 256 256"
+                                                class="flex-shrink-0 text-primary">
+                                                <rect width="256" height="256" fill="none"></rect>
+                                                <circle cx="128" cy="128" r="96" fill="none" stroke="currentColor"
+                                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="24">
+                                                </circle>
+                                                <polyline points="128 72 128 128 184 128" fill="none"
+                                                    stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                                    stroke-width="24">
+                                                </polyline>
+                                            </svg>
+                                            <div>
+                                                <p>16-24 weeks</p>
+                                            </div>
+                                        </h4>
+                                        <h4 class="flex items-center space-x-2 text-sm font-semibold">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                                fill="currentColor" viewBox="0 0 256 256"
+                                                class="flex-shrink-0 text-primary">
+                                                <rect width="256" height="256" fill="none"></rect>
+                                                <circle cx="128" cy="96" r="64" fill="none" stroke="currentColor"
+                                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="24">
+                                                </circle>
+                                                <path d="M31,216a112,112,0,0,1,194,0" fill="none" stroke="currentColor"
+                                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="24">
+                                                </path>
+                                            </svg>
+                                            <span class="line-clamp-1">4815</span>
+                                        </h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="w-full">
+                        <a class="group flex h-full w-full max-w-[410px] flex-col bg-white drop-shadow-light"
+                            target="_blank" href="/course/CertifiedPersonalTrainer-36">
+                            <div class="relative ">
+                                <div class="w-100 h-[308px]">
+                                    <span class="inline-block w-full h-full overflow-hidden">
+                                        <img alt="Certified Personal Trainer" src="./src/images/Courses_Grid_Img_3.webp"
+                                            decoding="async" data-nimg="fill"
+                                            class="w-full transition duration-1000 ease-out group-hover:scale-110 h-full">
+                                    </span>
+                                </div>
+                                <p
+                                    class="righ rig absolute right-10 flex h-16 w-16 -translate-y-1/2 flex-col items-center justify-center rounded-full bg-[#010305] lg:h-20 lg:w-20">
+                                    <span class="p-1 font-kumbh text-sm font-semibold text-white lg:text-base">₹
+                                        17800</span>
+                                </p>
+                            </div>
+                            <div class="flex h-full flex-col p-10">
+                                <h3
+                                    class="mb-4 text-2xl font-semibold transition ease-in line-clamp-2 group-hover:text-primary lg:text-3xl">
+                                    Certified Personal Trainer</h3>
+                                <div class="mt-auto">
+                                    <p class="font-kumbh text-sm font-semibold text-[#a5a6aa] line-clamp-1">Other
+                                        Professional Courses</p>
+                                    <hr class="my-6 h-1 text-[#797C7F3D]">
+                                    <div class="flex items-center justify-between">
+                                        <h4 class="flex items-center space-x-2 text-sm font-semibold">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                                fill="currentColor" viewBox="0 0 256 256"
+                                                class="flex-shrink-0 text-primary">
+                                                <rect width="256" height="256" fill="none"></rect>
+                                                <circle cx="128" cy="128" r="96" fill="none" stroke="currentColor"
+                                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="24">
+                                                </circle>
+                                                <polyline points="128 72 128 128 184 128" fill="none"
+                                                    stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                                    stroke-width="24">
+                                                </polyline>
+                                            </svg>
+                                            <div>
+                                                <span
+                                                    data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;15-16 weeks&quot;}"
+                                                    data-sheets-userformat="{&quot;2&quot;:637,&quot;3&quot;:{&quot;1&quot;:0},&quot;5&quot;:{&quot;1&quot;:[{&quot;1&quot;:2,&quot;2&quot;:0,&quot;5&quot;:{&quot;1&quot;:2,&quot;2&quot;:0}},{&quot;1&quot;:0,&quot;2&quot;:0,&quot;3&quot;:3},{&quot;1&quot;:1,&quot;2&quot;:0,&quot;4&quot;:1}]},&quot;6&quot;:{&quot;1&quot;:[{&quot;1&quot;:2,&quot;2&quot;:0,&quot;5&quot;:{&quot;1&quot;:2,&quot;2&quot;:0}},{&quot;1&quot;:0,&quot;2&quot;:0,&quot;3&quot;:3},{&quot;1&quot;:1,&quot;2&quot;:0,&quot;4&quot;:1}]},&quot;7&quot;:{&quot;1&quot;:[{&quot;1&quot;:2,&quot;2&quot;:0,&quot;5&quot;:{&quot;1&quot;:2,&quot;2&quot;:0}},{&quot;1&quot;:0,&quot;2&quot;:0,&quot;3&quot;:3},{&quot;1&quot;:1,&quot;2&quot;:0,&quot;4&quot;:1}]},&quot;8&quot;:{&quot;1&quot;:[{&quot;1&quot;:2,&quot;2&quot;:0,&quot;5&quot;:{&quot;1&quot;:2,&quot;2&quot;:0}},{&quot;1&quot;:0,&quot;2&quot;:0,&quot;3&quot;:3},{&quot;1&quot;:1,&quot;2&quot;:0,&quot;4&quot;:1}]},&quot;9&quot;:1,&quot;12&quot;:0}">15-16
+                                                    weeks</span>
+                                                <br>
+                                            </div>
+                                        </h4>
+                                        <h4 class="flex items-center space-x-2 text-sm font-semibold">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                                fill="currentColor" viewBox="0 0 256 256"
+                                                class="flex-shrink-0 text-primary">
+                                                <rect width="256" height="256" fill="none"></rect>
+                                                <circle cx="128" cy="96" r="64" fill="none" stroke="currentColor"
+                                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="24">
+                                                </circle>
+                                                <path d="M31,216a112,112,0,0,1,194,0" fill="none" stroke="currentColor"
+                                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="24">
+                                                </path>
+                                            </svg>
+                                            <span class="line-clamp-1">176</span>
+                                        </h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="flex justify-center">
+                    <a class="btn-blue inline-block text-sm font-medium text-white rounded-full transition ease-in duration-300 bg-primary hover:bg-primary-dark shadow-glow px-10 py-4"
+                        href="/courses">View All Courses</a>
+                </div>
+            </section>
+            <!-- Courses Grid Section End -->
+
+            <!-- Course Info Section Start -->
+            <section class="courses_info">
+                <div
+                    class="m-auto grid max-w-7xl justify-items-center gap-14 px-4 py-10 md:grid-cols-2 lg:grid-cols-4 lg:py-20 anim_left">
+                    <div class="group flex flex-col items-center justify-center">
+                        <img alt="Online Courses" src="./src/images/Course_Info_Img_1.webp" width="124" height="124"
+                            decoding="async" data-nimg="future"
+                            class="transition-all duration-500 ease-in-out group-hover:-translate-y-2 group-hover:contrast-200 group-hover:saturate-0"
+                            loading="lazy">
+                        <h3 class="mt-6 mb-1 text-center text-xl font-semibold lg:mt-8 lg:mb-3 lg:text-2xl">Online
+                            Courses
+                        </h3>
+                        <p class="text-center font-kumbh text-[#a5a6aa]">Comprehensive and science-backed curriculum
+                        </p>
+                    </div>
+                    <div class="group flex flex-col items-center justify-center">
+                        <img alt="Knowledgeable Faculty" src="./src/images/Course_Info_Img_2.webp" width="124"
+                            height="124" decoding="async" data-nimg="future"
+                            class="transition-all duration-500 ease-in-out group-hover:-translate-y-2 group-hover:contrast-200 group-hover:saturate-0"
+                            loading="lazy">
+                        <h3 class="mt-6 mb-1 text-center text-xl font-semibold lg:mt-8 lg:mb-3 lg:text-2xl">
+                            Knowledgeable
+                            Faculty</h3>
+                        <p class="text-center font-kumbh text-[#a5a6aa]">Combined teaching experience of 40 years</p>
+                    </div>
+                    <div class="group flex flex-col items-center justify-center">
+                        <img alt="Multiple Accreditations" src="./src/images/Course_Info_Img_3.webp" width="124"
+                            height="124" decoding="async" data-nimg="future"
+                            class="transition-all duration-500 ease-in-out group-hover:-translate-y-2 group-hover:contrast-200 group-hover:saturate-0"
+                            loading="lazy">
+                        <h3 class="mt-6 mb-1 text-center text-xl font-semibold lg:mt-8 lg:mb-3 lg:text-2xl">Multiple
+                            Accreditations</h3>
+                        <p class="text-center font-kumbh text-[#a5a6aa]">Fully accredited institute with internationally
+                            accredited courses</p>
+                    </div>
+                    <div class="group flex flex-col items-center justify-center">
+                        <img alt="+30,000 Scholars" src="./src/images/Course_Info_Img_4.webp" width="124" height="124"
+                            decoding="async" data-nimg="future"
+                            class="transition-all duration-500 ease-in-out group-hover:-translate-y-2 group-hover:contrast-200 group-hover:saturate-0"
+                            loading="lazy">
+                        <h3 class="mt-6 mb-1 text-center text-xl font-semibold lg:mt-8 lg:mb-3 lg:text-2xl">+30,000
+                            Scholars
+                        </h3>
+                        <p class="text-center font-kumbh text-[#a5a6aa]">Certified scholars with starting income of
+                            ₹40,000/month*</p>
+                    </div>
+                </div>
+            </section>
+            <!-- Course Info Section End -->
+
+            <!-- Modern Education Section Start -->
+            <section class="modern_education anim_up">
+                <p class="mb-7 text-xs font-semibold">MODERN EDUCATION</p>
+                <div class="grid grid-cols-1 gap-8 lg:grid-cols-2 anim_up">
+                    <h2 class="text-4xl font-semibold lg:text-6xl lg:leading-[62px]">We provide the best <br> online
+                        courses. </h2>
+                    <div class="space-y-7 font-kumbh text-[#a5a6aa] anim_up">
+                        <p>We are known to provide comprehensive and practical knowledge in health and fitness. Renowned
+                            researchers and world-class elite coaches contribute to all our premium certification
+                            programs.
+                        </p>
+                        <p>Our courses are suitable for general health-conscious people as well as for those wanting to
+                            build a career in the fitness industry.</p>
+                    </div>
+                </div>
+            </section>
+            <!-- Modern Education Section End -->
+
+            <!-- Latest Blogs Section Start -->
+            <section class="latest_blog anim_up">
+                <div class="space-y-6 text-center anim_up">
+                    <p class="text-xs font-semibold">INSIGHTFUL &amp; INSPIRING</p>
+                    <h2 class="text-4xl font-semibold lg:text-6xl lg:leading-[62px]">Latest Blogs</h2>
+                </div>
+                <div class="grid grid-cols-1 justify-items-center gap-8 py-10 md:grid-cols-2 xl:grid-cols-3 anim_up">
+                    <div>
+                        <a href="https://blog.infs.com/blog/2022/12/21/how-to-stay-consistent-during-your-weight-loss-journey/"
+                            target="_blank" rel="noreferrer"
+                            class="group flex min-h-[400px] max-w-[410px] flex-col justify-between">
+                            <div class="relative ">
+                                <div class="overflow-hidden">
+                                    <img alt="How to stay Consistent during your Weight Loss Journey?"
+                                        src="./src/images/Latest_Blogs_1.webp" width="395" height="274" decoding="async"
+                                        data-nimg="future"
+                                        class="w-full object-cover transition duration-1000 ease-out group-hover:scale-110 lg:h-[274px]"
+                                        loading="lazy">
+                                </div>
+                                <div class="absolute inset-0 bg-[#010305]/10"></div>
+                            </div>
+                            <div class="mt-7 flex h-full flex-col justify-between">
+                                <p class="text-xs font-semibold">WEIGHT LOSS</p>
+                                <h3
+                                    class="my-4 text-2xl font-semibold transition ease-in line-clamp-2 group-hover:text-primary lg:text-3xl">
+                                    How to stay Consistent during your Weight Loss Journey?</h3>
+                                <time class="mt-auto font-kumbh text-sm text-[#a5a6aa] line-clamp-1">Dec 21, 2022</time>
+                            </div>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="https://blog.infs.com/blog/2021/07/08/career-opportunities-in-the-fitness-industry/"
+                            target="_blank" rel="noreferrer"
+                            class="group flex min-h-[400px] max-w-[410px] flex-col justify-between">
+                            <div class="relative ">
+                                <div class="overflow-hidden">
+                                    <img alt="Top 9 Career Opportunities in the Fitness Industry "
+                                        src="./src/images/Latest_Blogs_2.webp" width="395" height="274" decoding="async"
+                                        data-nimg="future"
+                                        class="w-full object-cover transition duration-1000 ease-out group-hover:scale-110 lg:h-[274px]"
+                                        loading="lazy">
+                                </div>
+                                <div class="absolute inset-0 bg-[#010305]/10"></div>
+                            </div>
+                            <div class="mt-7 flex h-full flex-col justify-between">
+                                <p class="text-xs font-semibold">CAREERS IN FITNESS</p>
+                                <h3
+                                    class="my-4 text-2xl font-semibold transition ease-in line-clamp-2 group-hover:text-primary lg:text-3xl">
+                                    Top 9 Career Opportunities in the Fitness Industry </h3>
+                                <time class="mt-auto font-kumbh text-sm text-[#a5a6aa] line-clamp-1">Jul 8, 2021</time>
+                            </div>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="https://blog.infs.com/blog/2022/09/08/how-to-manage-a-full-time-job-with-fitness-coaching/"
+                            target="_blank" rel="noreferrer"
+                            class="group flex min-h-[400px] max-w-[410px] flex-col justify-between">
+                            <div class="relative ">
+                                <div class="overflow-hidden">
+                                    <img alt="How to manage a Full Time Job with Fitness Coaching?"
+                                        src="./src/images/Latest_Blogs_3.webp" width="395" height="274" decoding="async"
+                                        data-nimg="future"
+                                        class="w-full object-cover transition duration-1000 ease-out group-hover:scale-110 lg:h-[274px]"
+                                        loading="lazy">
+                                </div>
+                                <div class="absolute inset-0 bg-[#010305]/10"></div>
+                            </div>
+                            <div class="mt-7 flex h-full flex-col justify-between">
+                                <p class="text-xs font-semibold">CAREERS IN FITNESS</p>
+                                <h3
+                                    class="my-4 text-2xl font-semibold transition ease-in line-clamp-2 group-hover:text-primary lg:text-3xl">
+                                    How to manage a Full Time Job with Fitness Coaching?</h3>
+                                <time class="mt-auto font-kumbh text-sm text-[#a5a6aa] line-clamp-1">Sep 8, 2022</time>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="flex justify-center">
+                    <a href="https://blog.infs.com/" target="_blank" rel="noreferrer"
+                        class="btn-blue inline-block text-sm font-medium text-white rounded-full transition ease-in duration-300 bg-primary hover:bg-primary-dark shadow-glow px-10 py-4">Show
+                        More</a>
+                </div>
+            </section>
+            <!-- Latest Blogs Section End -->
+
+            <!-- Infs Newslwtter Section Start -->
+            <section class="infs_newsletter bg-[#f5f7fa]">
+                <div class="m-auto max-w-7xl px-4 py-10 lg:py-20 anim_up">
+                    <p class="mb-6 text-xs font-semibold">INFS NEWSLETTER</p>
+                    <h2 class="text-4xl font-semibold lg:text-6xl lg:leading-[62px]">Get the Latest <br>Into Your Inbox
+                    </h2>
+                    <div class="mt-10 grid-cols-12 lg:grid anim_up">
+                        <img alt="newsletter" src="./src/images/Infs_Newslwtter_Img.webp" width="728" height="500"
+                            decoding="async" data-nimg="future" class="col-span-7 w-full object-cover lg:h-[500px]"
+                            loading="lazy">
+                        <form
+                            class="col-span-5 flex h-full w-full flex-col justify-between space-y-10 self-start bg-white p-[3.5rem] lg:-ml-14 lg:-mt-36 anim_left">
+                            <div class="group relative">
+                                <svg class="absolute top-1/2 -translate-y-1/2 text-[#a5a6aa] fill-[#a5a6aa] stroke-[#a5a6aa] inline-block w-[20px] h-[20px]"
+                                    viewBox="0 0 884 1024">
+                                    <path
+                                        d="M601.8 634.3H558.9C553 634.3 547.3 632.3 542.6 628.7 538 625 534.7 619.9 533.2 614.2 532 609 532.1 603.6 533.5 598.5 534.9 593.3 537.5 588.6 541.1 584.7 629.8 498.4 682.3 381.5 687.8 257.9 687.8 189.5 660.6 123.9 612.3 75.5 563.9 27.2 498.3 0 429.9 0 361.5 0 295.9 27.2 247.5 75.5 199.2 123.9 172 189.5 172 257.9 177.5 381.5 230 498.4 318.7 584.7 322.3 588.6 324.9 593.3 326.3 598.5 327.7 603.6 327.8 609 326.6 614.2 325.1 619.9 321.8 625 317.2 628.7 312.5 632.3 306.8 634.3 300.9 634.3H258C189.6 634.3 124 661.6 75.6 709.9 27.3 758.3 0.1 823.8 0 892.2V949.5C0 957.1 3 964.4 8.4 969.8 13.8 975.2 21.1 978.2 28.7 978.2H831.1C838.7 978.2 846 975.2 851.3 969.8 856.7 964.4 859.7 957.1 859.7 949.5V892.2C859.7 823.8 832.5 758.3 784.1 709.9 735.8 661.6 670.2 634.4 601.8 634.3ZM802.4 920.9H57.3V892.2C57.4 839 78.5 788 116.1 750.4 153.7 712.8 204.7 691.6 257.9 691.6H300.8C319.5 691.6 337.7 685.3 352.4 673.8 367.1 662.3 377.6 646.2 382.1 628.1 386 612.5 385.5 596.2 380.9 580.9 376.2 565.6 367.5 551.8 355.7 541 280.2 465.4 235.2 364.6 229.2 257.9 229.2 204.7 250.4 153.7 288 116.1 325.6 78.4 376.6 57.3 429.8 57.3 483.1 57.3 534.1 78.4 571.7 116.1 609.3 153.7 630.5 204.7 630.5 257.9 624.5 364.6 579.5 465.4 504 541 492.2 551.8 483.5 565.6 478.8 580.9 474.2 596.2 473.7 612.5 477.6 628.1 482.1 646.2 492.5 662.3 507.3 673.8 522 685.3 540.2 691.6 558.9 691.6H601.8C655 691.6 706 712.8 743.6 750.4 781.2 788 802.3 839 802.4 892.2L802.4 920.9Z">
+                                    </path>
+                                </svg>
+                                <div>
+                                    <input
+                                        class="peer w-full py-2 pl-8 text-sm outline-none transition-all ease-in focus:placeholder:text-[#010305]"
+                                        name="Name" required="" type="text" placeholder="Name">
+                                    <div
+                                        class="h-0.5 w-full bg-[#a6a7ab4d] transition-all ease-in-out peer-focus:bg-[#010305]">
+                                        <div
+                                            class=" duration-400 h-0.5 w-0 bg-[#010305] transition-all ease-in-out group-hover:w-full">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="group relative">
+                                <svg class="absolute top-1/2 -translate-y-1/2 text-[#a5a6aa] fill-[#a5a6aa] stroke-[#a5a6aa] inline-block w-[20px] h-[20px]"
+                                    viewBox="0 0 1024 1024">
+                                    <path
+                                        d="M900.6 0H86.8C63.8 0 41.7 9.2 25.4 25.5 9.2 41.8 0 63.8 0 86.8L0 665.4C0 688.4 9.2 710.4 25.4 726.7 41.7 743 63.8 752.1 86.8 752.2H900.6C923.6 752.1 945.7 743 962 726.7 978.2 710.4 987.4 688.4 987.4 665.4V86.8C987.4 63.8 978.2 41.7 962 25.5 945.7 9.2 923.6 0 900.6 0ZM888.6 57.9L495.6 450.9 99 57.9H888.6ZM57.9 653.4V98.5L336.5 374.7 57.9 653.4ZM98.8 694.3L377.6 415.5 475.3 512.3C480.7 517.7 488.1 520.8 495.7 520.8 503.4 520.8 510.7 517.7 516.1 512.3L611.4 417 888.7 694.4 98.8 694.3ZM929.6 653.4L652.2 376 929.6 98.7V653.4Z">
+                                    </path>
+                                </svg>
+                                <div>
+                                    <input
+                                        class="peer w-full py-2 pl-8 text-sm outline-none transition-all ease-in focus:placeholder:text-[#010305]"
+                                        name="Email" required="" type="email" placeholder="Email">
+                                    <div
+                                        class="h-0.5 w-full bg-[#a6a7ab4d] transition-all ease-in-out peer-focus:bg-[#010305]">
+                                        <div
+                                            class=" duration-400 h-0.5 w-0 bg-[#010305] transition-all ease-in-out group-hover:w-full">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="group relative">
+                                <svg class="absolute top-1/2 -translate-y-1/2 text-[#a5a6aa] fill-[#a5a6aa] stroke-[#a5a6aa] inline-block w-[20px] h-[20px]"
+                                    viewBox="0 0 1079 1024">
+                                    <path
+                                        d="M547.893 0c-135.697-0.226-265.961 53.305-362.289 148.882s-150.877 225.418-151.713 361.114c0.725 136.099 55.112 266.418 151.349 362.656 96.237 96.234 226.556 150.621 362.653 151.347 135.791 0 266.022-53.943 362.042-149.963 96.016-96.016 149.958-226.246 149.958-362.037s-53.943-266.020-149.958-362.039c-96.020-96.019-226.251-149.961-362.042-149.961v0zM547.893 964.385c-89.471 0.396-177.051-25.751-251.664-75.13s-132.908-119.772-167.513-202.285c-34.605-82.508-43.966-173.426-26.9-261.257 17.067-87.83 59.795-168.627 122.781-232.174s143.401-106.989 231.078-124.833c87.677-17.844 178.675-9.289 261.485 24.584 82.815 33.873 153.725 91.542 203.763 165.715s76.956 161.518 77.352 250.99c-0.205 119.755-47.594 234.607-131.896 319.662-84.306 85.059-198.736 133.463-318.486 134.727v0z"
+                                        fill="rgb(165, 166, 170)"></path>
+                                    <path
+                                        d="M547.849 420.018c-23.855 0.035-46.721 9.527-63.586 26.392-16.865 16.869-26.357 39.731-26.392 63.586v243.979c0 23.868 9.483 46.761 26.361 63.639s39.767 26.361 63.639 26.361c23.868 0 46.761-9.483 63.639-26.361s26.361-39.771 26.361-63.639v-243.979c-0.036-23.859-9.532-46.734-26.41-63.599-16.874-16.869-39.753-26.356-63.613-26.379zM577.857 753.931c0 7.96-3.161 15.592-8.789 21.219s-13.263 8.789-21.219 8.789c-7.96 0-15.592-3.161-21.219-8.789s-8.789-13.259-8.789-21.219v-243.979c0-7.96 3.161-15.592 8.789-21.219s13.259-8.789 21.219-8.789c7.956 0 15.592 3.161 21.219 8.789s8.789 13.259 8.789 21.219v243.979z"
+                                        fill="rgb(165, 166, 170)"></path>
+                                    <path
+                                        d="M547.849 180.001c-17.795 0-35.194 5.277-49.989 15.164-14.799 9.887-26.33 23.94-33.142 40.381-6.807 16.441-8.593 34.533-5.12 51.987s12.043 33.487 24.625 46.071c12.586 12.584 28.619 21.153 46.071 24.625s35.546 1.69 51.988-5.12c16.442-6.81 30.493-18.343 40.381-33.14s15.164-32.193 15.164-49.989c-0.036-23.853-9.528-46.719-26.392-63.586-16.869-16.867-39.736-26.358-63.586-26.393zM547.849 300.21c-5.935 0-11.736-1.76-16.673-5.057-4.933-3.297-8.78-7.984-11.050-13.467s-2.867-11.517-1.71-17.338c1.158-5.821 4.016-11.168 8.214-15.364 4.194-4.197 9.541-7.054 15.364-8.212 5.819-1.158 11.856-0.564 17.337 1.708 5.485 2.271 10.169 6.117 13.468 11.052 3.295 4.935 5.058 10.737 5.058 16.672-0.013 7.955-3.179 15.58-8.802 21.206-5.628 5.625-13.25 8.79-21.206 8.802z"
+                                        fill="rgb(165, 166, 170)"></path>
+                                </svg>
+                                <div>
+                                    <select name="ListID"
+                                        class="peer w-full py-2 pl-8 text-sm outline-none transition-all ease-in focus:placeholder:text-[#010305]">
+                                        <option value="40754">Holistic Health &amp; Wellness</option>
+                                        <option value="40632">Wellness for Women and Kids </option>
+                                        <option value="40670">Career in the Fitness Industry</option>
+                                        <option value="40600">Weight Loss Tips</option>
+                                    </select>
+                                    <div
+                                        class="h-0.5 w-full bg-[#a6a7ab4d] transition-all ease-in-out peer-focus:bg-[#010305]">
+                                        <div
+                                            class=" duration-400 h-0.5 w-0 bg-[#010305] transition-all ease-in-out group-hover:w-full">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <button
+                                    class="inline-block text-sm font-medium text-white rounded-full transition ease-in duration-300 bg-accent ring-2 ring-accent hover:bg-transparent hover:text-accent shadow-glow shadow-accent/20 px-10 py-4 flex items-center justify-between space-x-2"
+                                    type="submit">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor"
+                                        viewBox="0 0 256 256">
+                                        <rect width="256" height="256" fill="none"></rect>
+                                        <path
+                                            d="M210.3,35.9,23.9,88.4a8,8,0,0,0-1.2,15l85.6,40.5a7.8,7.8,0,0,1,3.8,3.8l40.5,85.6a8,8,0,0,0,15-1.2L220.1,45.7A7.9,7.9,0,0,0,210.3,35.9Z"
+                                            fill="none" stroke="currentColor" stroke-linecap="round"
+                                            stroke-linejoin="round" stroke-width="24"></path>
+                                        <line x1="110.9" y1="145.1" x2="156.1" y2="99.9" fill="none"
+                                            stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke-width="24"></line>
+                                    </svg>
+                                    <span>Subscribe</span>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+            <!-- Infs Newslwtter Section End -->
+
+            <!-- Our Approach Section Start -->
+            <section class="our_approach">
+                <div class="grid grid-cols-2 anim_up">
+                    <img alt="approaches laptop" src="./src/images/Our_Approach_Img_1.webp" width="412" height="412"
+                        decoding="async" data-nimg="future" class="w-full object-cover" loading="lazy">
+                    <img alt="approaches employee" src="./src/images/Our_Approach_Img_2.webp" width="462" height="478"
+                        decoding="async" data-nimg="future" class="mt-10 -ml-20 w-full object-cover lg:mt-20 lg:-ml-40"
+                        loading="lazy">
+                </div>
+                <div class="!overflow-x-hidden anim_up overflow-hidden">
+                    <p class="text-xs font-semibold">OUR APPROACH</p>
+                    <h2 class="py-6 text-4xl font-semibold lg:text-6xl lg:leading-[62px]">We develop career-boosting
+                        certifications.</h2>
+                    <p class="font-kumbh text-[#797c7f]">Create your niche in the
+                        field of fitness and nutrition with our <br> world-class programs. </p>
+                    <div class="space-y-3 py-8 anim_up">
+                        <p class="flex items-center space-x-2 font-kumbh">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="currentColor"
+                                viewBox="0 0 256 256" class="text-primary">
+                                <rect width="256" height="256" fill="none"></rect>
+                                <polyline points="216 72 104 184 48 128" fill="none" stroke="currentColor"
+                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="24"></polyline>
+                            </svg>
+                            <span>Build a strong foundation</span>
+                        </p>
+                        <p class="flex items-center space-x-2 font-kumbh">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="currentColor"
+                                viewBox="0 0 256 256" class="text-primary">
+                                <rect width="256" height="256" fill="none"></rect>
+                                <polyline points="216 72 104 184 48 128" fill="none" stroke="currentColor"
+                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="24"></polyline>
+                            </svg>
+                            <span>Stay updated with the latest information</span>
+                        </p>
+                        <p class="flex items-center space-x-2 font-kumbh">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="currentColor"
+                                viewBox="0 0 256 256" class="text-primary">
+                                <rect width="256" height="256" fill="none"></rect>
+                                <polyline points="216 72 104 184 48 128" fill="none" stroke="currentColor"
+                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="24"></polyline>
+                            </svg>
+                            <span>Earn in 6 figures</span>
+                        </p>
+                    </div>
+                    <div>
+                        <a class="btn-blue inline-block text-sm font-medium text-white rounded-full transition ease-in duration-300 bg-primary hover:bg-primary-dark shadow-glow px-10 py-4"
+                            href="/courses">View Our Courses</a>
+                    </div>
+                </div>
+            </section>
+            <!-- Our Approach Section End -->
+
+            <!-- Testimonial Section Start -->
+            <section class="testimonial">
+                <div class="relative m-auto max-w-7xl sm:px-8 py-10 lg:py-[72px] anim_up">
+                    <div class="swiper testimonial_content">
+                        <div class="swiper-wrapper">
                             <div class="swiper-slide">
-                                <img src="./src/images/Testimonial_Img_1.webp" alt="Tanya Sharma" />
+                                <div class="flex flex-col items-center justify-center w-full h-full">
+                                    <svg class="text-accent fill-[currentColor] stroke-[currentColor] w-[28px] h-[28px] inline-block"
+                                        viewBox="0 0 1024 1024">
+                                        <path d="M0 0V747.9L373.9 373.9V0H0Z"></path>
+                                        <path d="M623.2 0V747.9L997.1 373.9V0H623.2Z"></path>
+                                    </svg>
+                                    <h3 class="max-w-3xl m-auto mt-12 mb-5 text-lg text-center lg:text-xl">I'm forever
+                                        grateful to INFS to make my foundations and understanding rock solid. Their
+                                        comprehensive course has helped me with so much knowledge that I can now
+                                        confidently
+                                        help others transform their lives and achieve their fitness goals just like I
+                                        did
+                                        mine.</h3>
+                                    <h4 class="text-base font-semibold lg:text-lg">Tanya Sharma</h4>
+                                    <p class="text-sm font-kumbh text-gray/50">INFS Scholar</p>
+                                </div>
                             </div>
                             <div class="swiper-slide">
-                                <img src="./src/images/Testimonial_Img_2.webp" alt="Anita Kumar" />
+                                <div class="flex flex-col items-center justify-center w-full h-full">
+                                    <svg class="text-accent fill-[currentColor] stroke-[currentColor] w-[28px] h-[28px] inline-block"
+                                        viewBox="0 0 1024 1024">
+                                        <path d="M0 0V747.9L373.9 373.9V0H0Z"></path>
+                                        <path d="M623.2 0V747.9L997.1 373.9V0H623.2Z"></path>
+                                    </svg>
+                                    <h3 class="max-w-3xl m-auto mt-12 mb-5 text-lg text-center lg:text-xl">The Diploma
+                                        course is very comprehensive which transforms a general fitness enthusiast into
+                                        a
+                                        Nutrition &amp; Fitness Coach. It focuses on imparting practical knowledge and
+                                        developing requisite coaching skills to make a successful career in the
+                                        Nutrition
+                                        &amp; Fitness Industry.</h3>
+                                    <h4 class="text-base font-semibold lg:text-lg">Anita Kumar</h4>
+                                    <p class="text-sm font-kumbh text-gray/50">INFS Scholar</p>
+                                </div>
                             </div>
                             <div class="swiper-slide">
-                                <img src="./src/images/Testimonial_Img_3.webp" alt="Umesh Choudhary" />
+                                <div class="flex flex-col items-center justify-center w-full h-full">
+                                    <svg class="text-accent fill-[currentColor] stroke-[currentColor] w-[28px] h-[28px] inline-block"
+                                        viewBox="0 0 1024 1024">
+                                        <path d="M0 0V747.9L373.9 373.9V0H0Z"></path>
+                                        <path d="M623.2 0V747.9L997.1 373.9V0H623.2Z"></path>
+                                    </svg>
+                                    <h3 class="max-w-3xl m-auto mt-12 mb-5 text-lg text-center lg:text-xl"> Every module
+                                        of
+                                        the Diploma course is backed by scientific research papers and designed in such
+                                        a
+                                        way that even a non-science background individual can understand the concepts
+                                        precisely.</h3>
+                                    <h4 class="text-base font-semibold lg:text-lg">Umesh Choudhary</h4>
+                                    <p class="text-sm font-kumbh text-gray/50">INFS Scholar</p>
+                                </div>
                             </div>
                             <div class="swiper-slide">
-                                <img src="./src/images/Testimonial_Img_4.webp" alt="Akhila Vadrevu" />
+                                <div class="flex flex-col items-center justify-center w-full h-full">
+                                    <svg class="text-accent fill-[currentColor] stroke-[currentColor] w-[28px] h-[28px] inline-block"
+                                        viewBox="0 0 1024 1024">
+                                        <path d="M0 0V747.9L373.9 373.9V0H0Z"></path>
+                                        <path d="M623.2 0V747.9L997.1 373.9V0H623.2Z"></path>
+                                    </svg>
+                                    <h3 class="max-w-3xl m-auto mt-12 mb-5 text-lg text-center lg:text-xl">The course
+                                        has
+                                        live lectures which helped me clear any doubts with the most knowledgeable
+                                        faculty,
+                                        who always encouraged scholars by saying that no questions are silly! The
+                                        recorded
+                                        lectures were always handy as an alternative to live lectures and for future
+                                        revisions of the topic.</h3>
+                                    <h4 class="text-base font-semibold lg:text-lg">Akhila Vadrevu</h4>
+                                    <p class="text-sm font-kumbh text-gray/50">INFS Scholar</p>
+                                </div>
                             </div>
                             <div class="swiper-slide">
-                                <img src="./src/images/Testimonial_Img_5.webp" alt="Rashmi Priya" />
+                                <div class="flex flex-col items-center justify-center w-full h-full"><svg
+                                        class="text-accent fill-[currentColor] stroke-[currentColor] w-[28px] h-[28px] inline-block"
+                                        viewBox="0 0 1024 1024">
+                                        <path d="M0 0V747.9L373.9 373.9V0H0Z"></path>
+                                        <path d="M623.2 0V747.9L997.1 373.9V0H623.2Z"></path>
+                                    </svg>
+                                    <h3 class="max-w-3xl m-auto mt-12 mb-5 text-lg text-center lg:text-xl">The Diploma
+                                        in
+                                        Nutrition and Fitness was a comprehensive program that covered all aspects of
+                                        nutrition, from the basics of macro and micronutrients to advanced topics like
+                                        sports nutrition and supplement use.</h3>
+                                    <h4 class="text-base font-semibold lg:text-lg">Rashmi Priya</h4>
+                                    <p class="text-sm font-kumbh text-gray/50">INFS Scholar</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="instgram-thumb-next swiper-button-next">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                viewBox="0 0 256 256">
+                                <rect width="256" height="256" fill="none"></rect>
+                                <line x1="40" y1="128" x2="216" y2="128" fill="none" stroke="currentColor"
+                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="24"></line>
+                                <polyline points="144 56 216 128 144 200" fill="none" stroke="currentColor"
+                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="24"></polyline>
+                            </svg>
+                        </div>
+                        <div class="instgram-thumb-prev swiper-button-prev">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                viewBox="0 0 256 256">
+                                <rect width="256" height="256" fill="none"></rect>
+                                <line x1="216" y1="128" x2="40" y2="128" fill="none" stroke="currentColor"
+                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="24"></line>
+                                <polyline points="112 56 40 128 112 200" fill="none" stroke="currentColor"
+                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="24"></polyline>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-center mt-4 space-x-3 lg:mt-8 lg:space-x-5">
+                        <div thumbsSlider="" class="swiper testimonial_img md:max-w-[500px] max-w-[310px] mx-auto">
+                            <div class="swiper-wrapper anim_up">
+                                <div class="swiper-slide">
+                                    <img src="./src/images/Testimonial_Img_1.webp" alt="Tanya Sharma" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="./src/images/Testimonial_Img_2.webp" alt="Anita Kumar" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="./src/images/Testimonial_Img_3.webp" alt="Umesh Choudhary" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="./src/images/Testimonial_Img_4.webp" alt="Akhila Vadrevu" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="./src/images/Testimonial_Img_5.webp" alt="Rashmi Priya" />
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
-        <!-- Testimonial Section End -->
+            </section>
+            <!-- Testimonial Section End -->
 
-        <!-- Partner Section Start -->
-        <section class="partner">
-            <div class="swiper partnerLogo">
-                <div class="swiper-wrapper anim_up">
-                    <div class="swiper-slide">
-                        <img src="./src/images/Partner_Img_1.webp" alt="">
+            <!-- Partner Section Start -->
+            <section class="partner">
+                <div class="swiper partnerLogo">
+                    <div class="swiper-wrapper anim_up">
+                        <div class="swiper-slide">
+                            <img src="./src/images/Partner_Img_1.webp" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./src/images/Partner_Img_2.webp" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./src/images/Partner_Img_3.webp" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./src/images/Partner_Img_4.webp" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./src/images/Partner_Img_5.webp" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./src/images/Partner_Img_6.webp" alt="">
+                        </div>
                     </div>
-                    <div class="swiper-slide">
-                        <img src="./src/images/Partner_Img_2.webp" alt="">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="./src/images/Partner_Img_3.webp" alt="">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="./src/images/Partner_Img_4.webp" alt="">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="./src/images/Partner_Img_5.webp" alt="">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="./src/images/Partner_Img_6.webp" alt="">
-                    </div>
+                    <div class="swiper-scrollbar"></div>
                 </div>
-                <div class="swiper-scrollbar"></div>
-            </div>
-        </section>
-        <!-- Partner Section End -->
+            </section>
+            <!-- Partner Section End -->
+        </div>
+        <style>
+            body {
+                background: black;
+            }
+
+            .svg-container {
+                position: relative;
+                width: 500px;
+                /* Adjust the size as needed */
+                height: auto;
+            }
+
+            .svg-container svg {
+                width: 100%;
+                height: auto;
+            }
+
+            .svg-container path,
+            .svg-container g {
+                transform-origin: 50% 50%;
+            }
+
+            @keyframes rotate {
+                from {
+                    transform: rotate(0deg);
+                }
+
+                to {
+                    transform: rotate(360deg);
+                }
+            }
+
+            .rotate-slow {
+                animation: rotate 20s linear infinite;
+            }
+
+            .rotate-medium {
+                animation: rotate 10s linear infinite;
+            }
+
+            .rotate-fast {
+                animation: rotate 5s linear infinite;
+            }
+
+            .reverse {
+                animation-direction: reverse;
+            }
+        </style>
+
+        <div class="svg-container">
+            <svg width="100%" height="100%" viewBox="0 0 1642 1630" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_8394_10730)">
+                    <g class="orbit-group">
+                        <path
+                            d="M700.277 643.766C696.559 638.706 689.423 637.597 684.558 641.567C663.931 658.4 646.438 678.789 632.923 701.798C617.487 728.078 607.563 757.227 603.757 787.467C599.951 817.707 602.343 848.405 610.786 877.691C619.229 906.977 633.547 934.237 652.867 957.809C672.188 981.382 696.105 1000.77 723.163 1014.8C750.221 1028.83 779.852 1037.21 810.251 1039.41C840.65 1041.62 871.179 1037.61 899.979 1027.63C925.194 1018.9 948.62 1005.75 969.176 988.832C974.024 984.841 974.337 977.626 970.107 972.986C965.876 968.347 958.705 968.043 953.834 972.005C935.575 986.861 914.834 998.426 892.537 1006.15C866.654 1015.11 839.217 1018.72 811.897 1016.73C784.577 1014.75 757.947 1007.23 733.63 994.617C709.312 982.009 687.817 964.581 670.453 943.396C653.09 922.211 640.222 897.712 632.634 871.392C625.046 845.072 622.897 817.483 626.317 790.306C629.738 763.129 638.656 736.932 652.529 713.314C664.48 692.967 679.893 674.9 698.044 659.914C702.886 655.916 703.996 648.825 700.277 643.766Z"
+                            fill="#BB5077" fill-opacity="0.08" />
+                    </g>
+                    <g class="orbit-group">
+                        <path
+                            d="M1049.68 952.304C1054.48 955.36 1060.87 953.955 1063.74 949.043C1080.57 920.267 1091.98 888.621 1097.4 855.671C1103.37 819.328 1101.91 782.152 1093.11 746.389C1084.31 710.626 1068.35 677.018 1046.2 647.596C1024.04 618.173 996.157 593.546 964.22 575.203C932.283 556.86 896.96 545.181 860.383 540.872C823.806 536.562 786.736 539.713 751.41 550.132C716.085 560.551 683.239 578.022 654.855 601.491C629.12 622.77 607.539 648.578 591.161 677.611C588.365 682.567 590.37 688.791 595.428 691.398C600.486 694.004 606.681 692.005 609.493 687.057C624.585 660.496 644.398 636.876 667.986 617.372C694.223 595.678 724.586 579.528 757.24 569.897C789.894 560.265 824.161 557.354 857.972 561.337C891.783 565.32 924.435 576.116 953.957 593.072C983.478 610.028 1009.26 632.793 1029.73 659.99C1050.21 687.188 1064.96 718.255 1073.1 751.313C1081.23 784.372 1082.58 818.736 1077.06 852.33C1072.1 882.532 1061.68 911.548 1046.34 937.968C1043.49 942.89 1044.88 949.248 1049.68 952.304Z"
+                            fill="#293462" />
+                        <path
+                            d="M1091 815C1091 960.803 972.803 1079 827 1079C681.197 1079 563 960.803 563 815C563 669.197 681.197 551 827 551C972.803 551 1091 669.197 1091 815ZM565.492 815C565.492 959.427 682.573 1076.51 827 1076.51C971.427 1076.51 1088.51 959.427 1088.51 815C1088.51 670.573 971.427 553.492 827 553.492C682.573 553.492 565.492 670.573 565.492 815Z"
+                            fill="#293462" class="orbit-circle" />
+                    </g>
+                    <g class="orbit-group">
+                        <path
+                            d="M637.061 1051.23C632.947 1056.32 633.721 1063.8 638.956 1067.72C669.952 1090.93 704.967 1108.3 742.281 1118.91C783.395 1130.6 826.45 1133.86 868.855 1128.48C911.261 1123.11 952.142 1109.22 989.039 1087.64C1025.94 1066.06 1058.09 1037.24 1083.56 1002.91C1109.03 968.585 1127.3 929.463 1137.27 887.895C1147.23 846.328 1148.69 803.175 1141.54 761.031C1134.4 718.887 1118.81 678.623 1095.71 642.66C1074.74 610.022 1047.98 581.538 1016.77 558.599C1011.5 554.724 1004.12 556.149 1000.45 561.561C996.773 566.972 998.196 574.319 1003.45 578.21C1032.02 599.344 1056.53 625.514 1075.77 655.464C1097.15 688.74 1111.58 725.995 1118.19 764.989C1124.8 803.984 1123.45 843.912 1114.23 882.373C1105.01 920.834 1088.11 957.033 1064.54 988.794C1040.97 1020.55 1011.22 1047.22 977.08 1067.19C942.939 1087.15 905.114 1100.01 865.877 1104.98C826.64 1109.96 786.803 1106.94 748.761 1096.12C714.52 1086.38 682.371 1070.5 653.867 1049.29C648.62 1045.38 641.176 1046.15 637.061 1051.23Z"
+                            fill="white" fill-opacity="0.04" />
+                    </g>
+                    <g class="orbit-group">
+                        <path
+                            d="M1032.1 528.316C1036.77 521.803 1035.29 512.708 1028.6 508.297C990.339 483.086 947.639 465.27 902.715 455.823C853.051 445.379 801.756 445.393 752.097 455.862C702.439 466.332 655.505 487.029 614.284 516.634C576.998 543.414 545.126 576.953 520.299 615.465C515.956 622.203 518.276 631.12 525.182 635.192C532.087 639.265 540.96 636.949 545.326 630.226C568.09 595.179 597.208 564.642 631.22 540.214C669.166 512.96 712.372 493.907 758.086 484.269C803.801 474.631 851.021 474.618 896.74 484.233C937.72 492.85 976.688 509.032 1011.66 531.906C1018.37 536.294 1027.42 534.83 1032.1 528.316Z"
+                            fill="#BB5077" fill-opacity="0.16" />
+                        <path
+                            d="M623.902 1099.68C619.229 1106.2 620.706 1115.29 627.4 1119.7C665.661 1144.91 708.361 1162.73 753.285 1172.18C802.949 1182.62 854.244 1182.61 903.903 1172.14C953.561 1161.67 1000.5 1140.97 1041.72 1111.37C1079 1084.59 1110.87 1051.05 1135.7 1012.54C1140.04 1005.8 1137.72 996.88 1130.82 992.808C1123.91 988.735 1115.04 991.051 1110.67 997.774C1087.91 1032.82 1058.79 1063.36 1024.78 1087.79C986.834 1115.04 943.628 1134.09 897.914 1143.73C852.199 1153.37 804.979 1153.38 759.26 1143.77C718.28 1135.15 679.312 1118.97 644.337 1096.09C637.628 1091.71 628.575 1093.17 623.902 1099.68Z"
+                            fill="#BB5077" fill-opacity="0.16" />
+                    </g>
+                    <g class="orbit-group">
+                        <path
+                            d="M1262 815C1262 1055.24 1067.24 1250 827 1250C586.756 1250 392 1055.24 392 815C392 574.756 586.756 380 827 380C1067.24 380 1262 574.756 1262 815ZM396.898 815C396.898 1052.54 589.462 1245.1 827 1245.1C1064.54 1245.1 1257.1 1052.54 1257.1 815C1257.1 577.462 1064.54 384.898 827 384.898C589.462 384.898 396.898 577.462 396.898 815Z"
+                            fill="#28325D" class="orbit-circle" />
+                        <path
+                            d="M401.873 873.203C389.886 874.844 381.444 885.906 383.666 897.799C398.731 978.467 435.556 1053.65 490.346 1115.11C550.005 1182.03 628.255 1229.66 715.106 1251.9C801.957 1274.14 893.467 1270 977.95 1239.99C1055.54 1212.43 1123.97 1164.21 1175.96 1100.71C1183.62 1091.35 1181.54 1077.59 1171.81 1070.39C1162.09 1063.19 1148.42 1065.28 1140.7 1074.6C1093.94 1131.11 1032.67 1174.06 963.286 1198.7C887.01 1225.79 804.39 1229.54 725.977 1209.46C647.563 1189.37 576.914 1146.38 523.051 1085.95C474.057 1030.99 440.974 963.885 427.131 891.846C424.848 879.964 413.86 871.561 401.873 873.203Z"
+                            fill="#28325D" />
+                        <path
+                            d="M1181.78 573.639C1191.78 566.834 1194.41 553.17 1187.13 543.509C1126.08 462.523 1039.35 404.292 940.8 378.593C842.251 352.895 738.127 361.358 645.304 402.219C634.231 407.094 629.857 420.304 635.263 431.128C640.67 441.951 653.808 446.284 664.906 441.468C748.218 405.312 841.459 397.968 929.744 420.99C1018.03 444.011 1095.81 495.952 1150.86 568.187C1158.19 577.81 1171.77 580.445 1181.78 573.639Z"
+                            fill="#28325D" />
+                    </g>
+                    <g class="orbit-group">
+                        <path
+                            d="M1301.87 970.336C1313.09 974.005 1319.25 986.09 1315.12 997.147C1291 1061.8 1254.24 1121.08 1206.93 1171.51C1159.61 1221.93 1102.78 1262.38 1039.8 1290.56C1029.03 1295.38 1016.57 1290 1012.2 1279.04C1007.82 1268.08 1013.19 1255.69 1023.94 1250.83C1081.12 1224.99 1132.73 1188.12 1175.76 1142.26C1218.8 1096.4 1252.31 1042.56 1274.47 983.847C1278.63 972.806 1290.66 966.667 1301.87 970.336Z"
+                            fill="white" fill-opacity="0.12" />
+                        <path
+                            d="M671.664 1289.87C667.995 1301.09 655.91 1307.25 644.853 1303.12C580.203 1279 520.919 1242.24 470.495 1194.93C420.071 1147.61 379.623 1090.78 351.439 1027.8C346.619 1017.03 351.999 1004.57 362.96 1000.2C373.92 995.824 386.307 1001.19 391.167 1011.94C417.006 1069.12 453.877 1120.73 499.738 1163.76C545.598 1206.8 599.443 1240.31 658.153 1262.47C669.194 1266.63 675.333 1278.66 671.664 1289.87Z"
+                            fill="white" fill-opacity="0.12" />
+                        <path
+                            d="M352.129 659.664C340.912 655.995 334.752 643.91 338.878 632.853C363.002 568.203 399.757 508.919 447.072 458.495C494.387 408.071 551.216 367.623 614.203 339.439C624.975 334.619 637.427 339.999 641.801 350.96C646.176 361.92 640.813 374.307 630.059 379.167C572.876 405.006 521.27 441.877 478.237 487.738C435.203 533.598 401.686 587.443 379.533 646.153C375.366 657.194 363.345 663.333 352.129 659.664Z"
+                            fill="white" fill-opacity="0.12" />
+                        <path
+                            d="M982.336 340.128C986.005 328.912 998.09 322.751 1009.15 326.877C1073.8 351.002 1133.08 387.757 1183.51 435.072C1233.93 482.387 1274.38 539.216 1302.56 602.202C1307.38 612.974 1302 625.426 1291.04 629.801C1280.08 634.175 1267.69 628.813 1262.83 618.058C1236.99 560.875 1200.12 509.269 1154.26 466.236C1108.4 423.203 1054.56 389.685 995.847 367.532C984.806 363.366 978.667 351.344 982.336 340.128Z"
+                            fill="white" fill-opacity="0.12" />
+                    </g>
+                    <g class="orbit-group">
+                        <path
+                            d="M408.253 1185.41C400.834 1191.97 400.12 1203.32 406.909 1210.54C449.973 1256.27 500.219 1294.67 555.66 1324.22C564.401 1328.87 575.17 1325.2 579.554 1316.32C583.938 1307.44 580.276 1296.71 571.544 1292.04C520.266 1264.58 473.75 1229.03 433.789 1186.76C426.984 1179.56 415.672 1178.84 408.253 1185.41Z"
+                            fill="#BB5077" fill-opacity="0.4" />
+                        <path
+                            d="M296.645 636.75C287.252 633.606 277.061 638.665 274.211 648.15C256.132 708.314 248 771.028 250.136 833.812C250.473 843.711 259.037 851.202 268.921 850.558C278.804 849.913 286.263 841.378 285.947 831.479C284.089 773.341 291.617 715.282 308.242 659.54C311.073 650.049 306.037 639.893 296.645 636.75Z"
+                            fill="#BB5077" fill-opacity="0.4" />
+                        <path
+                            d="M715.591 267.146C713.617 257.44 704.141 251.144 694.501 253.418C633.358 267.844 574.981 292.158 521.676 325.4C513.271 330.641 511.066 341.803 516.566 350.041C522.066 358.278 533.187 360.47 541.602 355.246C591.022 324.568 645.067 302.059 701.652 288.585C711.288 286.291 717.565 276.852 715.591 267.146Z"
+                            fill="white" fill-opacity="0.16" />
+                        <path
+                            d="M1245.95 443.397C1253.37 436.834 1254.08 425.479 1247.29 418.268C1204.23 372.53 1153.98 334.131 1098.54 304.588C1089.8 299.93 1079.03 303.601 1074.65 312.483C1070.26 321.365 1073.92 332.092 1082.65 336.768C1133.93 364.228 1180.45 399.777 1220.41 442.045C1227.21 449.242 1238.53 449.959 1245.95 443.397Z"
+                            fill="#BB5077" fill-opacity="0.4" />
+                        <path
+                            d="M1357.36 991.25C1366.75 994.394 1376.94 989.335 1379.79 979.849C1397.87 919.686 1406 856.972 1403.86 794.187C1403.53 784.288 1394.96 776.798 1385.08 777.442C1375.2 778.086 1367.74 786.621 1368.05 796.521C1369.91 854.659 1362.38 912.718 1345.76 968.459C1342.93 977.951 1347.96 988.106 1357.36 991.25Z"
+                            fill="#BB5077" fill-opacity="0.4" />
+                        <path
+                            d="M938.408 1362.85C940.382 1372.56 949.858 1378.86 959.499 1376.58C1020.64 1362.16 1079.02 1337.84 1132.32 1304.6C1140.73 1299.36 1142.93 1288.2 1137.43 1279.96C1131.93 1271.72 1120.81 1269.53 1112.4 1274.75C1062.98 1305.43 1008.93 1327.94 952.347 1341.41C942.711 1343.71 936.434 1353.15 938.408 1362.85Z"
+                            fill="white" fill-opacity="0.16" />
+                    </g>
+                    <g class="orbit-group">
+                        <path
+                            d="M319.22 450.056C305.909 440.49 287.301 443.491 278.347 457.222C214.692 554.835 178.13 667.837 172.706 784.604C167.281 901.371 193.209 1017.28 247.54 1120.37C255.182 1134.87 273.432 1139.59 287.572 1131.29C301.713 1123 306.383 1104.85 298.806 1090.31C250.251 997.16 227.111 892.645 232.003 787.359C236.894 682.072 269.623 580.152 326.606 491.902C335.498 478.131 332.531 459.623 319.22 450.056Z"
+                            fill="white" fill-opacity="0.2" />
+                        <path
+                            d="M1396.94 557.721C1411.88 550.977 1418.59 533.361 1411.17 518.742C1358.46 414.808 1278.88 326.644 1180.47 263.562C1082.06 200.481 968.719 164.982 852.271 160.487C835.891 159.855 822.684 173.302 822.794 189.694C822.905 206.086 836.291 219.207 852.668 219.914C957.619 224.44 1059.7 256.658 1148.44 313.537C1237.17 370.417 1309.07 449.721 1357.01 543.195C1364.49 557.781 1382 564.465 1396.94 557.721Z"
+                            fill="white" fill-opacity="0.2" />
+                        <path
+                            d="M764.093 1436.97C762.463 1453.28 774.367 1467.89 790.735 1468.78C907.098 1475.1 1023.24 1450.27 1127.08 1396.58C1230.91 1342.9 1318.33 1262.49 1380.44 1163.89C1389.18 1150.02 1384.14 1131.86 1369.89 1123.76C1355.64 1115.66 1337.58 1120.69 1328.78 1134.52C1272.38 1223.15 1193.44 1295.44 1099.81 1343.85C1006.19 1392.26 901.558 1414.87 796.639 1409.65C780.268 1408.83 765.722 1420.66 764.093 1436.97Z"
+                            fill="white" fill-opacity="0.2" />
+                    </g>
+                    <g class="orbit-group">
+                        <path
+                            d="M1533 815C1533 1204.91 1216.91 1521 827 1521C437.087 1521 121 1204.91 121 815C121 425.087 437.087 109 827 109C1216.91 109 1533 425.087 1533 815ZM128.06 815C128.06 1201.01 440.986 1513.94 827 1513.94C1213.01 1513.94 1525.94 1201.01 1525.94 815C1525.94 428.986 1213.01 116.06 827 116.06C440.986 116.06 128.06 428.986 128.06 815Z"
+                            fill="#464E72" class="orbit-circle" />
+                        <path
+                            d="M274.218 1249.73C266.946 1255.45 265.673 1266 271.559 1273.13C369.014 1391.29 501.728 1475.41 650.498 1513.03C804.687 1552.02 967.447 1538.86 1113.37 1475.6C1259.29 1412.34 1380.16 1302.55 1457.11 1163.37C1531.36 1029.07 1560.69 874.704 1541.07 722.804C1539.89 713.628 1531.32 707.348 1522.18 708.746C1513.03 710.144 1506.77 718.691 1507.95 727.867C1526.45 872.45 1498.46 1019.34 1427.79 1147.16C1354.42 1279.87 1239.17 1384.55 1100.04 1444.86C960.912 1505.18 805.726 1517.72 658.711 1480.55C517.115 1444.75 390.775 1364.76 297.901 1252.42C292.006 1245.29 281.49 1244.01 274.218 1249.73Z"
+                            fill="#464E72" />
+                        <path
+                            d="M1379.78 380.267C1387.05 374.548 1388.33 364.002 1382.44 356.865C1284.99 238.708 1152.27 154.585 1003.5 116.967C849.313 77.9793 686.553 91.1408 540.632 154.397C394.711 217.653 273.84 327.445 196.888 466.631C122.642 600.926 93.3131 755.294 112.927 907.194C114.112 916.369 122.679 922.649 131.824 921.252C140.969 919.854 147.228 911.307 146.054 902.131C127.552 757.548 155.542 610.659 226.208 482.841C299.579 350.131 414.826 245.448 553.957 185.135C693.089 124.822 848.275 112.273 995.289 149.447C1136.88 185.25 1263.23 265.238 1356.1 377.581C1361.99 384.711 1372.51 385.986 1379.78 380.267Z"
+                            fill="#464E72" />
+                    </g>
+                    <g class="orbit-group">
+                        <path
+                            d="M1607.26 815C1626.45 815 1642.08 799.437 1641.26 780.268C1634.41 619.661 1580.19 464.373 1485.04 334.162C1383.05 194.585 1239.32 91.0528 1074.62 38.5292C909.928 -13.9944 732.796 -12.7889 568.829 41.9716C415.865 93.0575 281.751 188.283 183.185 315.272C171.421 330.429 175.156 352.168 190.8 363.276C206.445 374.384 228.069 370.649 239.894 355.539C329.884 240.545 451.856 154.292 590.839 107.875C740.827 57.7831 902.858 56.6803 1053.51 104.726C1204.17 152.772 1335.65 247.477 1428.94 375.155C1515.39 493.465 1564.91 634.407 1571.71 780.269C1572.6 799.435 1588.07 815 1607.26 815Z"
+                            fill="#BB5077" fill-opacity="0.5" />
+                        <path
+                            d="M46.7379 815C27.551 815 11.9198 830.563 12.7372 849.732C19.5857 1010.34 73.8083 1165.63 168.955 1295.84C270.945 1435.42 414.675 1538.95 579.372 1591.47C744.069 1643.99 921.201 1642.79 1085.17 1588.03C1238.13 1536.94 1372.25 1441.72 1470.81 1314.73C1482.58 1299.57 1478.84 1277.83 1463.2 1266.72C1447.55 1255.62 1425.93 1259.35 1414.1 1274.46C1324.11 1389.46 1202.14 1475.71 1063.16 1522.12C913.17 1572.22 751.139 1573.32 600.483 1525.27C449.827 1477.23 318.351 1382.52 225.055 1254.85C138.605 1136.54 89.0884 995.593 82.2879 849.731C81.3943 830.565 65.9247 815 46.7379 815Z"
+                            fill="#BB5077" fill-opacity="0.5" />
+                    </g>
+
+                </g>
+                <defs>
+                    <clipPath id="clip0_8394_10730">
+                        <rect width="1642" height="1630" fill="white" />
+                    </clipPath>
+                </defs>
+            </svg>
+        </div>
+        <div class="svg-container">
+            <svg width="100%" height="100%" viewBox="0 0 1578 1556" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_8394_11893)">
+                    <g class="">
+                        <path
+                            d="M1008 836C1008 981.803 889.803 1100 744 1100C598.197 1100 480 981.803 480 836C480 690.197 598.197 572 744 572C889.803 572 1008 690.197 1008 836ZM482.492 836C482.492 980.427 599.573 1097.51 744 1097.51C888.427 1097.51 1005.51 980.427 1005.51 836C1005.51 691.573 888.427 574.492 744 574.492C599.573 574.492 482.492 691.573 482.492 836Z"
+                            fill="#293462" />
+                    </g>
+                    <g class="orbit-group">
+                        <path
+                            d="M554.061 1072.23C549.947 1077.32 550.721 1084.8 555.956 1088.72C586.952 1111.93 621.967 1129.3 659.281 1139.91C700.395 1151.6 743.45 1154.86 785.855 1149.48C828.261 1144.11 869.142 1130.22 906.039 1108.64C942.937 1087.06 975.089 1058.24 1000.56 1023.91C1026.03 989.585 1044.3 950.463 1054.27 908.895C1064.23 867.328 1065.69 824.175 1058.54 782.031C1051.4 739.887 1035.81 699.623 1012.71 663.66C991.737 631.022 964.976 602.538 933.774 579.599C928.504 575.724 921.123 577.149 917.448 582.561C913.773 587.972 915.196 595.319 920.455 599.21C949.019 620.344 973.534 646.514 992.775 676.464C1014.15 709.74 1028.58 746.995 1035.19 785.989C1041.8 824.984 1040.45 864.912 1031.23 903.373C1022.01 941.834 1005.11 978.033 981.539 1009.79C957.969 1041.55 928.22 1068.22 894.08 1088.19C859.939 1108.15 822.114 1121.01 782.877 1125.98C743.64 1130.96 703.803 1127.94 665.761 1117.12C631.52 1107.38 599.371 1091.5 570.867 1070.29C565.62 1066.38 558.176 1067.15 554.061 1072.23Z"
+                            fill="white" fill-opacity="0.04" />
+                    </g>
+                    <g class="orbit-group">
+                        <path
+                            d="M540.902 1120.68C536.229 1127.2 537.706 1136.29 544.4 1140.7C582.661 1165.91 625.361 1183.73 670.285 1193.18C719.949 1203.62 771.244 1203.61 820.903 1193.14C870.561 1182.67 917.495 1161.97 958.716 1132.37C996.002 1105.59 1027.87 1072.05 1052.7 1033.54C1057.04 1026.8 1054.72 1017.88 1047.82 1013.81C1040.91 1009.73 1032.04 1012.05 1027.67 1018.77C1004.91 1053.82 975.792 1084.36 941.78 1108.79C903.834 1136.04 860.628 1155.09 814.914 1164.73C769.199 1174.37 721.979 1174.38 676.26 1164.77C635.28 1156.15 596.312 1139.97 561.337 1117.09C554.628 1112.71 545.575 1114.17 540.902 1120.68Z"
+                            fill="#BB5077" fill-opacity="0.16" />
+                    </g>
+                    <g class="orbit-group">
+                        <path
+                            d="M318.873 894.203C306.886 895.844 298.444 906.906 300.666 918.799C315.731 999.467 352.556 1074.65 407.346 1136.11C467.005 1203.03 545.255 1250.66 632.106 1272.9C718.957 1295.14 810.467 1291 894.95 1260.99C972.54 1233.43 1040.97 1185.21 1092.96 1121.71C1100.62 1112.35 1098.54 1098.59 1088.81 1091.39C1079.09 1084.19 1065.42 1086.28 1057.7 1095.6C1010.94 1152.11 949.667 1195.06 880.286 1219.7C804.01 1246.79 721.39 1250.54 642.977 1230.46C564.563 1210.37 493.914 1167.38 440.051 1106.95C391.057 1051.99 357.974 984.885 344.131 912.846C341.848 900.964 330.86 892.561 318.873 894.203Z"
+                            fill="#28325D" />
+                    </g>
+                    <g class="orbit-group">
+                        <path
+                            d="M588.664 1310.87C584.995 1322.09 572.91 1328.25 561.853 1324.12C497.203 1300 437.919 1263.24 387.495 1215.93C337.071 1168.61 296.623 1111.78 268.439 1048.8C263.619 1038.03 268.999 1025.57 279.96 1021.2C290.92 1016.82 303.307 1022.19 308.167 1032.94C334.006 1090.12 370.877 1141.73 416.738 1184.76C462.598 1227.8 516.443 1261.31 575.153 1283.47C586.194 1287.63 592.333 1299.66 588.664 1310.87Z"
+                            fill="white" fill-opacity="0.12" />
+                        <path
+                            d="M269.129 680.664C257.912 676.995 251.752 664.91 255.878 653.853C280.002 589.203 316.757 529.919 364.072 479.495C411.387 429.071 468.216 388.623 531.203 360.439C541.975 355.619 554.427 360.999 558.801 371.96C563.176 382.92 557.813 395.307 547.059 400.167C489.876 426.006 438.27 462.877 395.237 508.738C352.203 554.598 318.686 608.443 296.533 667.153C292.366 678.194 280.345 684.333 269.129 680.664Z"
+                            fill="white" fill-opacity="0.05" />
+                        <path
+                            d="M899.336 361.128C903.005 349.912 915.09 343.751 926.147 347.877C990.797 372.002 1050.08 408.757 1100.51 456.072C1150.93 503.387 1191.38 560.216 1219.56 623.202C1224.38 633.974 1219 646.426 1208.04 650.801C1197.08 655.175 1184.69 649.813 1179.83 639.058C1153.99 581.875 1117.12 530.269 1071.26 487.236C1025.4 444.203 971.557 410.685 912.847 388.532C901.806 384.366 895.667 372.344 899.336 361.128Z"
+                            fill="white" fill-opacity="0.05" />
+                    </g>
+                    <g class="orbit-group">
+                        <path
+                            d="M213.645 657.75C204.252 654.606 194.061 659.665 191.211 669.15C173.132 729.314 165 792.028 167.136 854.812C167.473 864.711 176.037 872.202 185.921 871.558C195.804 870.913 203.263 862.378 202.947 852.479C201.089 794.341 208.617 736.282 225.242 680.54C228.073 671.049 223.037 660.893 213.645 657.75Z"
+                            fill="#BB5077" fill-opacity="0.2" />
+                        <path
+                            d="M632.591 288.146C630.617 278.44 621.141 272.144 611.501 274.418C550.358 288.844 491.981 313.158 438.676 346.4C430.271 351.641 428.066 362.803 433.566 371.041C439.066 379.278 450.187 381.47 458.602 376.246C508.022 345.568 562.067 323.059 618.652 309.585C628.288 307.291 634.565 297.852 632.591 288.146Z"
+                            fill="white" fill-opacity="0.16" />
+                        <path
+                            d="M1274.36 1012.25C1283.75 1015.39 1293.94 1010.33 1296.79 1000.85C1314.87 940.686 1323 877.972 1320.86 815.187C1320.53 805.288 1311.96 797.798 1302.08 798.442C1292.2 799.086 1284.74 807.621 1285.05 817.521C1286.91 875.659 1279.38 933.718 1262.76 989.459C1259.93 998.951 1264.96 1009.11 1274.36 1012.25Z"
+                            fill="#BB5077" fill-opacity="0.4" />
+                        <path
+                            d="M855.408 1383.85C857.382 1393.56 866.858 1399.86 876.499 1397.58C937.641 1383.16 996.018 1358.84 1049.32 1325.6C1057.73 1320.36 1059.93 1309.2 1054.43 1300.96C1048.93 1292.72 1037.81 1290.53 1029.4 1295.75C979.977 1326.43 925.932 1348.94 869.347 1362.41C859.711 1364.71 853.434 1374.15 855.408 1383.85Z"
+                            fill="white" fill-opacity="0.16" />
+                    </g>
+                    <g class="orbit-group">
+                        <path
+                            d="M1450 836C1450 1225.91 1133.91 1542 744 1542C354.087 1542 38 1225.91 38 836C38 446.087 354.087 130 744 130C1133.91 130 1450 446.087 1450 836ZM45.06 836C45.06 1222.01 357.986 1534.94 744 1534.94C1130.01 1534.94 1442.94 1222.01 1442.94 836C1442.94 449.986 1130.01 137.06 744 137.06C357.986 137.06 45.06 449.986 45.06 836Z"
+                            fill="#464E72" fill-opacity="0.5" class="orbit-circle" />
+                        <path
+                            d="M1296.78 401.267C1304.05 395.548 1305.33 385.002 1299.44 377.865C1201.99 259.708 1069.27 175.585 920.502 137.967C766.313 98.9794 603.553 112.141 457.632 175.397C311.711 238.654 190.84 348.445 113.888 487.631C39.6415 621.926 10.313 776.294 29.9271 928.194C31.1119 937.37 39.6791 943.649 48.8242 942.252C57.9694 940.854 64.2283 932.307 63.054 923.131C44.5515 778.548 72.5417 631.659 143.208 503.841C216.579 371.131 331.825 266.448 470.957 206.135C610.089 145.822 765.275 133.273 912.289 170.447C1053.88 206.25 1180.23 286.238 1273.1 398.581C1278.99 405.711 1289.51 406.986 1296.78 401.267Z"
+                            fill="#464E72" />
+                    </g>
+                    <g class="orbit-group">
+                        <path
+                            d="M1524.26 836C1543.45 836 1559.08 820.437 1558.26 801.268C1551.41 640.661 1497.19 485.373 1402.04 355.162C1300.05 215.585 1156.32 112.053 991.625 59.5292C826.928 7.00559 649.796 8.21114 485.829 62.9716C332.865 114.058 198.751 209.283 100.185 336.272C88.4208 351.429 92.1561 373.168 107.8 384.276C123.445 395.384 145.069 391.649 156.894 376.539C246.884 261.545 368.856 175.292 507.839 128.875C657.827 78.7831 819.858 77.6803 970.514 125.726C1121.17 173.772 1252.65 268.477 1345.94 396.155C1432.39 514.465 1481.91 655.407 1488.71 801.269C1489.6 820.435 1505.07 836 1524.26 836Z"
+                            fill="#BB5077" fill-opacity="0.2" />
+                    </g>
+                </g>
+                <defs>
+                    <clipPath id="clip0_8394_11893">
+                        <rect width="1578" height="1556" fill="white" />
+                    </clipPath>
+                </defs>
+            </svg>
+        </div>
 
     </main>
     <!-- Main Section End -->
 
     <!-- Footer Start -->
-    <footer class="footer overflow-y-hidden">
+    <footer class="hidden footer overflow-y-hidden">
         <div class="m-auto max-w-4xl px-4 py-10 lg:py-20">
             <section class="flex items-center justify-center">
                 <a class="flex-shrink-0" href="/">
@@ -1191,3 +1452,55 @@
 <!-- Custome Js End -->
 
 </html>
+
+
+<script>
+    const paths = document.querySelectorAll('.svg-container .orbit-group');
+
+    paths.forEach((path) => {
+        const duration = Math.random() * 485 + 10; // Random duration between 5s and 20s
+        const isReverse = Math.random() > 0.5;
+        path.style.animation = `rotate ${duration}s linear infinite ${isReverse ? 'reverse' : 'normal'}`;
+    });
+
+</script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const items = gsap.utils.toArray(".header1_image");  // Select all 9 images
+
+        // Extract src attributes directly from the image elements
+        const imageUrls = items.map(item => item.src);
+
+        let currentIndex = 0;
+
+        function rotateImages() {
+            // Get the Flip state before rotating, capturing the layout of the items
+            const state = Flip.getState(items);
+
+            // Update the src of the 3 visible images
+            items.forEach((item, i) => {
+                let imgIndex = (currentIndex + i) % imageUrls.length;  // Rotating through the list
+                item.src = imageUrls[imgIndex];  // Dynamically update the image src
+            });
+
+            currentIndex = (currentIndex + 1) % imageUrls.length;  // Increment the index for next rotation
+
+            // Animate the position changes and the swapping effect
+            Flip.from(state, {
+                absolute: true,
+                duration: 1.5,  // Adjust the duration for smoother motion
+                ease: "power2.inOut",  // Smooth easing for a more dynamic feel
+                stagger: 0.2,  // Adds a staggered effect between each image
+                onEnter: (elements) => {
+                    gsap.fromTo(elements, { opacity: 0 }, { opacity: 1, duration: 0.5 });  // Fade in effect
+                },
+                onLeave: (elements) => {
+                    gsap.to(elements, { opacity: 0, duration: 0.5 });  // Fade out effect
+                }
+            });
+        }
+
+        // Rotate images every 1.5 seconds
+        setInterval(rotateImages, 2000);
+    });
+</script>
